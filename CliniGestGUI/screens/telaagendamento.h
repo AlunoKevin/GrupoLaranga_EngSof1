@@ -16,12 +16,12 @@ public:
     explicit TelaAgendamento(SistemaFacade* facade, QWidget *parent = nullptr);
     ~TelaAgendamento();
 
-private slots:
-    void on_btnAgendar_clicked();
-
 private:
     Ui::TelaAgendamento *ui;
     SistemaFacade* m_facade;
+
+private slots:
+    void on_btnAgendar_clicked();
 };
 
 #endif // TELAAGENDAMENTO_H

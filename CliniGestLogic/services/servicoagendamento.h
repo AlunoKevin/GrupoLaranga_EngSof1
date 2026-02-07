@@ -4,11 +4,11 @@
 
 class ServicoAgendamento : public IServicoAgendamento
 {
-private:
-    IConsultaRepository* repo;
-
 public:
-    explicit ServicoAgendamento(IConsultaRepository* r);
+    explicit ServicoAgendamento(IConsultaRepository* repo);
 
     bool agendar(const Consulta& consulta) override;
+
+private:
+    IConsultaRepository* m_repo;
 };

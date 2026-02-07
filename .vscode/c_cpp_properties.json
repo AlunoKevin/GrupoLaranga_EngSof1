@@ -4,12 +4,23 @@
       "name": "Linux",
       "includePath": [
         "${workspaceFolder}/**",
+
+        "${workspaceFolder}/CliniGestLogic",
+        "${workspaceFolder}/CliniGestLogic/models",
+        "${workspaceFolder}/CliniGestLogic/interfaces",
+        "${workspaceFolder}/CliniGestLogic/interfaces/services",
+        "${workspaceFolder}/CliniGestLogic/interfaces/repositories",
+        "${workspaceFolder}/CliniGestLogic/facade",
+
+        "${workspaceFolder}/CliniGestData",
+        "${workspaceFolder}/CliniGestData/repositories",
+        "${workspaceFolder}/CliniGestData/databasemanager",
+
         "/usr/include/x86_64-linux-gnu/qt6",
         "/usr/include/x86_64-linux-gnu/qt6/QtCore",
         "/usr/include/x86_64-linux-gnu/qt6/QtGui",
         "/usr/include/x86_64-linux-gnu/qt6/QtWidgets",
-        "/usr/include/x86_64-linux-gnu/qt6/QtSql",
-        "/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++"
+        "/usr/include/x86_64-linux-gnu/qt6/QtSql"
       ],
       "defines": [],
       "compilerPath": "/usr/bin/g++",

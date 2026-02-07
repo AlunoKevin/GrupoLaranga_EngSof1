@@ -10,15 +10,18 @@ INCLUDEPATH += \
     ../CliniGestData
 
 LIBS += \
-    -L../CliniGestLogic -lCliniGestLogic \
-    -L../CliniGestData  -lCliniGestData
+    $$PWD/../CliniGestLogic/libCliniGestLogic.so \
+    $$PWD/../CliniGestData/libCliniGestData.so
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    screens/telaagendamento.h
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    screens/telaagendamento.cpp
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    screens/telaagendamento.ui
