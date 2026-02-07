@@ -1,17 +1,19 @@
 #ifndef SISTEMAFACADE_H
 #define SISTEMAFACADE_H
 
-#include <QString>
+#include "interfaces/services/IServicoAgendamento.h"
+#include "interfaces/repositories/IConsultaRepository.h"
+
+
+class IConsultaRepository;
 
 class SistemaFacade
 {
 public:
-    SistemaFacade();
+    explicit SistemaFacade(IConsultaRepository* consultaRepo);
 
-    bool login(const QString& usuario, const QString& senha);
-
-    bool agendarConsulta(int pacienteId, int medicoId, const QString& dataHora);
-    bool cancelarConsulta(int consultaId);
+private:
+    IConsultaRepository* m_consultaRepo;
 };
 
-#endif
+#endif // SISTEMAFACADE_H

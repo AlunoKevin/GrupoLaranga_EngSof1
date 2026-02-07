@@ -1,11 +1,14 @@
-#ifndef SERVICOAGENDAMENTO_H
-#define SERVICOAGENDAMENTO_H
+#pragma once
+#include "../interfaces/services/IServicoAgendamento.h"
+#include "../interfaces/repositories/IConsultaRepository.h"
 
-class ServicoAgendamento
+class ServicoAgendamento : public IServicoAgendamento
 {
-public:
-    bool agendar(int pacienteId, int medicoId);
-    bool cancelar(int consultaId);
-};
+private:
+    IConsultaRepository* repo;
 
-#endif
+public:
+    explicit ServicoAgendamento(IConsultaRepository* r);
+
+    bool agendar(const Consulta& consulta) override;
+};

@@ -1,25 +1,23 @@
-#ifndef CONSULTA_H
-#define CONSULTA_H
-
-#include <QDateTime>
-
-class Paciente;
-class Medico;
+#pragma once
+#include <QDate>
+#include <QTime>
 
 class Consulta
 {
-public:
-    enum Status { AGENDADA, CANCELADA, FINALIZADA };
-
-    Consulta(Paciente* paciente, Medico* medico, QDateTime dataHora);
-
-    void setStatus(Status s);
-
 private:
-    Paciente* paciente;
-    Medico* medico;
-    QDateTime dataHora;
-    Status status;
-};
+    int id;
+    QDate data;
+    QTime horario;
 
-#endif
+public:
+    Consulta() = default;
+
+    Consulta(QDate d, QTime h)
+        : data(d), horario(h) {}
+
+    QDate getData() const { return data; }
+    QTime getHorario() const { return horario; }
+
+    void setData(const QDate& d) { data = d; }
+    void setHorario(const QTime& h) { horario = h; }
+};

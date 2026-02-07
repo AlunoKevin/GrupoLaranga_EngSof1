@@ -14,12 +14,12 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(SistemaFacade* facade, QWidget *parent = nullptr);
     ~MainWindow();
 
 private:
     Ui::MainWindow *ui;
-    SistemaFacade* sistema;   // Only talks to the facade
+    SistemaFacade* m_facade;
 };
 
-#endif
+#endif // MAINWINDOW_H

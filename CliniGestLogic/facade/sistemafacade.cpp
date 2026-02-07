@@ -1,22 +1,8 @@
 #include "sistemafacade.h"
+#include "interfaces/repositories/IConsultaRepository.h"
 
-SistemaFacade::SistemaFacade()
-{
-}
 
-bool SistemaFacade::login(const QString& usuario, const QString& senha)
+SistemaFacade::SistemaFacade(IConsultaRepository* consultaRepo)
+    : m_consultaRepo(consultaRepo)
 {
-    // Placeholder logic
-    return usuario == "admin" && senha == "123";
-}
-
-bool SistemaFacade::agendarConsulta(int, int, const QString&)
-{
-    // Call ServicoAgendamento later
-    return true;
-}
-
-bool SistemaFacade::cancelarConsulta(int)
-{
-    return true;
 }

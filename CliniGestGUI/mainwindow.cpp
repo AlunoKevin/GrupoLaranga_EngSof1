@@ -1,17 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "sistemafacade.h"
+#include "../CliniGestLogic/facade/sistemafacade.h"
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(SistemaFacade* facade, QWidget *parent)
     : QMainWindow(parent),
       ui(new Ui::MainWindow),
-      sistema(new SistemaFacade())
+      m_facade(facade)
 {
     ui->setupUi(this);
 }
 
 MainWindow::~MainWindow()
 {
-    delete sistema;
     delete ui;
 }
