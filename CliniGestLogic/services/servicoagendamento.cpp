@@ -1,16 +1,12 @@
 #include "servicoagendamento.h"
 
-ServicoAgendamento::ServicoAgendamento(IConsultaRepository* r)
-    : repo(r) {}
+ServicoAgendamento::ServicoAgendamento(IConsultaRepository* repo)
+    : m_repo(repo)
+{
+}
 
 bool ServicoAgendamento::agendar(const Consulta& consulta)
 {
-    auto existentes = repo->listarPorData(consulta.getData());
-
-    for (const auto& c : existentes) {
-        if (c.getHorario() == consulta.getHorario())
-            return false; // horário ocupado
-    }
-
-    return repo->salvar(consulta);
+    // validacao dps
+    return m_repo->salvar(consulta);
 }

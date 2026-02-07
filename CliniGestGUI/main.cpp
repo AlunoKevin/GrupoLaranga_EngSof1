@@ -4,6 +4,7 @@
 #include "../CliniGestData/databasemanager/databasemanager.h"
 #include "../CliniGestData/repositories/SqlConsultaRepository.h"
 #include "../CliniGestLogic/facade/sistemafacade.h"
+#include "screens/telaagendamento.h"
 
 int main(int argc, char *argv[])
 {
@@ -19,7 +20,11 @@ int main(int argc, char *argv[])
     SistemaFacade facade(&repo);
 
     // Create main window
-    MainWindow w(&facade);
+    //MainWindow w(&facade);
+    //w.show();
+    
+    // Create agendamento screen directly
+    TelaAgendamento w(&facade);
     w.show();
 
     return a.exec();
