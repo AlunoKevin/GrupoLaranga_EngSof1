@@ -7,6 +7,7 @@
 #include "../interfaces/repositories/ITriagemRepository.h"
 #include "../models/consulta.h"
 #include "../models/triagem.h"
+#include <QString>
 
 class SistemaFacade
 {
@@ -15,7 +16,10 @@ public:
     ~SistemaFacade();
 
     bool agendarConsulta(const Consulta& consulta);
+    
     bool registrarTriagem(const Triagem& triagem);
+
+    bool autenticar(QString usuario, QString senha);
 
 private:
     IConsultaRepository* m_consultaRepo;

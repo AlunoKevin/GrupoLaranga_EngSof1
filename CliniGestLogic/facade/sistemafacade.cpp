@@ -24,3 +24,11 @@ bool SistemaFacade::registrarTriagem(const Triagem& triagem)
 {
     return m_servicoTriagem->registrarTriagem(triagem);
 }
+
+bool SistemaFacade::autenticar(QString usuario, QString senha)
+{
+    if(usuario == "admin" && senha == "1234") {
+        return true;
+    }
+    return false;
+}
