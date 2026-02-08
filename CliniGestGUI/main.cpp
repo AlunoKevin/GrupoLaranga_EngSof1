@@ -3,8 +3,10 @@
 
 #include "../CliniGestData/databasemanager/databasemanager.h"
 #include "../CliniGestData/repositories/SqlConsultaRepository.h"
+#include "../CliniGestData/repositories/SqlTriagemRepository.h"
 #include "../CliniGestLogic/facade/sistemafacade.h"
 #include "screens/telaagendamento.h"
+#include "screens/telatriagem.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,10 +16,11 @@ int main(int argc, char *argv[])
     QSqlDatabase db = DatabaseManager::instance().getDatabase();
 
     // Create repository
-    SqlConsultaRepository repo(db);
+    SqlConsultaRepository consultaRepo(db);
+    SqlTriagemRepository triagemRepo(db);
 
     // Create facade
-    SistemaFacade facade(&repo);
+    SistemaFacade facade(&consultaRepo, &triagemRepo);
 
     // Create main window
     //MainWindow w(&facade);
@@ -26,6 +29,10 @@ int main(int argc, char *argv[])
     // Create agendamento screen directly
     TelaAgendamento w(&facade);
     w.show();
+
+    // Create triagem screen directly
+    TelaTriagem t(&facade);
+    t.show();
 
     return a.exec();
 }

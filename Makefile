@@ -30,7 +30,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = CliniGest1.0.0
-DISTDIR = /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/.tmp/CliniGest1.0.0
+DISTDIR = /home/juliana/GrupoLaranga_EngSof1/.tmp/CliniGest1.0.0
 SUBTARGETS    =  \
 		sub-CliniGestLogic \
 		sub-CliniGestData \
@@ -39,79 +39,79 @@ SUBTARGETS    =  \
 
 sub-CliniGestLogic-qmake_all:  FORCE
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro
+	cd CliniGestLogic/ && $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro
 	cd CliniGestLogic/ && $(MAKE) -f Makefile qmake_all
 sub-CliniGestLogic: FORCE
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile
+	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile
 sub-CliniGestLogic-make_first: FORCE
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile 
+	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile 
 sub-CliniGestLogic-all: FORCE
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile all
+	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile all
 sub-CliniGestLogic-clean: FORCE
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile clean
+	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile clean
 sub-CliniGestLogic-distclean: FORCE
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile distclean
+	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile distclean
 sub-CliniGestLogic-install_subtargets: FORCE
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile install
+	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile install
 sub-CliniGestLogic-uninstall_subtargets: FORCE
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile uninstall
+	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile uninstall
 sub-CliniGestData-qmake_all:  FORCE
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro
+	cd CliniGestData/ && $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro
 	cd CliniGestData/ && $(MAKE) -f Makefile qmake_all
 sub-CliniGestData: FORCE
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile
+	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile
 sub-CliniGestData-make_first: FORCE
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile 
+	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile 
 sub-CliniGestData-all: FORCE
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile all
+	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile all
 sub-CliniGestData-clean: FORCE
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile clean
+	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile clean
 sub-CliniGestData-distclean: FORCE
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile distclean
+	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile distclean
 sub-CliniGestData-install_subtargets: FORCE
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile install
+	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile install
 sub-CliniGestData-uninstall_subtargets: FORCE
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile uninstall
+	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile uninstall
 sub-CliniGestGUI-qmake_all:  FORCE
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro
+	cd CliniGestGUI/ && $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro
 	cd CliniGestGUI/ && $(MAKE) -f Makefile qmake_all
 sub-CliniGestGUI: FORCE
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile
+	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile
 sub-CliniGestGUI-make_first: FORCE
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile 
+	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile 
 sub-CliniGestGUI-all: FORCE
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile all
+	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile all
 sub-CliniGestGUI-clean: FORCE
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile clean
+	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile clean
 sub-CliniGestGUI-distclean: FORCE
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile distclean
+	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile distclean
 sub-CliniGestGUI-install_subtargets: FORCE
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile install
+	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile install
 sub-CliniGestGUI-uninstall_subtargets: FORCE
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile uninstall
+	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile uninstall
 
 Makefile: CliniGest.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/unix.conf \
@@ -128,7 +128,6 @@ Makefile: CliniGest.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake.co
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_designer.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
@@ -136,10 +135,8 @@ Makefile: CliniGest.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake.co
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_help.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_input_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_kms_support_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_linguist.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl.pri \
@@ -152,8 +149,6 @@ Makefile: CliniGest.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake.co
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uiplugin.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uitools.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
@@ -193,7 +188,6 @@ Makefile: CliniGest.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake.co
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_designer.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri:
@@ -201,10 +195,8 @@ Makefile: CliniGest.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake.co
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_fb_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_help.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_input_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_kms_support_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_linguist.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl.pri:
@@ -217,8 +209,6 @@ Makefile: CliniGest.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake.co
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uiplugin.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uitools.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
@@ -258,24 +248,24 @@ uninstall_subtargets: sub-CliniGestLogic-uninstall_subtargets sub-CliniGestData-
 
 sub-CliniGestLogic-check:
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile check
+	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile check
 sub-CliniGestData-check:
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile check
+	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile check
 sub-CliniGestGUI-check:
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile check
+	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile check
 check: sub-CliniGestLogic-check sub-CliniGestData-check sub-CliniGestGUI-check
 
 sub-CliniGestLogic-benchmark:
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile benchmark
+	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -f Makefile benchmark
 sub-CliniGestData-benchmark:
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile benchmark
+	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -f Makefile benchmark
 sub-CliniGestGUI-benchmark:
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile benchmark
+	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -f Makefile benchmark
 benchmark: sub-CliniGestLogic-benchmark sub-CliniGestData-benchmark sub-CliniGestGUI-benchmark
 install:install_subtargets  FORCE
 
@@ -290,17 +280,17 @@ dist: distdir FORCE
 
 distdir: sub-CliniGestLogic-distdir sub-CliniGestData-distdir sub-CliniGestGUI-distdir FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
-	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/unix.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/linux.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/sanitize.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/gcc-base.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/gcc-base-unix.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/g++-base.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/g++-unix.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/qconfig.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_concurrent.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_concurrent_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_designer.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_fb_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_help.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_input_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_kms_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_linguist.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_openglwidgets.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_openglwidgets_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_printsupport.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_printsupport_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uiplugin.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uitools.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xml.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xml_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/qt_functions.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/qt_config.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_post.prf .qmake.stash /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/exclusive_builds.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/toolchain.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/default_pre.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/resolve_config.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/default_post.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/warn_on.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/qmake_use.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/file_copies.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/testcase_targets.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/exceptions.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/yacc.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/lex.prf CliniGest.pro $(DISTDIR)/
+	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/unix.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/linux.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/sanitize.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/gcc-base.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/gcc-base-unix.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/g++-base.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/g++-unix.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/qconfig.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_concurrent.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_concurrent_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_fb_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_input_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_kms_support_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_openglwidgets.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_openglwidgets_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_printsupport.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_printsupport_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xml.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xml_private.pri /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/qt_functions.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/qt_config.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake.conf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_post.prf .qmake.stash /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/exclusive_builds.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/toolchain.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/default_pre.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/resolve_config.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/default_post.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/warn_on.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/qmake_use.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/file_copies.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/testcase_targets.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/exceptions.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/yacc.prf /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/lex.prf CliniGest.pro $(DISTDIR)/
 
 sub-CliniGestLogic-distdir: FORCE
 	@test -d CliniGestLogic/ || mkdir -p CliniGestLogic/
-	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/CliniGestLogic
+	cd CliniGestLogic/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/CliniGestLogic.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/CliniGestLogic
 
 sub-CliniGestData-distdir: FORCE
 	@test -d CliniGestData/ || mkdir -p CliniGestData/
-	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/CliniGestData
+	cd CliniGestData/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestData/CliniGestData.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/CliniGestData
 
 sub-CliniGestGUI-distdir: FORCE
 	@test -d CliniGestGUI/ || mkdir -p CliniGestGUI/
-	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/CliniGestGUI
+	cd CliniGestGUI/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/CliniGestGUI.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/CliniGestGUI
 

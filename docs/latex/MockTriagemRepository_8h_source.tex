@@ -1,0 +1,22 @@
+\doxysection{Mock\+Triagem\+Repository.\+h}
+\hypertarget{MockTriagemRepository_8h_source}{}\label{MockTriagemRepository_8h_source}\index{tests/mocks/MockTriagemRepository.h@{tests/mocks/MockTriagemRepository.h}}
+\mbox{\hyperlink{MockTriagemRepository_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/interfaces/repositories/ITriagemRepository.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/models/triagem.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMockTriagemRepository}{MockTriagemRepository}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classITriagemRepository}{ITriagemRepository}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ Lista\ em\ memória\ para\ simular\ o\ banco\ de\ dados}}
+\DoxyCodeLine{00010\ \ \ \ \ QList<Triagem>\ \mbox{\hyperlink{classMockTriagemRepository_a42184eb2dc32eb685c3be7b214e30bed}{triagensSalvas}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMockTriagemRepository_a30c91597ff2e759c78451e93dcb56ca7}{salvar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTriagem}{Triagem}}\&\ t)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMockTriagemRepository_a42184eb2dc32eb685c3be7b214e30bed}{triagensSalvas}}.append(t);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Simula\ sucesso\ no\ salvamento}}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ \};}
+
+\end{DoxyCode}

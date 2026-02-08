@@ -1,0 +1,35 @@
+\doxysection{telatriagem.\+h}
+\hypertarget{telatriagem_8h_source}{}\label{telatriagem_8h_source}\index{CliniGestGUI/screens/telatriagem.h@{CliniGestGUI/screens/telatriagem.h}}
+\mbox{\hyperlink{telatriagem_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ TELATRIAGEM\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ TELATRIAGEM\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/facade/sistemafacade.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceUi}{Ui}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTelaTriagem}{TelaTriagem}};}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTelaTriagem}{TelaTriagem}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ recebe\ o\ Facade\ para\ acessar\ a\ lógica}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classTelaTriagem}{TelaTriagem}}(\mbox{\hyperlink{classSistemaFacade}{SistemaFacade}}*\ facade,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classTelaTriagem_a84c43a7d6d47964e0c28d097ddc7c0f9}{\string~TelaTriagem}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_btnSalvarTriagem\_clicked();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classUi_1_1TelaTriagem}{Ui::TelaTriagem}}\ *ui;}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classSistemaFacade}{SistemaFacade}}*\ m\_facade;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TELATRIAGEM\_H}}
+
+\end{DoxyCode}
