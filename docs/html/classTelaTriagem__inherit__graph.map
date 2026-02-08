@@ -1,0 +1,5 @@
+<map id="TelaTriagem" name="TelaTriagem">
+<area shape="rect" id="Node000001" title="Classe responsável por gerenciar a tela de entrada de dados da triagem." alt="" coords="5,119,133,204"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="34,5,105,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,85,72,119,67,119,67,85"/>
+</map>

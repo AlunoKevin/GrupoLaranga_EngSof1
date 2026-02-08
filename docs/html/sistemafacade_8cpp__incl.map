@@ -1,0 +1,38 @@
+<map id="CliniGestLogic/facade/sistemafacade.cpp" name="CliniGestLogic/facade/sistemafacade.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="373,5,536,45"/>
+<area shape="rect" id="Node000002" href="$sistemafacade_8h.html" title=" " alt="" coords="389,93,520,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="457,46,457,79,452,79,452,46"/>
+<area shape="rect" id="Node000013" href="$servicoagendamento_8h.html" title=" " alt="" coords="123,93,365,119"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="405,48,289,91,287,86,403,43"/>
+<area shape="rect" id="Node000014" href="$servicotriagem_8h.html" title=" " alt="" coords="544,93,747,119"/>
+<area shape="poly" id="edge20_Node000001_Node000014" title=" " alt="" coords="501,43,606,86,604,91,499,48"/>
+<area shape="rect" id="Node000003" href="$IServicoAgendamento_8h.html" title=" " alt="" coords="5,167,187,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,121,196,166,194,161,402,116"/>
+<area shape="rect" id="Node000005" href="$consulta_8h.html" title=" " alt="" coords="219,255,384,280"/>
+<area shape="poly" id="edge15_Node000002_Node000005" title=" " alt="" coords="453,120,436,162,422,186,405,209,375,233,344,251,341,246,372,228,401,205,418,183,431,159,448,118"/>
+<area shape="rect" id="Node000008" href="$IServicoTriagem_8h.html" title=" " alt="" coords="517,167,675,207"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="477,117,551,158,549,162,474,121"/>
+<area shape="rect" id="Node000009" href="$triagem_8h.html" title=" " alt="" coords="515,255,677,280"/>
+<area shape="poly" id="edge16_Node000002_Node000009" title=" " alt="" coords="461,118,478,159,491,183,507,205,533,228,561,246,558,250,530,232,503,208,486,186,473,161,456,120"/>
+<area shape="rect" id="Node000011" href="$IConsultaRepository_8h.html" title=" " alt="" coords="211,167,391,207"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="433,121,352,163,349,158,431,116"/>
+<area shape="rect" id="Node000012" href="$ITriagemRepository_8h.html" title=" " alt="" coords="699,167,879,207"/>
+<area shape="poly" id="edge13_Node000002_Node000012" title=" " alt="" coords="504,116,696,161,695,166,503,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="105,255,159,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="107,206,123,241,118,243,102,208"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="146,204,259,247,257,252,144,209"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="314,328,377,353"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="311,279,333,315,329,318,306,282"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="225,328,290,353"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="296,282,274,318,269,315,292,279"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="599,207,599,241,593,241,593,207"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="561,328,631,353"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="599,280,599,314,593,314,593,280"/>
+<area shape="poly" id="edge11_Node000011_Node000004" title=" " alt="" coords="262,209,171,251,168,246,260,204"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="304,207,304,241,299,241,299,207"/>
+<area shape="poly" id="edge14_Node000012_Node000009" title=" " alt="" coords="744,209,638,252,636,247,742,204"/>
+<area shape="poly" id="edge18_Node000013_Node000003" title=" " alt="" coords="223,121,145,163,143,158,221,116"/>
+<area shape="poly" id="edge19_Node000013_Node000011" title=" " alt="" coords="255,117,282,154,277,157,250,120"/>
+<area shape="poly" id="edge21_Node000014_Node000008" title=" " alt="" coords="640,120,617,156,613,154,636,117"/>
+<area shape="poly" id="edge22_Node000014_Node000012" title=" " alt="" coords="668,116,744,158,742,162,665,121"/>
+</map>

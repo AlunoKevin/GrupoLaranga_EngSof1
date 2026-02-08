@@ -1,0 +1,12 @@
+<map id="tests/mocks/MockTriagemRepository.h" name="tests/mocks/MockTriagemRepository.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="34,5,306,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,60,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,33,73,81,62,88,59,83,70,76,149,29"/>
+<area shape="rect" id="Node000003" href="$ITriagemRepository_8h.html" title=" " alt="" coords="84,79,256,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,31,173,65,167,65,167,31"/>
+<area shape="rect" id="Node000004" href="$triagem_8h.html" title=" " alt="" coords="151,181,312,207"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="208,28,242,47,258,61,271,77,278,102,274,127,264,151,252,171,247,169,259,149,269,126,272,102,266,80,255,64,239,52,205,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="191,132,217,168,213,171,187,135"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="196,255,267,280"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="234,207,234,241,229,241,229,207"/>
+</map>

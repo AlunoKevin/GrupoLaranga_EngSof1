@@ -1,0 +1,18 @@
+\doxysection{servicotriagem.\+h}
+\hypertarget{servicotriagem_8h_source}{}\label{servicotriagem_8h_source}\index{CliniGestLogic/services/servicotriagem.h@{CliniGestLogic/services/servicotriagem.h}}
+\mbox{\hyperlink{servicotriagem_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}../interfaces/services/IServicoTriagem.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../interfaces/repositories/ITriagemRepository.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classServicoTriagem}{ServicoTriagem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIServicoTriagem}{IServicoTriagem}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classServicoTriagem}{ServicoTriagem}}(\mbox{\hyperlink{classITriagemRepository}{ITriagemRepository}}*\ repo);}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoTriagem_a5970ea89a0883f1db6233ac676622b49}{registrarTriagem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTriagem}{Triagem}}\&\ triagem)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classITriagemRepository}{ITriagemRepository}}*\ m\_repo;}
+\DoxyCodeLine{00012\ \};}
+
+\end{DoxyCode}

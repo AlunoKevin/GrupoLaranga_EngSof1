@@ -9,7 +9,9 @@ INCLUDEPATH += \
     ../CliniGestLogic
 
 HEADERS += \
-    mocks/MockConsultaRepository.h
+    mocks/MockConsultaRepository.h \
+    mocks/MockTriagemRepository.h
 
 SOURCES += \
-    test_agendamento.cpp
+    test_agendamento.cpp \
+    test_triagem.cpp

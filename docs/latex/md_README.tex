@@ -1,0 +1,47 @@
+\chapter{🏥 Clini\+Gest -\/ Sistema de Gestão Clínica}
+\hypertarget{md_README}{}\label{md_README}\index{🏥 CliniGest -\/ Sistema de Gestão Clínica@{🏥 CliniGest -\/ Sistema de Gestão Clínica}}
+\label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
+ Este projeto é uma aplicação modular desenvolvida em {\bfseries{C++}} com o framework {\bfseries{Qt}}, seguindo padrões de arquitetura como {\bfseries{Facade}} e {\bfseries{Repository}} para organização de responsabilidades entre lógica, dados e interface.
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md2}{}\doxysection{\texorpdfstring{📂 Estrutura do Projeto}{📂 Estrutura do Projeto}}\label{md_README_autotoc_md2}
+O projeto está dividido em três grandes módulos\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Clini\+Gest\+Logic}}\+: Contém as regras de negócio, modelos (\doxylink{classConsulta}{Consulta}, \doxylink{classTriagem}{Triagem}) e as interfaces de serviços. Gera a biblioteca {\ttfamily lib\+Clini\+Gest\+Logic.\+so}.
+\item {\bfseries{Clini\+Gest\+Data}}\+: Responsável pela persistência em banco de dados SQL e implementação dos repositórios. Gera a biblioteca {\ttfamily lib\+Clini\+Gest\+Data.\+so}.
+\item {\bfseries{Clini\+Gest\+GUI}}\+: Interface gráfica desenvolvida em Qt Widgets. Contém o executável principal.
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md4}{}\doxysection{\texorpdfstring{🚀 Processo de Compilação e Execução}{🚀 Processo de Compilação e Execução}}\label{md_README_autotoc_md4}
+Todo o processo abaixo deve ser executado via terminal dentro da pasta {\ttfamily Clini\+Gest\+GUI}.\hypertarget{md_README_autotoc_md5}{}\doxysubsection{\texorpdfstring{1. Entrar na pasta do módulo principal}{1. Entrar na pasta do módulo principal}}\label{md_README_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ CliniGestGUI}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md6}{}\doxysubsection{\texorpdfstring{2. Limpar arquivos temporários}{2. Limpar arquivos temporários}}\label{md_README_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ clean}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md7}{}\doxysubsection{\texorpdfstring{3. Gerar o Makefile e Compilar}{3. Gerar o Makefile e Compilar}}\label{md_README_autotoc_md7}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{qmake}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md8}{}\doxysubsection{\texorpdfstring{4. Configurar Bibliotecas e Executar}{4. Configurar Bibliotecas e Executar}}\label{md_README_autotoc_md8}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export\ LD\_LIBRARY\_PATH=\$LD\_LIBRARY\_PATH:\$(pwd)/../CliniGestLogic:\$(pwd)/../CliniGestData}
+\DoxyCodeLine{}
+\DoxyCodeLine{./CliniGestGUI}
+
+\end{DoxyCode}
+ 

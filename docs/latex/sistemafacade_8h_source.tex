@@ -1,0 +1,33 @@
+\doxysection{sistemafacade.\+h}
+\hypertarget{sistemafacade_8h_source}{}\label{sistemafacade_8h_source}\index{CliniGestLogic/facade/sistemafacade.h@{CliniGestLogic/facade/sistemafacade.h}}
+\mbox{\hyperlink{sistemafacade_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SISTEMAFACADE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SISTEMAFACADE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../interfaces/services/IServicoAgendamento.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../interfaces/services/IServicoTriagem.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../interfaces/repositories/IConsultaRepository.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../interfaces/repositories/ITriagemRepository.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../models/consulta.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../models/triagem.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSistemaFacade}{SistemaFacade}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSistemaFacade}{SistemaFacade}}(\mbox{\hyperlink{classIConsultaRepository}{IConsultaRepository}}*\ consultaRepo,\ \mbox{\hyperlink{classITriagemRepository}{ITriagemRepository}}*\ triagemRepo);}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classSistemaFacade_ab342879183ec760408d6ab94d131a890}{\string~SistemaFacade}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSistemaFacade_a7e0e472d88179be93439714e76e4566d}{agendarConsulta}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classConsulta}{Consulta}}\&\ consulta);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSistemaFacade_aa9c43a2dc26779472851c0b671e325de}{registrarTriagem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTriagem}{Triagem}}\&\ triagem);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classIConsultaRepository}{IConsultaRepository}}*\ m\_consultaRepo;}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classITriagemRepository}{ITriagemRepository}}*\ m\_triagemRepo;}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classIServicoAgendamento}{IServicoAgendamento}}*\ m\_servicoAgendamento;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classIServicoTriagem}{IServicoTriagem}}*\ m\_servicoTriagem;}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SISTEMAFACADE\_H}}
+
+\end{DoxyCode}

@@ -15,4 +15,6 @@ HEADERS += \
 
 SOURCES += \
     facade/sistemafacade.cpp \
-    services/servicoagendamento.cpp
+    services/servicoagendamento.cpp \
+    services/servicotriagem.cpp
+

@@ -1,0 +1,15 @@
+<map id="CliniGestGUI/ui_mainwindow.h" name="CliniGestGUI/ui_mainwindow.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="440,5,663,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,132,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="473,33,146,81,145,76,472,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="156,79,333,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="503,33,308,78,307,73,501,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="357,79,545,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="537,33,480,73,477,68,534,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="570,79,733,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="569,29,625,68,622,73,566,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="757,79,924,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="598,28,781,73,780,78,597,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="948,79,1099,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="628,28,935,74,934,79,627,33"/>
+</map>

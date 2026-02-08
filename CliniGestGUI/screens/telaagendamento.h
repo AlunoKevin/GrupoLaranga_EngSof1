@@ -1,3 +1,9 @@
+/**
+ * @file telaagendamento.h
+ * @author Kevin (Grupo Laranja)
+ * @brief Interface para realização de agendamento clínico.
+ */
+
 #ifndef TELAAGENDAMENTO_H
 #define TELAAGENDAMENTO_H
 
@@ -8,6 +14,12 @@ namespace Ui {
 class TelaAgendamento;
 }
 
+/**
+ * @class TelaAgendamento
+ * @brief Classe responsável por gerenciar a tela de entrada de dados do agendamento.
+ * Esta classe coleta informações como data, hora e paciente,
+ * validando-os através do SistemaFacade.
+ */
 class TelaAgendamento : public QWidget
 {
     Q_OBJECT

@@ -1,0 +1,29 @@
+\doxysection{consulta.\+h}
+\hypertarget{consulta_8h_source}{}\label{consulta_8h_source}\index{CliniGestLogic/models/consulta.h@{CliniGestLogic/models/consulta.h}}
+\mbox{\hyperlink{consulta_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <QDate>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QTime>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classConsulta}{Consulta}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00009\ \ \ \ \ QDate\ data;}
+\DoxyCodeLine{00010\ \ \ \ \ QTime\ horario;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classConsulta_a69143a5a1716aae6951ad0265eb0be51}{Consulta}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classConsulta_a0127737b7ef75e335b46574be1600c9b}{Consulta}}(QDate\ d,\ QTime\ h)}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ :\ data(d),\ horario(h)\ \{\}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ QDate\ \mbox{\hyperlink{classConsulta_a690c37cd4a5d0130baac76e21b289321}{getData}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ data;\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ QTime\ \mbox{\hyperlink{classConsulta_ae523e65e173c08ea7510427a510d69a6}{getHorario}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ horario;\ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConsulta_ab1830b9dfa8518113db79fb4f10b4373}{setData}}(\textcolor{keyword}{const}\ QDate\&\ d)\ \{\ data\ =\ d;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConsulta_a7f8ddcf3b782346aaab984aa58a1a198}{setHorario}}(\textcolor{keyword}{const}\ QTime\&\ h)\ \{\ horario\ =\ h;\ \}}
+\DoxyCodeLine{00023\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,76 @@
+\doxysection{Sql\+Triagem\+Repository Class Reference}
+\hypertarget{classSqlTriagemRepository}{}\label{classSqlTriagemRepository}\index{SqlTriagemRepository@{SqlTriagemRepository}}
+
+
+Implementação do repositório de triagem utilizando SQL (SQLite).  
+
+
+
+
+{\ttfamily \#include $<$Sql\+Triagem\+Repository.\+h$>$}
+
+
+
+Inheritance diagram for Sql\+Triagem\+Repository\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classSqlTriagemRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sql\+Triagem\+Repository\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classSqlTriagemRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSqlTriagemRepository_a7e2b8bfc85946a16f957916a2044aa27}{Sql\+Triagem\+Repository}} (QSql\+Database db)
+\item 
+bool \mbox{\hyperlink{classSqlTriagemRepository_a72ddd7be79b3118d6eb6e838131b119a}{salvar}} (const \mbox{\hyperlink{classTriagem}{Triagem}} \&triagem) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classITriagemRepository}{ITriagem\+Repository}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classITriagemRepository_a3c285fe81c53f07e12ceefc2927af902}{\texorpdfstring{$\sim$}{\string~}\+ITriagem\+Repository}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação do repositório de triagem utilizando SQL (SQLite). 
+
+
+\begin{DoxyItemize}
+\item Esta classe faz parte da camada Data Access e comunica-\/se diretamente com o banco. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSqlTriagemRepository_a7e2b8bfc85946a16f957916a2044aa27}\label{classSqlTriagemRepository_a7e2b8bfc85946a16f957916a2044aa27} 
+\index{SqlTriagemRepository@{SqlTriagemRepository}!SqlTriagemRepository@{SqlTriagemRepository}}
+\index{SqlTriagemRepository@{SqlTriagemRepository}!SqlTriagemRepository@{SqlTriagemRepository}}
+\doxysubsubsection{\texorpdfstring{SqlTriagemRepository()}{SqlTriagemRepository()}}
+{\footnotesize\ttfamily Sql\+Triagem\+Repository\+::\+Sql\+Triagem\+Repository (\begin{DoxyParamCaption}\item[{QSql\+Database}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSqlTriagemRepository_a72ddd7be79b3118d6eb6e838131b119a}\label{classSqlTriagemRepository_a72ddd7be79b3118d6eb6e838131b119a} 
+\index{SqlTriagemRepository@{SqlTriagemRepository}!salvar@{salvar}}
+\index{salvar@{salvar}!SqlTriagemRepository@{SqlTriagemRepository}}
+\doxysubsubsection{\texorpdfstring{salvar()}{salvar()}}
+{\footnotesize\ttfamily bool Sql\+Triagem\+Repository\+::salvar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTriagem}{Triagem}} \&}]{triagem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classITriagemRepository_a227be40029beefaf3a21fa17ab4d6d6b}{ITriagem\+Repository}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Clini\+Gest\+Data/repositories/\mbox{\hyperlink{SqlTriagemRepository_8h}{Sql\+Triagem\+Repository.\+h}}\end{DoxyCompactItemize}
