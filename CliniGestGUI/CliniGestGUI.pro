@@ -1,31 +1,31 @@
 QT += widgets sql
-
 CONFIG += c++17
 
 TEMPLATE = app
 TARGET = CliniGestGUI
 
+# Garante que ele busque os headers nas outras pastas
 INCLUDEPATH += \
     ../CliniGestLogic \
     ../CliniGestData
 
-LIBS += \
-    $$PWD/../CliniGestLogic/libCliniGestLogic.so \
-    $$PWD/../CliniGestData/libCliniGestData.so
+# Link das bibliotecas (formato Linux padrão)
+LIBS += -L../CliniGestLogic -lCliniGestLogic
+LIBS += -L../CliniGestData -lCliniGestData
+
+# Certifique-se de que o main.cpp está aqui!
+SOURCES += \
+    main.cpp \
+    mainwindow.cpp \
+    screens/telaagendamento.cpp \
+    screens/telatriagem.cpp
 
 HEADERS += \
     mainwindow.h \
     screens/telaagendamento.h \
     screens/telatriagem.h
 
-SOURCES += \
-    main.cpp \
-    mainwindow.cpp \
-    screens/telaagendamento.cpp \
-    screens/telatriagem.cpp \
-    ../CliniGestData/repositories/SqlTriagemRepository.cpp
-
 FORMS += \
     mainwindow.ui \
     screens/telaagendamento.ui \
-    screens/telatriagem.ui 
+    screens/telatriagem.ui

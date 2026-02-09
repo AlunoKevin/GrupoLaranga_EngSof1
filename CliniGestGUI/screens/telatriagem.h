@@ -30,7 +30,6 @@ public:
     ~TelaTriagem();
 
 private slots:
-    void on_btnBuscar_clicked();
     void on_btnSalvarTriagem_clicked();
 
 private:

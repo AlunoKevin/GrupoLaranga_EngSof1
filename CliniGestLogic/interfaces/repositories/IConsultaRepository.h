@@ -9,4 +9,6 @@ public:
 
     virtual bool salvar(const Consulta& consulta) = 0;
     virtual QList<Consulta> listarPorData(const QDate& data) = 0;
+
+    virtual bool atualizarStatus(int id, std::string status) = 0;
 };

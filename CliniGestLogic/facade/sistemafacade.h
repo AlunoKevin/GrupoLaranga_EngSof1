@@ -16,6 +16,7 @@ public:
 
     bool agendarConsulta(const Consulta& consulta);
     bool registrarTriagem(const Triagem& triagem);
+    bool cancelarConsulta(int id);
 
 private:
     IConsultaRepository* m_consultaRepo;

@@ -1,6 +1,6 @@
 #include <QtTest>
 #include "../CliniGestLogic/services/servicotriagem.h"
-#include "mocks/MockTriagemRepository.h"
+#include "MockTriagemRepository.h"
 
 class TestTriagem : public QObject
 {
