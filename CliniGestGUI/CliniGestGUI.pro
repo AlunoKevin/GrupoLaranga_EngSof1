@@ -22,9 +22,10 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     screens/telaagendamento.cpp \
-    screens/telatriagem.cpp 
+    screens/telatriagem.cpp \
+    ../CliniGestData/repositories/SqlTriagemRepository.cpp
 
 FORMS += \
     mainwindow.ui \
     screens/telaagendamento.ui \
-    screens/telatriagem.ui
+    screens/telatriagem.ui 
