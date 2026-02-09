@@ -24,3 +24,7 @@ bool SistemaFacade::registrarTriagem(const Triagem& triagem)
 {
     return m_servicoTriagem->registrarTriagem(triagem);
 }
+
+bool SistemaFacade::cancelarConsulta(int id) {
+    return m_consultaRepo->atualizarStatus(id, "CANCELADO");
+}
