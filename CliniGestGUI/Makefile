@@ -55,13 +55,15 @@ OBJECTS_DIR   = ./
 SOURCES       = main.cpp \
 		mainwindow.cpp \
 		screens/telaagendamento.cpp \
-		screens/telatriagem.cpp moc_mainwindow.cpp \
+		screens/telatriagem.cpp \
+		../CliniGestData/repositories/SqlTriagemRepository.cpp moc_mainwindow.cpp \
 		moc_telaagendamento.cpp \
 		moc_telatriagem.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		telaagendamento.o \
 		telatriagem.o \
+		SqlTriagemRepository.o \
 		moc_mainwindow.o \
 		moc_telaagendamento.o \
 		moc_telatriagem.o
@@ -135,7 +137,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		screens/telatriagem.h main.cpp \
 		mainwindow.cpp \
 		screens/telaagendamento.cpp \
-		screens/telatriagem.cpp
+		screens/telatriagem.cpp \
+		../CliniGestData/repositories/SqlTriagemRepository.cpp
 QMAKE_TARGET  = CliniGestGUI
 DESTDIR       = 
 TARGET        = CliniGestGUI
@@ -304,7 +307,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.h screens/telaagendamento.h screens/telatriagem.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp mainwindow.cpp screens/telaagendamento.cpp screens/telatriagem.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp mainwindow.cpp screens/telaagendamento.cpp screens/telatriagem.cpp ../CliniGestData/repositories/SqlTriagemRepository.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui screens/telaagendamento.ui screens/telatriagem.ui $(DISTDIR)/
 
 
@@ -444,6 +447,11 @@ telatriagem.o: screens/telatriagem.cpp screens/telatriagem.h \
 		../CliniGestLogic/interfaces/repositories/ITriagemRepository.h \
 		ui_telatriagem.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telatriagem.o screens/telatriagem.cpp
+
+SqlTriagemRepository.o: ../CliniGestData/repositories/SqlTriagemRepository.cpp ../CliniGestData/repositories/SqlTriagemRepository.h \
+		../CliniGestLogic/interfaces/repositories/ITriagemRepository.h \
+		../CliniGestLogic/models/triagem.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o SqlTriagemRepository.o ../CliniGestData/repositories/SqlTriagemRepository.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
