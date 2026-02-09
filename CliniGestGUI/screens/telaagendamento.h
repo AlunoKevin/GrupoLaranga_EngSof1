@@ -34,6 +34,7 @@ private:
 
 private slots:
     void on_btnAgendar_clicked();
+    void on_btnCancelar_clicked();
 };
 
 #endif // TELAAGENDAMENTO_H

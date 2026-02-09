@@ -5,6 +5,7 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QVariant>
+#include <QDebug> 
 #include "../../CliniGestLogic/interfaces/repositories/ITriagemRepository.h"
 #include "../../CliniGestLogic/models/triagem.h"
 
@@ -27,6 +28,7 @@ public:
                    "pressao TEXT, "
                    "temperatura REAL, "
                    "peso REAL, "
+                   "status TEXT, " 
                    "urgencia INTEGER)");
     }
 
@@ -42,6 +44,19 @@ public:
         query.bindValue(":urgencia", 0); // Placeholder para o nível de risco
 
         return query.exec();
+    }
+
+    bool atualizarStatus(int id, QString status) override {
+        QSqlQuery query(m_db);
+        query.prepare("UPDATE triagem SET status = :status WHERE id = :id");
+        query.bindValue(":status", status);
+        query.bindValue(":id", id);
+
+        if (!query.exec()) {
+            qDebug() << "Erro ao atualizar status da triagem:" << query.lastError().text();
+            return false;
+        }
+        return true;
     }
 };
 

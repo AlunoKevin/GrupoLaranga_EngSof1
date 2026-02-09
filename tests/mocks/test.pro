@@ -1,17 +1,12 @@
-QT += testlib
-QT -= gui
-CONFIG += c++17 console
+QT += core gui testlib
+CONFIG += c++17
 
-TEMPLATE = app
-TARGET = CliniGestTests
+SOURCES += test_agendamento.cpp \
+           ../../CliniGestLogic/services/servicoagendamento.cpp
 
-INCLUDEPATH += \
-    ../CliniGestLogic
+HEADERS += MockConsultaRepository.h \
+           MockTriagemRepository.h
 
-HEADERS += \
-    mocks/MockConsultaRepository.h \
-    mocks/MockTriagemRepository.h
-
-SOURCES += \
-    test_agendamento.cpp \
-    test_triagem.cpp
+INCLUDEPATH += . \
+               ../../CliniGestLogic \
+               ../../CliniGestData

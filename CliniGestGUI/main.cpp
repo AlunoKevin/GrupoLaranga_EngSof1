@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
     SqlTriagemRepository triagemRepo(db);
     SqlAtendimentoRepository atendimentoRepo(db);
 
+    // Instancia a Fachada Única com os 3 repositórios
     SistemaFacade facade(&consultaRepo, &triagemRepo, &atendimentoRepo);
-
 
     TelaAgendamento w(&facade);
     w.show();

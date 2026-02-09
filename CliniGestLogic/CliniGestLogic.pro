@@ -9,15 +9,15 @@ INCLUDEPATH += $$PWD
 HEADERS += \
     facade/sistemafacade.h \
     interfaces/services/IServicoAgendamento.h \
+    interfaces/services/IServicoAtendimento.h \
     interfaces/repositories/IConsultaRepository.h \
     interfaces/repositories/ITriagemRepository.h \
+    interfaces/repositories/IAtendimentoRepository.h \
     models/consulta.h \
     models/triagem.h \
-    services/servicoagendamento.h \
-    services/servicotriagem.h \
     models/atendimento.h \
-    interfaces/repositories/IAtendimentoRepository.h \
-    interfaces/services/IServicoAtendimento.h
+    services/servicoagendamento.h \
+    services/servicotriagem.h
 
 SOURCES += \
     facade/sistemafacade.cpp \
