@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TelaAtendimento</class>
+ <widget class="QWidget" name="TelaAtendimento">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Registro de Atendimento Médico - CliniGest</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelTitulo">
+     <property name="font">
+      <font>
+       <pointSize>16</pointSize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Atendimento Médico</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupDados">
+     <property name="title">
+      <string>Prontuário Eletrônico</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblDiag">
+        <property name="text">
+         <string>Diagnóstico (CID):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="txtDiagnostico">
+        <property name="placeholderText">
+         <string>Informe o código CID ou descrição...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblPresc">
+        <property name="text">
+         <string>Prescrição Médica:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPlainTextEdit" name="txtPrescricao"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lblExames">
+        <property name="text">
+         <string>Solicitação de Exames:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPlainTextEdit" name="txtExames"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="lblObs">
+        <property name="text">
+         <string>Observações:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPlainTextEdit" name="txtObservacoes"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSalvar">
+       <property name="text">
+        <string>Salvar (Ctrl+S)</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+S</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnFinalizar">
+       <property name="text">
+        <string>Finalizar Atendimento (Enter)</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #28a745; color: white; font-weight: bold;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSair">
+       <property name="text">
+        <string>Voltar (Esc)</string>
+       </property>
+       <property name="shortcut">
+        <string>Esc</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
