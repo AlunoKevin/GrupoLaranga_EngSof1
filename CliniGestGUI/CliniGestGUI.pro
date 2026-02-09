@@ -16,15 +16,18 @@ LIBS += \
 HEADERS += \
     mainwindow.h \
     screens/telaagendamento.h \
-    screens/telatriagem.h
+    screens/telatriagem.h \
+    screens/telaatendimento.h  
 
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
     screens/telaagendamento.cpp \
-    screens/telatriagem.cpp 
+    screens/telatriagem.cpp \
+    screens/telaatendimento.cpp 
 
 FORMS += \
     mainwindow.ui \
     screens/telaagendamento.ui \
-    screens/telatriagem.ui
+    screens/telatriagem.ui \
+    screens/telaatendimento.ui  

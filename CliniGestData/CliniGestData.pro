@@ -10,7 +10,8 @@ INCLUDEPATH += \
 
 HEADERS += \
     databasemanager/databasemanager.h \
-    repositories/SqlConsultaRepository.h
+    repositories/SqlConsultaRepository.h \
+    repositories/SqlAtendimentoRepository.h
 
 SOURCES += \
     databasemanager/databasemanager.cpp \

@@ -2,8 +2,12 @@
 #include "../services/servicoagendamento.h"
 #include "../services/servicotriagem.h"
 
-SistemaFacade::SistemaFacade(IConsultaRepository* consultaRepo, ITriagemRepository* triagemRepo)
-    : m_consultaRepo(consultaRepo), m_triagemRepo(triagemRepo)
+SistemaFacade::SistemaFacade(IConsultaRepository* consultaRepo, 
+                               ITriagemRepository* triagemRepo,
+                               IAtendimentoRepository* atendimentoRepo)
+    : m_consultaRepo(consultaRepo), 
+      m_triagemRepo(triagemRepo),
+      m_atendimentoRepo(atendimentoRepo)
 {
     m_servicoAgendamento = new ServicoAgendamento(m_consultaRepo);
     m_servicoTriagem = new ServicoTriagem(m_triagemRepo);
@@ -23,4 +27,15 @@ bool SistemaFacade::agendarConsulta(const Consulta& consulta)
 bool SistemaFacade::registrarTriagem(const Triagem& triagem)
 {
     return m_servicoTriagem->registrarTriagem(triagem);
+}
+
+bool SistemaFacade::autenticar(const QString& usuario, const QString& senha) {
+    return (usuario == "admin" && senha == "1234");
+}
+
+bool SistemaFacade::registrarAtendimento(const Atendimento& atendimento) {
+    if (m_atendimentoRepo) {
+        return m_atendimentoRepo->salvar(atendimento);
+    }
+    return false;
 }

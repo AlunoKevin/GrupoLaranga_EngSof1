@@ -4,35 +4,34 @@
 #include "../CliniGestData/databasemanager/databasemanager.h"
 #include "../CliniGestData/repositories/SqlConsultaRepository.h"
 #include "../CliniGestData/repositories/SqlTriagemRepository.h"
+#include "../CliniGestData/repositories/SqlAtendimentoRepository.h"
 #include "../CliniGestLogic/facade/sistemafacade.h"
+
 #include "screens/telaagendamento.h"
 #include "screens/telatriagem.h"
+#include "screens/telaatendimento.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    // Get database from singleton
     QSqlDatabase db = DatabaseManager::instance().getDatabase();
 
-    // Create repository
     SqlConsultaRepository consultaRepo(db);
     SqlTriagemRepository triagemRepo(db);
+    SqlAtendimentoRepository atendimentoRepo(db);
 
-    // Create facade
-    SistemaFacade facade(&consultaRepo, &triagemRepo);
+    SistemaFacade facade(&consultaRepo, &triagemRepo, &atendimentoRepo);
 
-    // Create main window
-    //MainWindow w(&facade);
-    //w.show();
-    
-    // Create agendamento screen directly
+
     TelaAgendamento w(&facade);
     w.show();
 
-    // Create triagem screen directly
     TelaTriagem t(&facade);
     t.show();
+
+    TelaAtendimento at(&facade);
+    at.show();
 
     return a.exec();
 }
