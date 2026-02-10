@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = CliniGestData1.0.0
-DISTDIR = /home/hugo/Downloads/Projeto\ ENG1/GrupoLaranga_EngSof1/CliniGestData/.tmp/CliniGestData1.0.0
+DISTDIR = /home/juliana/GrupoLaranga_EngSof1/CliniGestData/.tmp/CliniGestData1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -shared -Wl,-soname,libCliniGestData.so.1
 LIBS          = $(SUBLIBS) /usr/lib/x86_64-linux-gnu/libQt5Gui.so /usr/lib/x86_64-linux-gnu/libQt5Sql.so /usr/lib/x86_64-linux-gnu/libQt5Core.so -lGL -lpthread   
@@ -53,9 +53,11 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = databasemanager/databasemanager.cpp \
-		repositories/SqlConsultaRepository.cpp 
+		repositories/SqlConsultaRepository.cpp \
+		repositories/SqlTriagemRepository.cpp 
 OBJECTS       = databasemanager.o \
-		SqlConsultaRepository.o
+		SqlConsultaRepository.o \
+		SqlTriagemRepository.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -136,7 +138,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		repositories/SqlConsultaRepository.h \
 		repositories/SqlTriagemRepository.h \
 		repositories/SqlAtendimentoRepository.h databasemanager/databasemanager.cpp \
-		repositories/SqlConsultaRepository.cpp
+		repositories/SqlConsultaRepository.cpp \
+		repositories/SqlTriagemRepository.cpp
 QMAKE_TARGET  = CliniGestData
 DESTDIR       = 
 TARGET        = libCliniGestData.so.1.0.0
@@ -336,7 +339,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents databasemanager/databasemanager.h repositories/SqlConsultaRepository.h repositories/SqlTriagemRepository.h repositories/SqlAtendimentoRepository.h $(DISTDIR)/
-	$(COPY_FILE) --parents databasemanager/databasemanager.cpp repositories/SqlConsultaRepository.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents databasemanager/databasemanager.cpp repositories/SqlConsultaRepository.cpp repositories/SqlTriagemRepository.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -391,6 +394,11 @@ SqlConsultaRepository.o: repositories/SqlConsultaRepository.cpp repositories/Sql
 		../CliniGestLogic/interfaces/repositories/IConsultaRepository.h \
 		../CliniGestLogic/models/consulta.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o SqlConsultaRepository.o repositories/SqlConsultaRepository.cpp
+
+SqlTriagemRepository.o: repositories/SqlTriagemRepository.cpp repositories/SqlTriagemRepository.h \
+		../CliniGestLogic/interfaces/repositories/ITriagemRepository.h \
+		../CliniGestLogic/models/triagem.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o SqlTriagemRepository.o repositories/SqlTriagemRepository.cpp
 
 ####### Install
 

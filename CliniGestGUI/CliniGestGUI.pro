@@ -18,7 +18,8 @@ HEADERS += \
     mainwindow.h \
     screens/telaagendamento.h \
     screens/telatriagem.h \
-    screens/telaatendimento.h
+    screens/telaatendimento.h \
+    ../CliniGestData/repositories/SqlTriagemRepository.h
 
 # Lista unificada de Sources (Incluindo Atendimento)
 SOURCES += \
@@ -26,7 +27,8 @@ SOURCES += \
     mainwindow.cpp \
     screens/telaagendamento.cpp \
     screens/telatriagem.cpp \
-    screens/telaatendimento.cpp
+    screens/telaatendimento.cpp \
+    ../CliniGestData/repositories/SqlTriagemRepository.cpp
 
 # Lista unificada de Forms (Interfaces Gráficas)
 FORMS += \

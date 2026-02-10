@@ -2,6 +2,7 @@
 #define SQLATENDIMENTOREPOSITORY_H
 
 #include "../../CliniGestLogic/interfaces/repositories/IAtendimentoRepository.h"
+#include "../../CliniGestLogic/models/atendimento.h"
 #include <QSqlDatabase>
 #include <QSqlQuery>
 
