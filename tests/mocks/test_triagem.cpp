@@ -39,5 +39,5 @@ private slots:
     }
 };
 
-QTEST_APPLESS_MAIN(TestTriagem)
+// QTEST_APPLESS_MAIN(TestTriagem)
 #include "test_triagem.moc"

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #ifndef SQLTRIAGEMREPOSITORY_H
 #define SQLTRIAGEMREPOSITORY_H
 
@@ -60,4 +61,35 @@ public:
     }
 };
 
+=======
+#ifndef SQLTRIAGEMREPOSITORY_H
+#define SQLTRIAGEMREPOSITORY_H
+
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
+#include <QVariant>
+#include "../../CliniGestLogic/interfaces/repositories/ITriagemRepository.h"
+#include "../../CliniGestLogic/models/triagem.h"
+
+/**
+ * @class SqlTriagemRepository
+ * @brief Implementação do repositório de triagem utilizando SQL (SQLite).
+ * * Esta classe faz parte da camada Data Access e comunica-se diretamente com o banco.
+ */
+class SqlTriagemRepository : public ITriagemRepository
+{
+private:
+    QSqlDatabase m_db;
+
+public:
+    explicit SqlTriagemRepository(QSqlDatabase db);
+    virtual ~SqlTriagemRepository() {} 
+
+    bool salvar(const Triagem& triagem) override;
+
+    Triagem buscarPorPaciente(const QString& cpf);
+};
+
+>>>>>>> Stashed changes
 #endif // SQLTRIAGEMREPOSITORY_H
