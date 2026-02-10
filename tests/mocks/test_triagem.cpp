@@ -11,7 +11,7 @@ private slots:
         // Um mock de repositório e dados de triagem válidos
         MockTriagemRepository* mockRepo = new MockTriagemRepository();
         ServicoTriagem servico(mockRepo);
-        Triagem t("12/8", 36.5, 70.0, 1); // Pressão, Temp, Peso, Urgência
+        Triagem t("Paciente Teste", "12/8", 36.5, 70.0, 1);
 
         // Chamamos o serviço para registrar
         bool resultado = servico.registrarTriagem(t);
@@ -27,8 +27,8 @@ private slots:
         // Uma temperatura inválida
         MockTriagemRepository* mockRepo = new MockTriagemRepository();
         ServicoTriagem servico(mockRepo);
-        Triagem t("12/8", 55.0, 70.0, 4);
-
+        Triagem t("Paciente Invalido", "12/8", 55.0, 70.0, 4);
+        
         // Tentamos registrar
         bool resultado = servico.registrarTriagem(t);
 

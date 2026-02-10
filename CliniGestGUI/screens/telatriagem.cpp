@@ -1,5 +1,5 @@
 #include "telatriagem.h"
-#include "ui_telatriagem.h" // <-- ESTA LINHA É A CHAVE PARA O ERRO SUMIR
+#include "ui_telatriagem.h" 
 #include <QMessageBox>
 #include "../../CliniGestLogic/models/triagem.h"
 
@@ -18,14 +18,15 @@ TelaTriagem::~TelaTriagem()
 
 void TelaTriagem::on_btnSalvarTriagem_clicked()
 {
-    // Coleta dados da UI
+    // 1. Pegue o nome do campo que você tem na UI (ex: txtNomePaciente)
+    QString nome = ui->txtNomePaciente->text(); 
     QString pressao = ui->txtPressao->text();
     double temp = ui->txtTemperatura->value();
     double peso = ui->txtPeso->value();
     int urgencia = ui->cbUrgencia->currentIndex();
 
-    // Cria o objeto para passar para a lógica (resolvendo o erro de argumentos)
-    Triagem dados(pressao, temp, peso, urgencia);
+    // 2. Agora passe o 'nome' como primeiro argumento
+    Triagem dados(nome, pressao, temp, peso, urgencia);
 
     if (m_facade->registrarTriagem(dados)) {
         QMessageBox::information(this, "Sucesso", "Triagem registrada!");

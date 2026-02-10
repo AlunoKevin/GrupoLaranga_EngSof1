@@ -37,10 +37,10 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = CliniGestGUI1.0.0
-DISTDIR = /home/hugo/Downloads/Projeto\ ENG1/GrupoLaranga_EngSof1/CliniGestGUI/.tmp/CliniGestGUI1.0.0
+DISTDIR = /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/.tmp/CliniGestGUI1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1
-LIBS          = $(SUBLIBS) /home/hugo/Downloads/Projeto\ ENG1/GrupoLaranga_EngSof1/CliniGestGUI/../CliniGestLogic/libCliniGestLogic.so /home/hugo/Downloads/Projeto\ ENG1/GrupoLaranga_EngSof1/CliniGestGUI/../CliniGestData/libCliniGestData.so /usr/lib/x86_64-linux-gnu/libQt5Widgets.so /usr/lib/x86_64-linux-gnu/libQt5Gui.so /usr/lib/x86_64-linux-gnu/libQt5Sql.so /usr/lib/x86_64-linux-gnu/libQt5Core.so -lGL -lpthread   
+LIBS          = $(SUBLIBS) /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/../CliniGestLogic/libCliniGestLogic.so /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/../CliniGestData/libCliniGestData.so /usr/lib/x86_64-linux-gnu/libQt5Widgets.so /usr/lib/x86_64-linux-gnu/libQt5Gui.so /usr/lib/x86_64-linux-gnu/libQt5Sql.so /usr/lib/x86_64-linux-gnu/libQt5Core.so -lGL -lpthread   
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -56,7 +56,8 @@ SOURCES       = main.cpp \
 		mainwindow.cpp \
 		screens/telaagendamento.cpp \
 		screens/telatriagem.cpp \
-		screens/telaatendimento.cpp moc_mainwindow.cpp \
+		screens/telaatendimento.cpp \
+		../CliniGestData/repositories/SqlTriagemRepository.cpp moc_mainwindow.cpp \
 		moc_telaagendamento.cpp \
 		moc_telatriagem.cpp \
 		moc_telaatendimento.cpp
@@ -65,6 +66,7 @@ OBJECTS       = main.o \
 		telaagendamento.o \
 		telatriagem.o \
 		telaatendimento.o \
+		SqlTriagemRepository.o \
 		moc_mainwindow.o \
 		moc_telaagendamento.o \
 		moc_telatriagem.o \
@@ -149,11 +151,13 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		CliniGestGUI.pro mainwindow.h \
 		screens/telaagendamento.h \
 		screens/telatriagem.h \
-		screens/telaatendimento.h main.cpp \
+		screens/telaatendimento.h \
+		../CliniGestData/repositories/SqlTriagemRepository.h main.cpp \
 		mainwindow.cpp \
 		screens/telaagendamento.cpp \
 		screens/telatriagem.cpp \
-		screens/telaatendimento.cpp
+		screens/telaatendimento.cpp \
+		../CliniGestData/repositories/SqlTriagemRepository.cpp
 QMAKE_TARGET  = CliniGestGUI
 DESTDIR       = 
 TARGET        = CliniGestGUI
@@ -337,8 +341,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents mainwindow.h screens/telaagendamento.h screens/telatriagem.h screens/telaatendimento.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp mainwindow.cpp screens/telaagendamento.cpp screens/telatriagem.cpp screens/telaatendimento.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents mainwindow.h screens/telaagendamento.h screens/telatriagem.h screens/telaatendimento.h ../CliniGestData/repositories/SqlTriagemRepository.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp mainwindow.cpp screens/telaagendamento.cpp screens/telatriagem.cpp screens/telaatendimento.cpp ../CliniGestData/repositories/SqlTriagemRepository.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui screens/telaagendamento.ui screens/telatriagem.ui screens/telaatendimento.ui $(DISTDIR)/
 
 
@@ -376,7 +380,7 @@ compiler_moc_header_clean:
 moc_mainwindow.cpp: mainwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include '/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/juliana/GrupoLaranga_EngSof1/CliniGestGUI -I/home/juliana/GrupoLaranga_EngSof1/CliniGestLogic -I/home/juliana/GrupoLaranga_EngSof1/CliniGestData -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 moc_telaagendamento.cpp: screens/telaagendamento.h \
 		../CliniGestLogic/facade/sistemafacade.h \
@@ -388,7 +392,7 @@ moc_telaagendamento.cpp: screens/telaagendamento.h \
 		../CliniGestLogic/models/atendimento.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include '/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaagendamento.h -o moc_telaagendamento.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/juliana/GrupoLaranga_EngSof1/CliniGestGUI -I/home/juliana/GrupoLaranga_EngSof1/CliniGestLogic -I/home/juliana/GrupoLaranga_EngSof1/CliniGestData -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaagendamento.h -o moc_telaagendamento.cpp
 
 moc_telatriagem.cpp: screens/telatriagem.h \
 		../CliniGestLogic/facade/sistemafacade.h \
@@ -400,7 +404,7 @@ moc_telatriagem.cpp: screens/telatriagem.h \
 		../CliniGestLogic/models/atendimento.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include '/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telatriagem.h -o moc_telatriagem.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/juliana/GrupoLaranga_EngSof1/CliniGestGUI -I/home/juliana/GrupoLaranga_EngSof1/CliniGestLogic -I/home/juliana/GrupoLaranga_EngSof1/CliniGestData -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telatriagem.h -o moc_telatriagem.cpp
 
 moc_telaatendimento.cpp: screens/telaatendimento.h \
 		../CliniGestLogic/facade/sistemafacade.h \
@@ -412,7 +416,7 @@ moc_telaatendimento.cpp: screens/telaatendimento.h \
 		../CliniGestLogic/models/atendimento.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include '/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/hugo/Downloads/Projeto ENG1/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaatendimento.h -o moc_telaatendimento.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/juliana/GrupoLaranga_EngSof1/CliniGestGUI -I/home/juliana/GrupoLaranga_EngSof1/CliniGestLogic -I/home/juliana/GrupoLaranga_EngSof1/CliniGestData -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaatendimento.h -o moc_telaatendimento.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -507,6 +511,11 @@ telaatendimento.o: screens/telaatendimento.cpp screens/telaatendimento.h \
 		../CliniGestLogic/models/atendimento.h \
 		ui_telaatendimento.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telaatendimento.o screens/telaatendimento.cpp
+
+SqlTriagemRepository.o: ../CliniGestData/repositories/SqlTriagemRepository.cpp ../CliniGestData/repositories/SqlTriagemRepository.h \
+		../CliniGestLogic/interfaces/repositories/ITriagemRepository.h \
+		../CliniGestLogic/models/triagem.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o SqlTriagemRepository.o ../CliniGestData/repositories/SqlTriagemRepository.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

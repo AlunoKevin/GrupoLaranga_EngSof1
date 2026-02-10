@@ -3,51 +3,45 @@
 SqlTriagemRepository::SqlTriagemRepository(QSqlDatabase db) : m_db(db) 
 {
     QSqlQuery query(m_db);
+    // Criando a tabela com a coluna status e paciente_nome para manter compatibilidade
     query.exec("CREATE TABLE IF NOT EXISTS triagem ("
                "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                "paciente_nome TEXT, "
                "pressao TEXT, "
                "temperatura REAL, "
                "peso REAL, "
+               "status TEXT, " 
                "urgencia INTEGER)");
 }
 
-// A implementação do salvar já estava correta, mas aqui está novamente para referência
 bool SqlTriagemRepository::salvar(const Triagem& triagem) {
     QSqlQuery query(m_db);
-    query.prepare("INSERT INTO triagem (paciente_nome, pressao, temperatura, peso, urgencia) "
-                  "VALUES (:nome, :pressao, :temp, :peso, :urgencia)");
+    query.prepare("INSERT INTO triagem (paciente_nome, pressao, temperatura, peso, urgencia, status) "
+                  "VALUES (:nome, :pressao, :temp, :peso, :urgencia, :status)");
 
     query.bindValue(":nome", triagem.getPacienteNome()); 
     query.bindValue(":pressao", triagem.getPressao());
     query.bindValue(":temp", triagem.getTemperatura());
     query.bindValue(":peso", triagem.getPeso());
     query.bindValue(":urgencia", triagem.getUrgencia());
+    query.bindValue(":status", "Pendente"); // Status inicial padrão
 
     if (!query.exec()) {
-        // ESSA LINHA É A CHAVE: Ela vai imprimir o erro no console do Qt Creator
-        qDebug() << "ERRO NO SQLITE:" << query.lastError().text();
+        qDebug() << "ERRO NO SQLITE (salvar):" << query.lastError().text();
         return false;
     }
     return true;
 }
 
-// Implementação do buscarPorPaciente para o médico ver os dados na tela
-Triagem SqlTriagemRepository::buscarPorPaciente(const QString& cpf) {
+bool SqlTriagemRepository::atualizarStatus(int id, QString status) {
     QSqlQuery query(m_db);
-    // Buscando os 5 campos que o construtor da Triagem espera
-    query.prepare("SELECT paciente_nome, pressao, temperatura, peso, urgencia FROM triagem WHERE paciente_nome = :nome ORDER BY id DESC LIMIT 1");
-    query.bindValue(":nome", cpf);
+    query.prepare("UPDATE triagem SET status = :status WHERE id = :id");
+    query.bindValue(":status", status);
+    query.bindValue(":id", id);
 
-    if (query.exec() && query.next()) {
-        // O construtor da Triagem espera 5 argumentos: nome, pressao, temp, peso, urgencia
-        return Triagem(
-            query.value(0).toString(), 
-            query.value(1).toString(),
-            query.value(2).toDouble(),
-            query.value(3).toDouble(),
-            query.value(4).toInt()
-        );
+    if (!query.exec()) {
+        qDebug() << "ERRO NO SQLITE (atualizarStatus):" << query.lastError().text();
+        return false;
     }
-    return Triagem();
+    return true;
 }
