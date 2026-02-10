@@ -127,5 +127,5 @@ void TestAgendamento::agendar_data_passada()
     QVERIFY(!executarAgendamentoDataPassada());
 }
 
-QTEST_MAIN(TestAgendamento)
+// QTEST_MAIN(TestAgendamento)
 #include "test_agendamento.moc"

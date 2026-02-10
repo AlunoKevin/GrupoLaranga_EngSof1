@@ -1,0 +1,11 @@
+# Qt gerados
+moc_*
+ui_*
+*.db
+*.pro.user
+*.moc
+*.o
+moc_predefs.h
+Makefile
+test
+.qmake.stash

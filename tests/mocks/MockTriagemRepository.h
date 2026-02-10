@@ -6,11 +6,17 @@
 class MockTriagemRepository : public ITriagemRepository
 {
 public:
-    // Lista em memória para simular o banco de dados
     QList<Triagem> triagensSalvas;
 
     bool salvar(const Triagem& t) override {
         triagensSalvas.append(t);
-        return true; // Simula sucesso no salvamento
+        return true; 
+    }
+
+    // ADICIONE ESTE MÉTODO ABAIXO PARA CORRIGIR O ERRO:
+    bool atualizarStatus(int id, QString status) override {
+        Q_UNUSED(id);
+        Q_UNUSED(status);
+        return true; // Simula que o status foi atualizado com sucesso
     }
 };
