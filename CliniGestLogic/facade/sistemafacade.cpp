@@ -43,9 +43,20 @@ bool SistemaFacade::registrarAtendimento(const Atendimento& atendimento)
     return false;
 }
 
-bool SistemaFacade::autenticar(const QString& usuario, const QString& senha) {
-    // Lógica simples para teste 
-    return (usuario == "admin" && senha == "1234");
+// verificar se o login existe e se a senha bate, se sim, setar o usuário logado no serviço
+bool SistemaFacade::autenticar(const QString& login, const QString& senha)
+{
+    if (!m_usuarioServico)
+        return false;
+
+    Usuario* u = m_usuarioServico->buscarPorLogin(login);
+
+    if (u && u->getSenha() == senha) {
+        m_usuarioServico->setUsuarioLogado(u);
+        return true;
+    }
+
+    return false;
 }
 
 bool SistemaFacade::atualizarDadosUtilizador(int id, const QString& nome, const QString& email) {
@@ -65,6 +76,22 @@ bool SistemaFacade::alterarSenha(int id, const QString& novaSenha) {
 Usuario* SistemaFacade::buscarUtilizadorLogado() {
     if (m_usuarioServico) {
         return m_usuarioServico->buscarUtilizadorLogado();
+    }
+    return nullptr;
+}
+
+bool SistemaFacade::cadastrarUsuario(Usuario* usuario)
+{
+    if (m_usuarioRepo) {
+        return m_usuarioRepo->salvar(usuario);
+    }
+    return false;
+}
+
+Usuario* SistemaFacade::buscarUsuarioPorId(int id)
+{
+    if (m_usuarioServico) {
+        return m_usuarioServico->buscarPorId(id);
     }
     return nullptr;
 }

@@ -11,9 +11,11 @@ public:
     static DatabaseManager& instance();
 
     QSqlDatabase getDatabase();
+    
 
 private:
     DatabaseManager();
+    void criarTabelasSeNaoExistirem();
     QSqlDatabase db;
 };
 

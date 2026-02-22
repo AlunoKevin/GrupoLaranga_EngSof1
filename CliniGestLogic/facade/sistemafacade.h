@@ -23,6 +23,9 @@ public:
     
     ~SistemaFacade();
 
+    bool cadastrarUsuario(Usuario* usuario);
+    Usuario* buscarUsuarioPorId(int id);
+
     bool agendarConsulta(const Consulta& consulta);
 
     bool registrarTriagem(const Triagem& triagem);
