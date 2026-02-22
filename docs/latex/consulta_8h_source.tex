@@ -2,28 +2,43 @@
 \hypertarget{consulta_8h_source}{}\label{consulta_8h_source}\index{CliniGestLogic/models/consulta.h@{CliniGestLogic/models/consulta.h}}
 \mbox{\hyperlink{consulta_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <QDate>}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QTime>}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classConsulta}{Consulta}}}
-\DoxyCodeLine{00006\ \{}
-\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
-\DoxyCodeLine{00009\ \ \ \ \ QDate\ data;}
-\DoxyCodeLine{00010\ \ \ \ \ QTime\ horario;}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONSULTA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONSULTA\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QDate>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QTime>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classConsulta}{Consulta}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classConsulta_a69143a5a1716aae6951ad0265eb0be51}{Consulta}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classConsulta_a69143a5a1716aae6951ad0265eb0be51}{Consulta}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classConsulta_a0127737b7ef75e335b46574be1600c9b}{Consulta}}(QDate\ d,\ QTime\ h)}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ :\ data(d),\ horario(h)\ \{\}}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ QDate\ \mbox{\hyperlink{classConsulta_a690c37cd4a5d0130baac76e21b289321}{getData}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ data;\ \}}
-\DoxyCodeLine{00019\ \ \ \ \ QTime\ \mbox{\hyperlink{classConsulta_ae523e65e173c08ea7510427a510d69a6}{getHorario}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ horario;\ \}}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConsulta_ab1830b9dfa8518113db79fb4f10b4373}{setData}}(\textcolor{keyword}{const}\ QDate\&\ d)\ \{\ data\ =\ d;\ \}}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConsulta_a7f8ddcf3b782346aaab984aa58a1a198}{setHorario}}(\textcolor{keyword}{const}\ QTime\&\ h)\ \{\ horario\ =\ h;\ \}}
-\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Construtor\ completo}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classConsulta_a53e9673127de1d3d644f305140b5ede1}{Consulta}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\ p,\ std::string\ m,\ QDate\ d,\ QTime\ h)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classConsulta_a3246296a1477432182e97988c408cbab}{id}}(\mbox{\hyperlink{classConsulta_a3246296a1477432182e97988c408cbab}{id}}),\ \mbox{\hyperlink{classConsulta_a67d229a423c17b71de51ae457c8d5e13}{paciente}}(p),\ \mbox{\hyperlink{classConsulta_ad7aa582e01c147043fba8aa16026c149}{medico}}(m),\ \mbox{\hyperlink{classConsulta_a912acbb27cd8b952c1f89e789b9a5dc8}{data}}(d),\ \mbox{\hyperlink{classConsulta_a82ae6f820fb3d09e1bc3f25180222cb3}{horario}}(h)\ \{\}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Atributos}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classConsulta_a3246296a1477432182e97988c408cbab}{id}};}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ \mbox{\hyperlink{classConsulta_a67d229a423c17b71de51ae457c8d5e13}{paciente}};}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{classConsulta_ad7aa582e01c147043fba8aa16026c149}{medico}};}
+\DoxyCodeLine{00020\ \ \ \ \ QDate\ \mbox{\hyperlink{classConsulta_a912acbb27cd8b952c1f89e789b9a5dc8}{data}};}
+\DoxyCodeLine{00021\ \ \ \ \ QTime\ \mbox{\hyperlink{classConsulta_a82ae6f820fb3d09e1bc3f25180222cb3}{horario}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Setters\ (Essenciais\ para\ o\ seu\ erro\ sumir)}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConsulta_a96d3d0b53122db37735cd58253ff3b1e}{setPaciente}}(\textcolor{keyword}{const}\ std::string\&\ p)\ \{\ \mbox{\hyperlink{classConsulta_a67d229a423c17b71de51ae457c8d5e13}{paciente}}\ =\ p;\ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConsulta_adfe1c8edc51c00558409188dc8719e90}{setMedico}}(\textcolor{keyword}{const}\ std::string\&\ m)\ \{\ \mbox{\hyperlink{classConsulta_ad7aa582e01c147043fba8aa16026c149}{medico}}\ =\ m;\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConsulta_ab1830b9dfa8518113db79fb4f10b4373}{setData}}(\textcolor{keyword}{const}\ QDate\&\ d)\ \{\ \mbox{\hyperlink{classConsulta_a912acbb27cd8b952c1f89e789b9a5dc8}{data}}\ =\ d;\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConsulta_a7f8ddcf3b782346aaab984aa58a1a198}{setHorario}}(\textcolor{keyword}{const}\ QTime\&\ h)\ \{\ \mbox{\hyperlink{classConsulta_a82ae6f820fb3d09e1bc3f25180222cb3}{horario}}\ =\ h;\ \}\ \textcolor{comment}{//\ Note:\ é\ setHorario,\ não\ setHora}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConsulta_a8a1d76b0d72342983b01b3ec3831f1e3}{setId}}(\textcolor{keywordtype}{int}\ i)\ \{\ \textcolor{keywordtype}{id}\ =\ i;\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00031\ \ \ \ \ std::string\ \mbox{\hyperlink{classConsulta_a638436320bc18faf3b7de47cce84cff6}{getPaciente}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classConsulta_a67d229a423c17b71de51ae457c8d5e13}{paciente}};\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ std::string\ \mbox{\hyperlink{classConsulta_a9a423813e260265053f3ec6dfde48775}{getMedico}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classConsulta_ad7aa582e01c147043fba8aa16026c149}{medico}};\ \}}
+\DoxyCodeLine{00033\ \ \ \ \ QDate\ \mbox{\hyperlink{classConsulta_a690c37cd4a5d0130baac76e21b289321}{getData}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classConsulta_a912acbb27cd8b952c1f89e789b9a5dc8}{data}};\ \}}
+\DoxyCodeLine{00034\ \ \ \ \ QTime\ \mbox{\hyperlink{classConsulta_ae523e65e173c08ea7510427a510d69a6}{getHorario}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classConsulta_a82ae6f820fb3d09e1bc3f25180222cb3}{horario}};\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classConsulta_a99291c22a64da717f274861f9d5901b0}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classConsulta_a3246296a1477432182e97988c408cbab}{id}};\ \}}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONSULTA\_H}}
 
 \end{DoxyCode}

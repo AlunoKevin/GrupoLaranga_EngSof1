@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for Mock\+Triagem\+Repository\+:\nopagebreak
+Inheritance diagram for Mock\+Triagem\+Repository\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for Mock\+Triagem\+Repository\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Mock\+Triagem\+Repository\+:\nopagebreak
+Collaboration diagram for Mock\+Triagem\+Repository\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,11 +28,13 @@ Collaboration diagram for Mock\+Triagem\+Repository\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classMockTriagemRepository_a30c91597ff2e759c78451e93dcb56ca7}{salvar}} (const \mbox{\hyperlink{classTriagem}{Triagem}} \&t) override
+\item 
+bool \mbox{\hyperlink{classMockTriagemRepository_a28a29425c78753e139b650d655f70c35}{atualizar\+Status}} (int id, QString status) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classITriagemRepository}{ITriagem\+Repository}}}
 \begin{DoxyCompactItemize}
 \item 
-virtual \mbox{\hyperlink{classITriagemRepository_a3c285fe81c53f07e12ceefc2927af902}{\texorpdfstring{$\sim$}{\string~}\+ITriagem\+Repository}} ()=default
+virtual \mbox{\hyperlink{classITriagemRepository_a96215b2a4cbce07946adf955723796d0}{\texorpdfstring{$\sim$}{\string~}\+ITriagem\+Repository}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -40,6 +44,16 @@ QList$<$ \mbox{\hyperlink{classTriagem}{Triagem}} $>$ \mbox{\hyperlink{classMock
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classMockTriagemRepository_a28a29425c78753e139b650d655f70c35}\label{classMockTriagemRepository_a28a29425c78753e139b650d655f70c35} 
+\index{MockTriagemRepository@{MockTriagemRepository}!atualizarStatus@{atualizarStatus}}
+\index{atualizarStatus@{atualizarStatus}!MockTriagemRepository@{MockTriagemRepository}}
+\doxysubsubsection{\texorpdfstring{atualizarStatus()}{atualizarStatus()}}
+{\footnotesize\ttfamily bool Mock\+Triagem\+Repository\+::atualizar\+Status (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{QString}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classITriagemRepository_a62960e708ce31b577ca31e4fa499976b}{ITriagem\+Repository}}.
+
 \Hypertarget{classMockTriagemRepository_a30c91597ff2e759c78451e93dcb56ca7}\label{classMockTriagemRepository_a30c91597ff2e759c78451e93dcb56ca7} 
 \index{MockTriagemRepository@{MockTriagemRepository}!salvar@{salvar}}
 \index{salvar@{salvar}!MockTriagemRepository@{MockTriagemRepository}}

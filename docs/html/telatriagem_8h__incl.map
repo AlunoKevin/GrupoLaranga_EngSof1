@@ -1,32 +1,35 @@
 <map id="CliniGestGUI/screens/telatriagem.h" name="CliniGestGUI/screens/telatriagem.h">
-<area shape="rect" id="Node000001" title="Interface para realização de triagem clínica." alt="" coords="298,5,457,45"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="261,101,339,126"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="362,47,322,92,318,88,358,44"/>
-<area shape="rect" id="Node000003" href="$sistemafacade_8h.html" title=" " alt="" coords="363,93,546,133"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="396,44,431,81,427,85,393,47"/>
-<area shape="rect" id="Node000004" href="$IServicoAgendamento_8h.html" title=" " alt="" coords="5,181,187,221"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="377,136,188,181,187,176,375,131"/>
-<area shape="rect" id="Node000006" href="$consulta_8h.html" title=" " alt="" coords="219,269,384,295"/>
-<area shape="poly" id="edge16_Node000003_Node000006" title=" " alt="" coords="452,135,435,178,421,201,405,223,376,248,344,266,341,261,372,243,401,219,417,198,430,175,447,133"/>
-<area shape="rect" id="Node000009" href="$IServicoTriagem_8h.html" title=" " alt="" coords="517,181,675,221"/>
-<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="487,131,555,172,552,177,484,136"/>
-<area shape="rect" id="Node000010" href="$triagem_8h.html" title=" " alt="" coords="515,269,677,295"/>
-<area shape="poly" id="edge17_Node000003_Node000010" title=" " alt="" coords="463,132,479,175,492,198,507,220,533,243,561,261,558,265,530,247,503,223,487,201,474,177,458,134"/>
-<area shape="rect" id="Node000012" href="$IConsultaRepository_8h.html" title=" " alt="" coords="211,181,391,221"/>
-<area shape="poly" id="edge11_Node000003_Node000012" title=" " alt="" coords="422,136,348,177,346,172,420,131"/>
-<area shape="rect" id="Node000013" href="$ITriagemRepository_8h.html" title=" " alt="" coords="699,181,879,221"/>
-<area shape="poly" id="edge14_Node000003_Node000013" title=" " alt="" coords="529,131,704,175,702,181,527,136"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="105,269,159,295"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="107,220,123,255,118,258,102,223"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="146,219,259,262,257,267,144,224"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="314,343,377,368"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="311,294,333,330,329,332,306,296"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="225,343,290,368"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="296,296,274,332,269,330,292,294"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="599,222,599,255,593,255,593,222"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="561,343,631,368"/>
-<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="599,295,599,329,593,329,593,295"/>
-<area shape="poly" id="edge12_Node000012_Node000005" title=" " alt="" coords="262,224,171,266,168,261,260,219"/>
-<area shape="poly" id="edge13_Node000012_Node000006" title=" " alt="" coords="304,222,304,255,299,255,299,222"/>
-<area shape="poly" id="edge15_Node000013_Node000010" title=" " alt="" coords="744,224,638,267,636,262,742,219"/>
+<area shape="rect" id="Node000001" title="Interface para realização de triagem clínica." alt="" coords="347,5,506,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="310,101,389,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="411,47,371,92,367,88,408,44"/>
+<area shape="rect" id="Node000003" href="$sistemafacade_8h.html" title=" " alt="" coords="413,93,595,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="446,44,480,81,476,85,442,47"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="595,343,666,368"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="596,115,676,122,760,134,832,152,859,165,878,180,888,194,892,209,892,223,887,237,867,262,837,284,799,303,758,320,680,344,679,339,756,315,797,298,834,279,864,258,883,234,887,222,887,210,883,197,874,183,857,169,830,157,759,139,676,127,596,121"/>
+<area shape="rect" id="Node000005" href="$IConsultaRepository_8h.html" title=" " alt="" coords="158,181,338,221"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="449,136,318,180,316,174,447,131"/>
+<area shape="rect" id="Node000007" href="$consulta_8h.html" title=" " alt="" coords="37,269,203,295"/>
+<area shape="poly" id="edge17_Node000003_Node000007" title=" " alt="" coords="413,134,147,184,135,199,128,218,122,256,117,255,123,216,131,196,144,179,412,129"/>
+<area shape="rect" id="Node000011" href="$ITriagemRepository_8h.html" title=" " alt="" coords="414,181,594,221"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="507,134,507,167,501,167,501,134"/>
+<area shape="rect" id="Node000012" href="$triagem_8h.html" title=" " alt="" coords="365,269,526,295"/>
+<area shape="poly" id="edge18_Node000003_Node000012" title=" " alt="" coords="458,136,428,155,405,183,401,201,405,221,414,240,426,257,422,260,410,243,399,223,395,201,400,180,425,151,455,131"/>
+<area shape="rect" id="Node000013" href="$IAtendimentoRepository_8h.html" title=" " alt="" coords="669,181,864,221"/>
+<area shape="poly" id="edge14_Node000003_Node000013" title=" " alt="" coords="562,131,697,175,696,180,561,136"/>
+<area shape="rect" id="Node000014" href="$atendimento_8h.html" title=" " alt="" coords="602,269,795,295"/>
+<area shape="poly" id="edge19_Node000003_Node000014" title=" " alt="" coords="539,131,573,153,608,179,650,219,683,256,679,260,646,223,605,183,570,157,536,136"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="227,269,282,295"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="252,221,255,255,250,256,247,222"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="218,224,152,264,149,260,216,219"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,343,64,368"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="108,297,61,336,57,332,105,293"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="89,343,151,368"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="123,295,123,329,117,329,117,295"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="175,343,241,368"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="136,293,185,332,181,336,132,297"/>
+<area shape="poly" id="edge13_Node000011_Node000004" title=" " alt="" coords="522,220,614,330,610,334,518,224"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="492,223,465,260,460,256,488,220"/>
+<area shape="poly" id="edge12_Node000012_Node000004" title=" " alt="" coords="476,292,589,335,587,340,474,297"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="752,223,720,260,716,257,748,220"/>
+<area shape="poly" id="edge16_Node000014_Node000004" title=" " alt="" coords="689,297,653,334,649,331,686,293"/>
 </map>

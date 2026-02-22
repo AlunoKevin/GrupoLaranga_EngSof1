@@ -10,14 +10,18 @@ HEADERS += \
     facade/sistemafacade.h \
     interfaces/services/IServicoAgendamento.h \
     interfaces/services/IServicoAtendimento.h \
+    interfaces/services/IServicoUsuario.h \
     interfaces/repositories/IConsultaRepository.h \
     interfaces/repositories/ITriagemRepository.h \
     interfaces/repositories/IAtendimentoRepository.h \
+    interfaces/repositories/IUsuarioRepository.h \
     models/consulta.h \
     models/triagem.h \
     models/atendimento.h \
+    models/usuario.h \
     services/servicoagendamento.h \
-    services/servicotriagem.h
+    services/servicotriagem.h \
+    services/servicousuario.h
 
 SOURCES += \
     facade/sistemafacade.cpp \

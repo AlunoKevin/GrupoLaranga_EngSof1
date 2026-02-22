@@ -90,21 +90,30 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classMockTriagemRepository.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="classMockTriagemRepository.html">MockTriagemRepository</a> : <span class="keyword">public</span> <a class="code hl_class" href="classITriagemRepository.html">ITriagemRepository</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">// Lista em memória para simular o banco de dados</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classMockTriagemRepository.html#a42184eb2dc32eb685c3be7b214e30bed">   10</a></span>    QList&lt;Triagem&gt; <a class="code hl_variable" href="classMockTriagemRepository.html#a42184eb2dc32eb685c3be7b214e30bed">triagensSalvas</a>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classMockTriagemRepository.html#a30c91597ff2e759c78451e93dcb56ca7">   12</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMockTriagemRepository.html#a30c91597ff2e759c78451e93dcb56ca7">salvar</a>(<span class="keyword">const</span> <a class="code hl_class" href="classTriagem.html">Triagem</a>&amp; t)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <a class="code hl_variable" href="classMockTriagemRepository.html#a42184eb2dc32eb685c3be7b214e30bed">triagensSalvas</a>.append(t);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">// Simula sucesso no salvamento</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classMockTriagemRepository.html#a42184eb2dc32eb685c3be7b214e30bed">    9</a></span>    QList&lt;Triagem&gt; <a class="code hl_variable" href="classMockTriagemRepository.html#a42184eb2dc32eb685c3be7b214e30bed">triagensSalvas</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classMockTriagemRepository.html#a30c91597ff2e759c78451e93dcb56ca7">   11</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMockTriagemRepository.html#a30c91597ff2e759c78451e93dcb56ca7">salvar</a>(<span class="keyword">const</span> <a class="code hl_class" href="classTriagem.html">Triagem</a>&amp; t)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_variable" href="classMockTriagemRepository.html#a42184eb2dc32eb685c3be7b214e30bed">triagensSalvas</a>.append(t);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>; </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
 </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// ADICIONE ESTE MÉTODO ABAIXO PARA CORRIGIR O ERRO:</span></div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classMockTriagemRepository.html#a28a29425c78753e139b650d655f70c35">   17</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMockTriagemRepository.html#a28a29425c78753e139b650d655f70c35">atualizarStatus</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, QString status)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        Q_UNUSED(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        Q_UNUSED(status);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">// Simula que o status foi atualizado com sucesso</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
 </div>
-<div class="ttc" id="aclassITriagemRepository_html"><div class="ttname"><a href="classITriagemRepository.html">ITriagemRepository</a></div><div class="ttdef"><b>Definition</b> ITriagemRepository.h:4</div></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+</div>
+<div class="ttc" id="aclassITriagemRepository_html"><div class="ttname"><a href="classITriagemRepository.html">ITriagemRepository</a></div><div class="ttdef"><b>Definition</b> ITriagemRepository.h:7</div></div>
 <div class="ttc" id="aclassMockTriagemRepository_html"><div class="ttname"><a href="classMockTriagemRepository.html">MockTriagemRepository</a></div><div class="ttdef"><b>Definition</b> MockTriagemRepository.h:7</div></div>
-<div class="ttc" id="aclassMockTriagemRepository_html_a30c91597ff2e759c78451e93dcb56ca7"><div class="ttname"><a href="classMockTriagemRepository.html#a30c91597ff2e759c78451e93dcb56ca7">MockTriagemRepository::salvar</a></div><div class="ttdeci">bool salvar(const Triagem &amp;t) override</div><div class="ttdef"><b>Definition</b> MockTriagemRepository.h:12</div></div>
-<div class="ttc" id="aclassMockTriagemRepository_html_a42184eb2dc32eb685c3be7b214e30bed"><div class="ttname"><a href="classMockTriagemRepository.html#a42184eb2dc32eb685c3be7b214e30bed">MockTriagemRepository::triagensSalvas</a></div><div class="ttdeci">QList&lt; Triagem &gt; triagensSalvas</div><div class="ttdef"><b>Definition</b> MockTriagemRepository.h:10</div></div>
+<div class="ttc" id="aclassMockTriagemRepository_html_a28a29425c78753e139b650d655f70c35"><div class="ttname"><a href="classMockTriagemRepository.html#a28a29425c78753e139b650d655f70c35">MockTriagemRepository::atualizarStatus</a></div><div class="ttdeci">bool atualizarStatus(int id, QString status) override</div><div class="ttdef"><b>Definition</b> MockTriagemRepository.h:17</div></div>
+<div class="ttc" id="aclassMockTriagemRepository_html_a30c91597ff2e759c78451e93dcb56ca7"><div class="ttname"><a href="classMockTriagemRepository.html#a30c91597ff2e759c78451e93dcb56ca7">MockTriagemRepository::salvar</a></div><div class="ttdeci">bool salvar(const Triagem &amp;t) override</div><div class="ttdef"><b>Definition</b> MockTriagemRepository.h:11</div></div>
+<div class="ttc" id="aclassMockTriagemRepository_html_a42184eb2dc32eb685c3be7b214e30bed"><div class="ttname"><a href="classMockTriagemRepository.html#a42184eb2dc32eb685c3be7b214e30bed">MockTriagemRepository::triagensSalvas</a></div><div class="ttdeci">QList&lt; Triagem &gt; triagensSalvas</div><div class="ttdef"><b>Definition</b> MockTriagemRepository.h:9</div></div>
 <div class="ttc" id="aclassTriagem_html"><div class="ttname"><a href="classTriagem.html">Triagem</a></div><div class="ttdef"><b>Definition</b> triagem.h:4</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

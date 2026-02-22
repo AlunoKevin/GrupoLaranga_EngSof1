@@ -82,11 +82,11 @@ Inheritance diagram for ITriagemRepository:</div>
 <div class="dyncontent">
 <div class="center"><img src="classITriagemRepository__inherit__graph.png" border="0" usemap="#aITriagemRepository_inherit__map" alt="Inheritance graph"/></div>
 <map name="aITriagemRepository_inherit__map" id="aITriagemRepository_inherit__map">
-<area shape="rect" title=" " alt="" coords="103,5,279,91"/>
-<area shape="rect" href="classMockTriagemRepository.html" title=" " alt="" coords="5,149,176,214"/>
-<area shape="poly" title=" " alt="" coords="153,103,117,150,113,147,149,100"/>
-<area shape="rect" href="classSqlTriagemRepository.html" title="Implementação do repositório de triagem utilizando SQL (SQLite)." alt="" coords="200,139,381,224"/>
-<area shape="poly" title=" " alt="" coords="233,100,261,137,257,140,228,103"/>
+<area shape="rect" title=" " alt="" coords="105,5,281,111"/>
+<area shape="rect" href="classMockTriagemRepository.html" title=" " alt="" coords="5,179,176,264"/>
+<area shape="poly" title=" " alt="" coords="155,124,119,180,115,177,151,121"/>
+<area shape="rect" href="classSqlTriagemRepository.html" title="Implementação do repositório de triagem utilizando SQL (SQLite)." alt="" coords="200,159,392,284"/>
+<area shape="poly" title=" " alt="" coords="236,121,259,157,254,160,232,124"/>
 </map>
 </div>
 <div class="dynheader">
@@ -94,20 +94,22 @@ Collaboration diagram for ITriagemRepository:</div>
 <div class="dyncontent">
 <div class="center"><img src="classITriagemRepository__coll__graph.png" border="0" usemap="#aITriagemRepository_coll__map" alt="Collaboration graph"/></div>
 <map name="aITriagemRepository_coll__map" id="aITriagemRepository_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,181,91"/>
+<area shape="rect" title=" " alt="" coords="5,5,181,111"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c285fe81c53f07e12ceefc2927af902" id="r_a3c285fe81c53f07e12ceefc2927af902"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classITriagemRepository.html#a3c285fe81c53f07e12ceefc2927af902">~ITriagemRepository</a> ()=default</td></tr>
-<tr class="separator:a3c285fe81c53f07e12ceefc2927af902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96215b2a4cbce07946adf955723796d0" id="r_a96215b2a4cbce07946adf955723796d0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classITriagemRepository.html#a96215b2a4cbce07946adf955723796d0">~ITriagemRepository</a> ()</td></tr>
+<tr class="separator:a96215b2a4cbce07946adf955723796d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a227be40029beefaf3a21fa17ab4d6d6b" id="r_a227be40029beefaf3a21fa17ab4d6d6b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classITriagemRepository.html#a227be40029beefaf3a21fa17ab4d6d6b">salvar</a> (const <a class="el" href="classTriagem.html">Triagem</a> &amp;triagem)=0</td></tr>
 <tr class="separator:a227be40029beefaf3a21fa17ab4d6d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62960e708ce31b577ca31e4fa499976b" id="r_a62960e708ce31b577ca31e4fa499976b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classITriagemRepository.html#a62960e708ce31b577ca31e4fa499976b">atualizarStatus</a> (int id, QString status)=0</td></tr>
+<tr class="separator:a62960e708ce31b577ca31e4fa499976b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3c285fe81c53f07e12ceefc2927af902" name="a3c285fe81c53f07e12ceefc2927af902"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c285fe81c53f07e12ceefc2927af902">&#9670;&#160;</a></span>~ITriagemRepository()</h2>
+<a id="a96215b2a4cbce07946adf955723796d0" name="a96215b2a4cbce07946adf955723796d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96215b2a4cbce07946adf955723796d0">&#9670;&#160;</a></span>~ITriagemRepository()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,7 +126,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -132,6 +134,44 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a62960e708ce31b577ca31e4fa499976b" name="a62960e708ce31b577ca31e4fa499976b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62960e708ce31b577ca31e4fa499976b">&#9670;&#160;</a></span>atualizarStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ITriagemRepository::atualizarStatus </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classSqlTriagemRepository.html#ad76409a76a32d94b57a1beb847a3cc2b">SqlTriagemRepository</a>, and <a class="el" href="classMockTriagemRepository.html#a28a29425c78753e139b650d655f70c35">MockTriagemRepository</a>.</p>
+
+</div>
+</div>
 <a id="a227be40029beefaf3a21fa17ab4d6d6b" name="a227be40029beefaf3a21fa17ab4d6d6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a227be40029beefaf3a21fa17ab4d6d6b">&#9670;&#160;</a></span>salvar()</h2>
 

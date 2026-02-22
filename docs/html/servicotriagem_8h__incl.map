@@ -4,9 +4,10 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,48,117,86,114,82,157,44"/>
 <area shape="rect" id="Node000005" href="$ITriagemRepository_8h.html" title=" " alt="" coords="187,93,367,133"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="203,44,247,82,244,86,200,48"/>
-<area shape="rect" id="Node000003" href="$triagem_8h.html" title=" " alt="" coords="99,181,261,207"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,131,157,170,154,175,106,136"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="145,255,215,280"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="183,207,183,241,177,241,177,207"/>
-<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="255,136,207,175,203,170,252,131"/>
+<area shape="rect" id="Node000003" href="$triagem_8h.html" title=" " alt="" coords="78,181,239,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,132,140,169,136,173,100,135"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="182,255,253,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="170,205,201,243,197,246,166,209"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="250,136,189,176,186,172,247,131"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="276,134,268,169,254,208,235,245,230,242,250,206,263,167,271,133"/>
 </map>

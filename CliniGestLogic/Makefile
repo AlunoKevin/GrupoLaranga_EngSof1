@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = CliniGestLogic1.0.0
-DISTDIR = /home/hugo/Downloads/Projeto\ ENG1/GrupoLaranga_EngSof1/CliniGestLogic/.tmp/CliniGestLogic1.0.0
+DISTDIR = /home/juliana/GrupoLaranga_EngSof1/CliniGestLogic/.tmp/CliniGestLogic1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -shared -Wl,-soname,libCliniGestLogic.so.1
 LIBS          = $(SUBLIBS) /usr/lib/x86_64-linux-gnu/libQt5Core.so -lpthread   
@@ -136,14 +136,18 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		CliniGestLogic.pro facade/sistemafacade.h \
 		interfaces/services/IServicoAgendamento.h \
 		interfaces/services/IServicoAtendimento.h \
+		interfaces/services/IServicoUsuario.h \
 		interfaces/repositories/IConsultaRepository.h \
 		interfaces/repositories/ITriagemRepository.h \
 		interfaces/repositories/IAtendimentoRepository.h \
+		interfaces/repositories/IUsuarioRepository.h \
 		models/consulta.h \
 		models/triagem.h \
 		models/atendimento.h \
+		models/usuario.h \
 		services/servicoagendamento.h \
-		services/servicotriagem.h facade/sistemafacade.cpp \
+		services/servicotriagem.h \
+		services/servicousuario.h facade/sistemafacade.cpp \
 		services/servicoagendamento.cpp \
 		services/servicotriagem.cpp
 QMAKE_TARGET  = CliniGestLogic
@@ -342,7 +346,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents facade/sistemafacade.h interfaces/services/IServicoAgendamento.h interfaces/services/IServicoAtendimento.h interfaces/repositories/IConsultaRepository.h interfaces/repositories/ITriagemRepository.h interfaces/repositories/IAtendimentoRepository.h models/consulta.h models/triagem.h models/atendimento.h services/servicoagendamento.h services/servicotriagem.h $(DISTDIR)/
+	$(COPY_FILE) --parents facade/sistemafacade.h interfaces/services/IServicoAgendamento.h interfaces/services/IServicoAtendimento.h interfaces/services/IServicoUsuario.h interfaces/repositories/IConsultaRepository.h interfaces/repositories/ITriagemRepository.h interfaces/repositories/IAtendimentoRepository.h interfaces/repositories/IUsuarioRepository.h models/consulta.h models/triagem.h models/atendimento.h models/usuario.h services/servicoagendamento.h services/servicotriagem.h services/servicousuario.h $(DISTDIR)/
 	$(COPY_FILE) --parents facade/sistemafacade.cpp services/servicoagendamento.cpp services/servicotriagem.cpp $(DISTDIR)/
 
 
@@ -397,7 +401,10 @@ sistemafacade.o: facade/sistemafacade.cpp facade/sistemafacade.h \
 		interfaces/repositories/ITriagemRepository.h \
 		models/triagem.h \
 		interfaces/repositories/IAtendimentoRepository.h \
-		models/atendimento.h
+		models/atendimento.h \
+		interfaces/repositories/IUsuarioRepository.h \
+		models/usuario.h \
+		interfaces/services/IServicoUsuario.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sistemafacade.o facade/sistemafacade.cpp
 
 servicoagendamento.o: services/servicoagendamento.cpp services/servicoagendamento.h \

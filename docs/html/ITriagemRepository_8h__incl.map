@@ -1,7 +1,8 @@
 <map id="CliniGestLogic/interfaces/repositories/ITriagemRepository.h" name="CliniGestLogic/interfaces/repositories/ITriagemRepository.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,248,45"/>
-<area shape="rect" id="Node000002" href="$triagem_8h.html" title=" " alt="" coords="46,93,207,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,46,129,79,124,79,124,46"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="91,167,162,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="129,119,129,153,124,153,124,119"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="23,5,266,45"/>
+<area shape="rect" id="Node000002" href="$triagem_8h.html" title=" " alt="" coords="5,93,167,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,47,105,84,101,80,128,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="109,167,180,192"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="161,44,178,78,182,99,181,119,163,157,159,154,175,118,177,99,173,80,156,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,117,129,155,125,158,94,121"/>
 </map>

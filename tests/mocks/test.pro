@@ -1,15 +1,17 @@
 QT += core gui testlib
 CONFIG += c++17
 
-# Remova test_agendamento.cpp e test_triagem.cpp daqui!
 SOURCES += \
     main.cpp \
     ../../CliniGestLogic/services/servicoagendamento.cpp \
-    ../../CliniGestLogic/services/servicotriagem.cpp
+    ../../CliniGestLogic/services/servicotriagem.cpp \
+    ../../CliniGestLogic/services/servicousuario.cpp
 
 HEADERS += \
     MockConsultaRepository.h \
-    MockTriagemRepository.h
+    MockTriagemRepository.h \
+    MockUsuarioRepository.h \
+    test_manter_usuario.cpp  
 
 INCLUDEPATH += . \
     ../../CliniGestLogic \

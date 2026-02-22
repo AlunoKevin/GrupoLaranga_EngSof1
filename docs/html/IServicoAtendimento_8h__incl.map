@@ -1,0 +1,7 @@
+<map id="CliniGestLogic/interfaces/services/IServicoAtendimento.h" name="CliniGestLogic/interfaces/services/IServicoAtendimento.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,237,45"/>
+<area shape="rect" id="Node000002" href="$atendimento_8h.html" title=" " alt="" coords="25,93,218,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,46,124,79,119,79,119,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="86,167,157,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="124,119,124,153,119,153,119,119"/>
+</map>

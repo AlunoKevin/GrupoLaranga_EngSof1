@@ -82,11 +82,11 @@ Inheritance diagram for IConsultaRepository:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIConsultaRepository__inherit__graph.png" border="0" usemap="#aIConsultaRepository_inherit__map" alt="Inheritance graph"/></div>
 <map name="aIConsultaRepository_inherit__map" id="aIConsultaRepository_inherit__map">
-<area shape="rect" title=" " alt="" coords="105,5,287,111"/>
-<area shape="rect" href="classMockConsultaRepository.html" title=" " alt="" coords="5,169,181,254"/>
-<area shape="poly" title=" " alt="" coords="156,123,124,170,120,167,151,120"/>
-<area shape="rect" href="classSqlConsultaRepository.html" title=" " alt="" coords="206,159,391,264"/>
-<area shape="poly" title=" " alt="" coords="241,121,266,157,261,160,237,124"/>
+<area shape="rect" title=" " alt="" coords="105,5,287,131"/>
+<area shape="rect" href="classMockConsultaRepository.html" title=" " alt="" coords="5,189,181,294"/>
+<area shape="poly" title=" " alt="" coords="154,144,127,190,122,187,150,141"/>
+<area shape="rect" href="classSqlConsultaRepository.html" title=" " alt="" coords="206,179,391,304"/>
+<area shape="poly" title=" " alt="" coords="242,141,264,177,259,180,238,144"/>
 </map>
 </div>
 <div class="dynheader">
@@ -94,7 +94,7 @@ Collaboration diagram for IConsultaRepository:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIConsultaRepository__coll__graph.png" border="0" usemap="#aIConsultaRepository_coll__map" alt="Collaboration graph"/></div>
 <map name="aIConsultaRepository_coll__map" id="aIConsultaRepository_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,187,111"/>
+<area shape="rect" title=" " alt="" coords="5,5,187,131"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -106,6 +106,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a53ac24f267d4ae8e7834320e227b63a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e6e116789d0771a8f5240e5d32e3f88" id="r_a0e6e116789d0771a8f5240e5d32e3f88"><td class="memItemLeft" align="right" valign="top">virtual QList&lt; <a class="el" href="classConsulta.html">Consulta</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIConsultaRepository.html#a0e6e116789d0771a8f5240e5d32e3f88">listarPorData</a> (const QDate &amp;data)=0</td></tr>
 <tr class="separator:a0e6e116789d0771a8f5240e5d32e3f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaef05480aac128b993cb5b87fd6c20d" id="r_adaef05480aac128b993cb5b87fd6c20d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIConsultaRepository.html#adaef05480aac128b993cb5b87fd6c20d">atualizarStatus</a> (int id, std::string status)=0</td></tr>
+<tr class="separator:adaef05480aac128b993cb5b87fd6c20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abbdb5174dd027f1085e5207347739ac4" name="abbdb5174dd027f1085e5207347739ac4"></a>
@@ -134,6 +136,44 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="adaef05480aac128b993cb5b87fd6c20d" name="adaef05480aac128b993cb5b87fd6c20d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaef05480aac128b993cb5b87fd6c20d">&#9670;&#160;</a></span>atualizarStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IConsultaRepository::atualizarStatus </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classSqlConsultaRepository.html#a43401eaadfa5fb71b13175335a9265c0">SqlConsultaRepository</a>, and <a class="el" href="classMockConsultaRepository.html#abc090bf77b1b11a3e93f2241831c81e1">MockConsultaRepository</a>.</p>
+
+</div>
+</div>
 <a id="a0e6e116789d0771a8f5240e5d32e3f88" name="a0e6e116789d0771a8f5240e5d32e3f88"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e6e116789d0771a8f5240e5d32e3f88">&#9670;&#160;</a></span>listarPorData()</h2>
 

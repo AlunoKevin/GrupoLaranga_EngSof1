@@ -87,30 +87,34 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QSqlDatabase&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QList&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QDate&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="IConsultaRepository_8h.html">interfaces/repositories/IConsultaRepository.h</a>&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classSqlConsultaRepository.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classSqlConsultaRepository.html">SqlConsultaRepository</a> : <span class="keyword">public</span> <a class="code hl_class" href="classIConsultaRepository.html">IConsultaRepository</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classSqlConsultaRepository.html">SqlConsultaRepository</a>(QSqlDatabase database);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSqlConsultaRepository.html#a8b89b204239b080072722ad81f5557de">salvar</a>(<span class="keyword">const</span> <a class="code hl_class" href="classConsulta.html">Consulta</a>&amp; consulta) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    QList&lt;Consulta&gt; <a class="code hl_function" href="classSqlConsultaRepository.html#af4b378c44c62a65a86feb42f09b1b3dc">listarPorData</a>(<span class="keyword">const</span> QDate&amp; data) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    QSqlDatabase db;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="IConsultaRepository_8h.html">interfaces/repositories/IConsultaRepository.h</a>&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classSqlConsultaRepository.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classSqlConsultaRepository.html">SqlConsultaRepository</a> : <span class="keyword">public</span> <a class="code hl_class" href="classIConsultaRepository.html">IConsultaRepository</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classSqlConsultaRepository.html">SqlConsultaRepository</a>(QSqlDatabase database);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSqlConsultaRepository.html#a8b89b204239b080072722ad81f5557de">salvar</a>(<span class="keyword">const</span> <a class="code hl_class" href="classConsulta.html">Consulta</a>&amp; consulta) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    QList&lt;Consulta&gt; <a class="code hl_function" href="classSqlConsultaRepository.html#af4b378c44c62a65a86feb42f09b1b3dc">listarPorData</a>(<span class="keyword">const</span> QDate&amp; data) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSqlConsultaRepository.html#a43401eaadfa5fb71b13175335a9265c0">atualizarStatus</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, std::string status) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    QSqlDatabase db;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif </span><span class="comment">// SQLCONSULTAREPOSITORY_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif </span><span class="comment">// SQLCONSULTAREPOSITORY_H</span></div>
 <div class="ttc" id="aIConsultaRepository_8h_html"><div class="ttname"><a href="IConsultaRepository_8h.html">IConsultaRepository.h</a></div></div>
-<div class="ttc" id="aclassConsulta_html"><div class="ttname"><a href="classConsulta.html">Consulta</a></div><div class="ttdef"><b>Definition</b> consulta.h:6</div></div>
+<div class="ttc" id="aclassConsulta_html"><div class="ttname"><a href="classConsulta.html">Consulta</a></div><div class="ttdef"><b>Definition</b> consulta.h:8</div></div>
 <div class="ttc" id="aclassIConsultaRepository_html"><div class="ttname"><a href="classIConsultaRepository.html">IConsultaRepository</a></div><div class="ttdef"><b>Definition</b> IConsultaRepository.h:6</div></div>
-<div class="ttc" id="aclassSqlConsultaRepository_html"><div class="ttname"><a href="classSqlConsultaRepository.html">SqlConsultaRepository</a></div><div class="ttdef"><b>Definition</b> SqlConsultaRepository.h:11</div></div>
-<div class="ttc" id="aclassSqlConsultaRepository_html_a8b89b204239b080072722ad81f5557de"><div class="ttname"><a href="classSqlConsultaRepository.html#a8b89b204239b080072722ad81f5557de">SqlConsultaRepository::salvar</a></div><div class="ttdeci">bool salvar(const Consulta &amp;consulta) override</div><div class="ttdef"><b>Definition</b> SqlConsultaRepository.cpp:8</div></div>
-<div class="ttc" id="aclassSqlConsultaRepository_html_af4b378c44c62a65a86feb42f09b1b3dc"><div class="ttname"><a href="classSqlConsultaRepository.html#af4b378c44c62a65a86feb42f09b1b3dc">SqlConsultaRepository::listarPorData</a></div><div class="ttdeci">QList&lt; Consulta &gt; listarPorData(const QDate &amp;data) override</div><div class="ttdef"><b>Definition</b> SqlConsultaRepository.cpp:15</div></div>
+<div class="ttc" id="aclassSqlConsultaRepository_html"><div class="ttname"><a href="classSqlConsultaRepository.html">SqlConsultaRepository</a></div><div class="ttdef"><b>Definition</b> SqlConsultaRepository.h:12</div></div>
+<div class="ttc" id="aclassSqlConsultaRepository_html_a43401eaadfa5fb71b13175335a9265c0"><div class="ttname"><a href="classSqlConsultaRepository.html#a43401eaadfa5fb71b13175335a9265c0">SqlConsultaRepository::atualizarStatus</a></div><div class="ttdeci">bool atualizarStatus(int id, std::string status) override</div><div class="ttdef"><b>Definition</b> SqlConsultaRepository.cpp:24</div></div>
+<div class="ttc" id="aclassSqlConsultaRepository_html_a8b89b204239b080072722ad81f5557de"><div class="ttname"><a href="classSqlConsultaRepository.html#a8b89b204239b080072722ad81f5557de">SqlConsultaRepository::salvar</a></div><div class="ttdeci">bool salvar(const Consulta &amp;consulta) override</div><div class="ttdef"><b>Definition</b> SqlConsultaRepository.cpp:11</div></div>
+<div class="ttc" id="aclassSqlConsultaRepository_html_af4b378c44c62a65a86feb42f09b1b3dc"><div class="ttname"><a href="classSqlConsultaRepository.html#af4b378c44c62a65a86feb42f09b1b3dc">SqlConsultaRepository::listarPorData</a></div><div class="ttdeci">QList&lt; Consulta &gt; listarPorData(const QDate &amp;data) override</div><div class="ttdef"><b>Definition</b> SqlConsultaRepository.cpp:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -84,40 +84,50 @@ $(document).ready(function() { init_codefold(0); });
 <a href="sistemafacade_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SISTEMAFACADE_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SISTEMAFACADE_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../interfaces/services/IServicoAgendamento.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../interfaces/services/IServicoTriagem.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../interfaces/repositories/IConsultaRepository.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;../interfaces/repositories/ITriagemRepository.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../interfaces/repositories/IConsultaRepository.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../interfaces/repositories/ITriagemRepository.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;../interfaces/repositories/IAtendimentoRepository.h&quot;</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../models/consulta.h&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../models/triagem.h&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classSistemaFacade.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classSistemaFacade.html">SistemaFacade</a></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classSistemaFacade.html">SistemaFacade</a>(<a class="code hl_class" href="classIConsultaRepository.html">IConsultaRepository</a>* consultaRepo, <a class="code hl_class" href="classITriagemRepository.html">ITriagemRepository</a>* triagemRepo);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_function" href="classSistemaFacade.html#ab342879183ec760408d6ab94d131a890">~SistemaFacade</a>();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSistemaFacade.html#a7e0e472d88179be93439714e76e4566d">agendarConsulta</a>(<span class="keyword">const</span> <a class="code hl_class" href="classConsulta.html">Consulta</a>&amp; consulta);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSistemaFacade.html#aa9c43a2dc26779472851c0b671e325de">registrarTriagem</a>(<span class="keyword">const</span> <a class="code hl_class" href="classTriagem.html">Triagem</a>&amp; triagem);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="classIConsultaRepository.html">IConsultaRepository</a>* m_consultaRepo;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="classITriagemRepository.html">ITriagemRepository</a>* m_triagemRepo;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="classIServicoAgendamento.html">IServicoAgendamento</a>* m_servicoAgendamento;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="classIServicoTriagem.html">IServicoTriagem</a>* m_servicoTriagem;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
-</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;../models/atendimento.h&quot;</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classSistemaFacade.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classSistemaFacade.html">SistemaFacade</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="classSistemaFacade.html">SistemaFacade</a>(<a class="code hl_class" href="classIConsultaRepository.html">IConsultaRepository</a>* consultaRepo, </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                  <a class="code hl_class" href="classITriagemRepository.html">ITriagemRepository</a>* triagemRepo,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                  <a class="code hl_class" href="classIAtendimentoRepository.html">IAtendimentoRepository</a>* atendimentoRepo);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="classSistemaFacade.html#ab342879183ec760408d6ab94d131a890">~SistemaFacade</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSistemaFacade.html#a7e0e472d88179be93439714e76e4566d">agendarConsulta</a>(<span class="keyword">const</span> <a class="code hl_class" href="classConsulta.html">Consulta</a>&amp; consulta);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSistemaFacade.html#aa9c43a2dc26779472851c0b671e325de">registrarTriagem</a>(<span class="keyword">const</span> <a class="code hl_class" href="classTriagem.html">Triagem</a>&amp; triagem);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSistemaFacade.html#a1d7d16560d75671245ca2ccd13a8cb09">registrarAtendimento</a>(<span class="keyword">const</span> <a class="code hl_class" href="classAtendimento.html">Atendimento</a>&amp; atendimento);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">// SISTEMAFACADE_H</span></div>
-<div class="ttc" id="aclassConsulta_html"><div class="ttname"><a href="classConsulta.html">Consulta</a></div><div class="ttdef"><b>Definition</b> consulta.h:6</div></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSistemaFacade.html#a4e996cf585b0640ca7dc19385dd4409d">autenticar</a>(<span class="keyword">const</span> QString&amp; usuario, <span class="keyword">const</span> QString&amp; senha);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_class" href="classIConsultaRepository.html">IConsultaRepository</a>* m_consultaRepo;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="classITriagemRepository.html">ITriagemRepository</a>* m_triagemRepo;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="classIAtendimentoRepository.html">IAtendimentoRepository</a>* m_atendimentoRepo; </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif </span><span class="comment">// SISTEMAFACADE_H</span></div>
+<div class="ttc" id="aclassAtendimento_html"><div class="ttname"><a href="classAtendimento.html">Atendimento</a></div><div class="ttdef"><b>Definition</b> atendimento.h:6</div></div>
+<div class="ttc" id="aclassConsulta_html"><div class="ttname"><a href="classConsulta.html">Consulta</a></div><div class="ttdef"><b>Definition</b> consulta.h:8</div></div>
+<div class="ttc" id="aclassIAtendimentoRepository_html"><div class="ttname"><a href="classIAtendimentoRepository.html">IAtendimentoRepository</a></div><div class="ttdef"><b>Definition</b> IAtendimentoRepository.h:6</div></div>
 <div class="ttc" id="aclassIConsultaRepository_html"><div class="ttname"><a href="classIConsultaRepository.html">IConsultaRepository</a></div><div class="ttdef"><b>Definition</b> IConsultaRepository.h:6</div></div>
-<div class="ttc" id="aclassIServicoAgendamento_html"><div class="ttname"><a href="classIServicoAgendamento.html">IServicoAgendamento</a></div><div class="ttdef"><b>Definition</b> IServicoAgendamento.h:6</div></div>
-<div class="ttc" id="aclassIServicoTriagem_html"><div class="ttname"><a href="classIServicoTriagem.html">IServicoTriagem</a></div><div class="ttdef"><b>Definition</b> IServicoTriagem.h:4</div></div>
-<div class="ttc" id="aclassITriagemRepository_html"><div class="ttname"><a href="classITriagemRepository.html">ITriagemRepository</a></div><div class="ttdef"><b>Definition</b> ITriagemRepository.h:4</div></div>
-<div class="ttc" id="aclassSistemaFacade_html"><div class="ttname"><a href="classSistemaFacade.html">SistemaFacade</a></div><div class="ttdef"><b>Definition</b> sistemafacade.h:12</div></div>
-<div class="ttc" id="aclassSistemaFacade_html_a7e0e472d88179be93439714e76e4566d"><div class="ttname"><a href="classSistemaFacade.html#a7e0e472d88179be93439714e76e4566d">SistemaFacade::agendarConsulta</a></div><div class="ttdeci">bool agendarConsulta(const Consulta &amp;consulta)</div><div class="ttdef"><b>Definition</b> sistemafacade.cpp:18</div></div>
-<div class="ttc" id="aclassSistemaFacade_html_aa9c43a2dc26779472851c0b671e325de"><div class="ttname"><a href="classSistemaFacade.html#aa9c43a2dc26779472851c0b671e325de">SistemaFacade::registrarTriagem</a></div><div class="ttdeci">bool registrarTriagem(const Triagem &amp;triagem)</div><div class="ttdef"><b>Definition</b> sistemafacade.cpp:23</div></div>
+<div class="ttc" id="aclassITriagemRepository_html"><div class="ttname"><a href="classITriagemRepository.html">ITriagemRepository</a></div><div class="ttdef"><b>Definition</b> ITriagemRepository.h:7</div></div>
+<div class="ttc" id="aclassSistemaFacade_html"><div class="ttname"><a href="classSistemaFacade.html">SistemaFacade</a></div><div class="ttdef"><b>Definition</b> sistemafacade.h:13</div></div>
+<div class="ttc" id="aclassSistemaFacade_html_a1d7d16560d75671245ca2ccd13a8cb09"><div class="ttname"><a href="classSistemaFacade.html#a1d7d16560d75671245ca2ccd13a8cb09">SistemaFacade::registrarAtendimento</a></div><div class="ttdeci">bool registrarAtendimento(const Atendimento &amp;atendimento)</div><div class="ttdef"><b>Definition</b> sistemafacade.cpp:34</div></div>
+<div class="ttc" id="aclassSistemaFacade_html_a4e996cf585b0640ca7dc19385dd4409d"><div class="ttname"><a href="classSistemaFacade.html#a4e996cf585b0640ca7dc19385dd4409d">SistemaFacade::autenticar</a></div><div class="ttdeci">bool autenticar(const QString &amp;usuario, const QString &amp;senha)</div><div class="ttdef"><b>Definition</b> sistemafacade.cpp:42</div></div>
+<div class="ttc" id="aclassSistemaFacade_html_a7e0e472d88179be93439714e76e4566d"><div class="ttname"><a href="classSistemaFacade.html#a7e0e472d88179be93439714e76e4566d">SistemaFacade::agendarConsulta</a></div><div class="ttdeci">bool agendarConsulta(const Consulta &amp;consulta)</div><div class="ttdef"><b>Definition</b> sistemafacade.cpp:17</div></div>
+<div class="ttc" id="aclassSistemaFacade_html_aa9c43a2dc26779472851c0b671e325de"><div class="ttname"><a href="classSistemaFacade.html#aa9c43a2dc26779472851c0b671e325de">SistemaFacade::registrarTriagem</a></div><div class="ttdeci">bool registrarTriagem(const Triagem &amp;triagem)</div><div class="ttdef"><b>Definition</b> sistemafacade.cpp:25</div></div>
 <div class="ttc" id="aclassSistemaFacade_html_ab342879183ec760408d6ab94d131a890"><div class="ttname"><a href="classSistemaFacade.html#ab342879183ec760408d6ab94d131a890">SistemaFacade::~SistemaFacade</a></div><div class="ttdeci">~SistemaFacade()</div><div class="ttdef"><b>Definition</b> sistemafacade.cpp:12</div></div>
 <div class="ttc" id="aclassTriagem_html"><div class="ttname"><a href="classTriagem.html">Triagem</a></div><div class="ttdef"><b>Definition</b> triagem.h:4</div></div>
 </div><!-- fragment --></div><!-- contents -->

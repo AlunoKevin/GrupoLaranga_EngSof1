@@ -35,4 +35,4 @@ FORMS += \
     mainwindow.ui \
     screens/telaagendamento.ui \
     screens/telatriagem.ui \
-    screens/telaatendimento.ui
+    screens/telaatendimento.ui 

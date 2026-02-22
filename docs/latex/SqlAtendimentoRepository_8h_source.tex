@@ -1,0 +1,44 @@
+\doxysection{Sql\+Atendimento\+Repository.\+h}
+\hypertarget{SqlAtendimentoRepository_8h_source}{}\label{SqlAtendimentoRepository_8h_source}\index{CliniGestData/repositories/SqlAtendimentoRepository.h@{CliniGestData/repositories/SqlAtendimentoRepository.h}}
+\mbox{\hyperlink{SqlAtendimentoRepository_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SQLATENDIMENTOREPOSITORY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SQLATENDIMENTOREPOSITORY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/interfaces/repositories/IAtendimentoRepository.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/models/atendimento.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QSqlDatabase>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QSqlQuery>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSqlAtendimentoRepository}{SqlAtendimentoRepository}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIAtendimentoRepository}{IAtendimentoRepository}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSqlAtendimentoRepository_a3bf206421f67aa8f03ba5714a6582a68}{SqlAtendimentoRepository}}(QSqlDatabase\ db)\ :\ m\_db(db)\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ QSqlQuery\ query(m\_db);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ query.exec(\textcolor{stringliteral}{"{}CREATE\ TABLE\ IF\ NOT\ EXISTS\ atendimento\ ("{}}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}id\ INTEGER\ PRIMARY\ KEY\ AUTOINCREMENT,\ "{}}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}id\_triagem\ INTEGER,\ "{}}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}diagnostico\ TEXT,\ "{}}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}prescricao\ TEXT,\ "{}}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}exames\ TEXT,\ "{}}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}observacoes\ TEXT)"{}});}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSqlAtendimentoRepository_ae23d6ef9913c90d01aed9827a90ee957}{salvar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAtendimento}{Atendimento}}\&\ a)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ QSqlQuery\ query(m\_db);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ query.prepare(\textcolor{stringliteral}{"{}INSERT\ INTO\ atendimento\ (id\_triagem,\ diagnostico,\ prescricao,\ exames,\ observacoes)\ "{}}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}VALUES\ (:triagem,\ :diag,\ :presc,\ :exames,\ :obs)"{}});}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ query.bindValue(\textcolor{stringliteral}{"{}:triagem"{}},\ a.\mbox{\hyperlink{classAtendimento_a2c91aaaa58a2594cb2240561e7a0ff97}{idTriagem}}());}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ query.bindValue(\textcolor{stringliteral}{"{}:diag"{}},\ a.\mbox{\hyperlink{classAtendimento_ad56630afd8ea472a57256719991b7ac2}{diagnostico}}());}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ query.bindValue(\textcolor{stringliteral}{"{}:presc"{}},\ a.\mbox{\hyperlink{classAtendimento_a7b64ea8a3d2b8bd5de8471a27b49b122}{prescricao}}());}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ query.bindValue(\textcolor{stringliteral}{"{}:exames"{}},\ a.\mbox{\hyperlink{classAtendimento_a2187aa6096e370ef9dca815b55138ef9}{exames}}());}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ query.bindValue(\textcolor{stringliteral}{"{}:obs"{}},\ a.\mbox{\hyperlink{classAtendimento_a78b71e51a6f18d7ea38ad312de474f50}{observacoes}}());}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ query.exec();}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ QSqlDatabase\ m\_db;}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SQLATENDIMENTOREPOSITORY\_H}}
+
+\end{DoxyCode}

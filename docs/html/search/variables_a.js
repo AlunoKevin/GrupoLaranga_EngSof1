@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['triagenssalvas_0',['triagensSalvas',['../classMockTriagemRepository.html#a42184eb2dc32eb685c3be7b214e30bed',1,'MockTriagemRepository']]],
-  ['txtpeso_1',['txtPeso',['../classUi__TelaTriagem.html#a0fe8aaae13be2ef181f42dbac0448b6e',1,'Ui_TelaTriagem']]],
-  ['txtpressao_2',['txtPressao',['../classUi__TelaTriagem.html#a72dcebc67f78b6d9d7f5c0212a3e37b0',1,'Ui_TelaTriagem']]],
-  ['txttemperatura_3',['txtTemperatura',['../classUi__TelaTriagem.html#af22d22ee95c8225b0a9d83fd5525f55d',1,'Ui_TelaTriagem']]]
+  ['stringdata0_0',['stringdata0',['../structQT__WARNING__DISABLE__DEPRECATED_1_1qt__meta__stringdata__SqlTriagemRepository__t.html#a4560c3e694681d6747c15be6612c043a',1,'QT_WARNING_DISABLE_DEPRECATED::qt_meta_stringdata_SqlTriagemRepository_t::stringdata0'],['../structQT__WARNING__DISABLE__DEPRECATED_1_1qt__meta__stringdata__TelaLogin__t.html#a1db69d0d5fe36d3e172fb8015b3feec3',1,'QT_WARNING_DISABLE_DEPRECATED::qt_meta_stringdata_TelaLogin_t::stringdata0']]],
+  ['stringdata1_1',['stringdata1',['../structQT__WARNING__DISABLE__DEPRECATED_1_1qt__meta__stringdata__TelaLogin__t.html#a33c65a3e4676aa95fdc48f19009a9cf1',1,'QT_WARNING_DISABLE_DEPRECATED::qt_meta_stringdata_TelaLogin_t']]],
+  ['stringdata2_2',['stringdata2',['../structQT__WARNING__DISABLE__DEPRECATED_1_1qt__meta__stringdata__TelaLogin__t.html#afe9e8f6e50807f0f8c5c6a9494452d38',1,'QT_WARNING_DISABLE_DEPRECATED::qt_meta_stringdata_TelaLogin_t']]]
 ];

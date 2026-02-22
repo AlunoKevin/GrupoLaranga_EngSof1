@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['registrartriagem_0',['registrartriagem',['../classSistemaFacade.html#aa9c43a2dc26779472851c0b671e325de',1,'SistemaFacade::registrarTriagem()'],['../classIServicoTriagem.html#a0713c6a30d1a3ab0b533db18faefb6a4',1,'IServicoTriagem::registrarTriagem()'],['../classServicoTriagem.html#a5970ea89a0883f1db6233ac676622b49',1,'ServicoTriagem::registrarTriagem()']]],
-  ['retranslateui_1',['retranslateui',['../classUi__MainWindow.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi()'],['../classUi__TelaAgendamento.html#a58ceac09e1b1a3bb70ecc29278f49337',1,'Ui_TelaAgendamento::retranslateUi()'],['../classUi__TelaTriagem.html#a16a140b8281eeb31346842f41609888b',1,'Ui_TelaTriagem::retranslateUi()']]]
+  ['main_0',['main',['../CliniGestGUI_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../tests_2mocks_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
+  ['mainwindow_1',['MainWindow',['../classMainWindow.html#ac230604395a07bef65afa67c08c0741d',1,'MainWindow']]],
+  ['medico_2',['Medico',['../classMedico.html#abec37628a7ff8b2f03fc5fa96752af3c',1,'Medico']]]
 ];
