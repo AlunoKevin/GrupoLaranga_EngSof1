@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for ITriagem\+Repository\+:\nopagebreak
+Inheritance diagram for ITriagem\+Repository\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for ITriagem\+Repository\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for ITriagem\+Repository\+:\nopagebreak
+Collaboration diagram for ITriagem\+Repository\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,22 +27,34 @@ Collaboration diagram for ITriagem\+Repository\+:\nopagebreak
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \mbox{\hyperlink{classITriagemRepository_a3c285fe81c53f07e12ceefc2927af902}{\texorpdfstring{$\sim$}{\string~}\+ITriagem\+Repository}} ()=default
+virtual \mbox{\hyperlink{classITriagemRepository_a96215b2a4cbce07946adf955723796d0}{\texorpdfstring{$\sim$}{\string~}\+ITriagem\+Repository}} ()
 \item 
 virtual bool \mbox{\hyperlink{classITriagemRepository_a227be40029beefaf3a21fa17ab4d6d6b}{salvar}} (const \mbox{\hyperlink{classTriagem}{Triagem}} \&triagem)=0
+\item 
+virtual bool \mbox{\hyperlink{classITriagemRepository_a62960e708ce31b577ca31e4fa499976b}{atualizar\+Status}} (int id, QString status)=0
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classITriagemRepository_a3c285fe81c53f07e12ceefc2927af902}\label{classITriagemRepository_a3c285fe81c53f07e12ceefc2927af902} 
+\Hypertarget{classITriagemRepository_a96215b2a4cbce07946adf955723796d0}\label{classITriagemRepository_a96215b2a4cbce07946adf955723796d0} 
 \index{ITriagemRepository@{ITriagemRepository}!````~ITriagemRepository@{\texorpdfstring{$\sim$}{\string~}ITriagemRepository}}
 \index{````~ITriagemRepository@{\texorpdfstring{$\sim$}{\string~}ITriagemRepository}!ITriagemRepository@{ITriagemRepository}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ITriagemRepository()}{\string~ITriagemRepository()}}
-{\footnotesize\ttfamily virtual ITriagem\+Repository\+::\texorpdfstring{$\sim$}{\string~}\+ITriagem\+Repository (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+{\footnotesize\ttfamily virtual ITriagem\+Repository\+::\texorpdfstring{$\sim$}{\string~}\+ITriagem\+Repository (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classITriagemRepository_a62960e708ce31b577ca31e4fa499976b}\label{classITriagemRepository_a62960e708ce31b577ca31e4fa499976b} 
+\index{ITriagemRepository@{ITriagemRepository}!atualizarStatus@{atualizarStatus}}
+\index{atualizarStatus@{atualizarStatus}!ITriagemRepository@{ITriagemRepository}}
+\doxysubsubsection{\texorpdfstring{atualizarStatus()}{atualizarStatus()}}
+{\footnotesize\ttfamily virtual bool ITriagem\+Repository\+::atualizar\+Status (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{QString}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classSqlTriagemRepository_ad76409a76a32d94b57a1beb847a3cc2b}{Sql\+Triagem\+Repository}}, and \mbox{\hyperlink{classMockTriagemRepository_a28a29425c78753e139b650d655f70c35}{Mock\+Triagem\+Repository}}.
+
 \Hypertarget{classITriagemRepository_a227be40029beefaf3a21fa17ab4d6d6b}\label{classITriagemRepository_a227be40029beefaf3a21fa17ab4d6d6b} 
 \index{ITriagemRepository@{ITriagemRepository}!salvar@{salvar}}
 \index{salvar@{salvar}!ITriagemRepository@{ITriagemRepository}}

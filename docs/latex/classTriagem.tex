@@ -10,7 +10,7 @@ Collaboration diagram for Triagem\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=186pt]{classTriagem__coll__graph}
+\includegraphics[width=195pt]{classTriagem__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -18,13 +18,27 @@ Collaboration diagram for Triagem\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classTriagem_a311c968101f75e4dc6836b78a93880c2}{Triagem}} ()=default
 \item 
-\mbox{\hyperlink{classTriagem_a54e7b07ea7f473c52b359e2fc5369288}{Triagem}} (QString p, double t, double pe, int u)
+\mbox{\hyperlink{classTriagem_a114f1a26199bb4199c0b645e8be2aa27}{Triagem}} (QString n, QString p, double t, double pe, int u)
+\item 
+QString \mbox{\hyperlink{classTriagem_a9ae83027f29049cf8f37cc5f95202feb}{get\+Paciente\+Nome}} () const
 \item 
 QString \mbox{\hyperlink{classTriagem_a0e756ea44a77f3349a74659b0259dd2a}{get\+Pressao}} () const
 \item 
 double \mbox{\hyperlink{classTriagem_a60d04ae90bcc1306b7813fca8832616e}{get\+Temperatura}} () const
 \item 
+double \mbox{\hyperlink{classTriagem_a20f670ed4e3505ff2e4991e39eb6e4aa}{get\+Peso}} () const
+\item 
+int \mbox{\hyperlink{classTriagem_aa359383697745611f6aca5d84554dbf4}{get\+Urgencia}} () const
+\item 
+void \mbox{\hyperlink{classTriagem_a469780db7b3efd22124c249cb93cdae2}{set\+Paciente\+Nome}} (const QString \&n)
+\item 
 void \mbox{\hyperlink{classTriagem_a44a71faad965a373524e82f506fb46b3}{set\+Pressao}} (const QString \&p)
+\item 
+void \mbox{\hyperlink{classTriagem_a00070206541f128befe78639236c5b20}{set\+Temperatura}} (double t)
+\item 
+void \mbox{\hyperlink{classTriagem_a17187b4a1b415b7bf9336ce22182e80e}{set\+Peso}} (double p)
+\item 
+void \mbox{\hyperlink{classTriagem_a067bffa708441b08a9abf6ff52ed3d1d}{set\+Urgencia}} (int u)
 \end{DoxyCompactItemize}
 
 
@@ -35,15 +49,27 @@ void \mbox{\hyperlink{classTriagem_a44a71faad965a373524e82f506fb46b3}{set\+Press
 \doxysubsubsection{\texorpdfstring{Triagem()}{Triagem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Triagem\+::\+Triagem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-\Hypertarget{classTriagem_a54e7b07ea7f473c52b359e2fc5369288}\label{classTriagem_a54e7b07ea7f473c52b359e2fc5369288} 
+\Hypertarget{classTriagem_a114f1a26199bb4199c0b645e8be2aa27}\label{classTriagem_a114f1a26199bb4199c0b645e8be2aa27} 
 \index{Triagem@{Triagem}!Triagem@{Triagem}}
 \index{Triagem@{Triagem}!Triagem@{Triagem}}
 \doxysubsubsection{\texorpdfstring{Triagem()}{Triagem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Triagem\+::\+Triagem (\begin{DoxyParamCaption}\item[{QString}]{p,  }\item[{double}]{t,  }\item[{double}]{pe,  }\item[{int}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Triagem\+::\+Triagem (\begin{DoxyParamCaption}\item[{QString}]{n,  }\item[{QString}]{p,  }\item[{double}]{t,  }\item[{double}]{pe,  }\item[{int}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classTriagem_a9ae83027f29049cf8f37cc5f95202feb}\label{classTriagem_a9ae83027f29049cf8f37cc5f95202feb} 
+\index{Triagem@{Triagem}!getPacienteNome@{getPacienteNome}}
+\index{getPacienteNome@{getPacienteNome}!Triagem@{Triagem}}
+\doxysubsubsection{\texorpdfstring{getPacienteNome()}{getPacienteNome()}}
+{\footnotesize\ttfamily QString Triagem\+::get\+Paciente\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classTriagem_a20f670ed4e3505ff2e4991e39eb6e4aa}\label{classTriagem_a20f670ed4e3505ff2e4991e39eb6e4aa} 
+\index{Triagem@{Triagem}!getPeso@{getPeso}}
+\index{getPeso@{getPeso}!Triagem@{Triagem}}
+\doxysubsubsection{\texorpdfstring{getPeso()}{getPeso()}}
+{\footnotesize\ttfamily double Triagem\+::get\+Peso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \Hypertarget{classTriagem_a0e756ea44a77f3349a74659b0259dd2a}\label{classTriagem_a0e756ea44a77f3349a74659b0259dd2a} 
 \index{Triagem@{Triagem}!getPressao@{getPressao}}
 \index{getPressao@{getPressao}!Triagem@{Triagem}}
@@ -56,11 +82,41 @@ void \mbox{\hyperlink{classTriagem_a44a71faad965a373524e82f506fb46b3}{set\+Press
 \doxysubsubsection{\texorpdfstring{getTemperatura()}{getTemperatura()}}
 {\footnotesize\ttfamily double Triagem\+::get\+Temperatura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\Hypertarget{classTriagem_aa359383697745611f6aca5d84554dbf4}\label{classTriagem_aa359383697745611f6aca5d84554dbf4} 
+\index{Triagem@{Triagem}!getUrgencia@{getUrgencia}}
+\index{getUrgencia@{getUrgencia}!Triagem@{Triagem}}
+\doxysubsubsection{\texorpdfstring{getUrgencia()}{getUrgencia()}}
+{\footnotesize\ttfamily int Triagem\+::get\+Urgencia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classTriagem_a469780db7b3efd22124c249cb93cdae2}\label{classTriagem_a469780db7b3efd22124c249cb93cdae2} 
+\index{Triagem@{Triagem}!setPacienteNome@{setPacienteNome}}
+\index{setPacienteNome@{setPacienteNome}!Triagem@{Triagem}}
+\doxysubsubsection{\texorpdfstring{setPacienteNome()}{setPacienteNome()}}
+{\footnotesize\ttfamily void Triagem\+::set\+Paciente\+Nome (\begin{DoxyParamCaption}\item[{const QString \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classTriagem_a17187b4a1b415b7bf9336ce22182e80e}\label{classTriagem_a17187b4a1b415b7bf9336ce22182e80e} 
+\index{Triagem@{Triagem}!setPeso@{setPeso}}
+\index{setPeso@{setPeso}!Triagem@{Triagem}}
+\doxysubsubsection{\texorpdfstring{setPeso()}{setPeso()}}
+{\footnotesize\ttfamily void Triagem\+::set\+Peso (\begin{DoxyParamCaption}\item[{double}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \Hypertarget{classTriagem_a44a71faad965a373524e82f506fb46b3}\label{classTriagem_a44a71faad965a373524e82f506fb46b3} 
 \index{Triagem@{Triagem}!setPressao@{setPressao}}
 \index{setPressao@{setPressao}!Triagem@{Triagem}}
 \doxysubsubsection{\texorpdfstring{setPressao()}{setPressao()}}
 {\footnotesize\ttfamily void Triagem\+::set\+Pressao (\begin{DoxyParamCaption}\item[{const QString \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classTriagem_a00070206541f128befe78639236c5b20}\label{classTriagem_a00070206541f128befe78639236c5b20} 
+\index{Triagem@{Triagem}!setTemperatura@{setTemperatura}}
+\index{setTemperatura@{setTemperatura}!Triagem@{Triagem}}
+\doxysubsubsection{\texorpdfstring{setTemperatura()}{setTemperatura()}}
+{\footnotesize\ttfamily void Triagem\+::set\+Temperatura (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classTriagem_a067bffa708441b08a9abf6ff52ed3d1d}\label{classTriagem_a067bffa708441b08a9abf6ff52ed3d1d} 
+\index{Triagem@{Triagem}!setUrgencia@{setUrgencia}}
+\index{setUrgencia@{setUrgencia}!Triagem@{Triagem}}
+\doxysubsubsection{\texorpdfstring{setUrgencia()}{setUrgencia()}}
+{\footnotesize\ttfamily void Triagem\+::set\+Urgencia (\begin{DoxyParamCaption}\item[{int}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

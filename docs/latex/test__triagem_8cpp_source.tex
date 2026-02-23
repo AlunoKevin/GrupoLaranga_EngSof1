@@ -1,0 +1,49 @@
+\doxysection{test\+\_\+triagem.\+cpp}
+\hypertarget{test__triagem_8cpp_source}{}\label{test__triagem_8cpp_source}\index{tests/mocks/test\_triagem.cpp@{tests/mocks/test\_triagem.cpp}}
+\mbox{\hyperlink{test__triagem_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <QtTest>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}../CliniGestLogic/services/servicotriagem.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MockTriagemRepository_8h}{MockTriagemRepository.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTestTriagem}{TestTriagem}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ test\_registrar\_triagem\_valida()\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Um\ mock\ de\ repositório\ e\ dados\ de\ triagem\ válidos}}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMockTriagemRepository}{MockTriagemRepository}}*\ mockRepo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMockTriagemRepository}{MockTriagemRepository}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServicoTriagem}{ServicoTriagem}}\ servico(mockRepo);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTriagem}{Triagem}}\ t(\textcolor{stringliteral}{"{}Paciente\ Teste"{}},\ \textcolor{stringliteral}{"{}12/8"{}},\ 36.5,\ 70.0,\ 1);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Chamamos\ o\ serviço\ para\ registrar}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ resultado\ =\ servico.\mbox{\hyperlink{classServicoTriagem_a5970ea89a0883f1db6233ac676622b49}{registrarTriagem}}(t);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ O\ registro\ deve\ ser\ bem\ sucedido\ e\ estar\ no\ mock}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ QVERIFY(resultado\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ QCOMPARE(mockRepo-\/>\mbox{\hyperlink{classMockTriagemRepository_a42184eb2dc32eb685c3be7b214e30bed}{triagensSalvas}}.size(),\ 1);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ mockRepo;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ test\_validar\_temperatura\_perigosa()\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Uma\ temperatura\ inválida}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMockTriagemRepository}{MockTriagemRepository}}*\ mockRepo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMockTriagemRepository}{MockTriagemRepository}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServicoTriagem}{ServicoTriagem}}\ servico(mockRepo);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTriagem}{Triagem}}\ t(\textcolor{stringliteral}{"{}Paciente\ Invalido"{}},\ \textcolor{stringliteral}{"{}12/8"{}},\ 55.0,\ 70.0,\ 4);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tentamos\ registrar}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ resultado\ =\ servico.\mbox{\hyperlink{classServicoTriagem_a5970ea89a0883f1db6233ac676622b49}{registrarTriagem}}(t);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ O\ serviço\ deve\ recusar\ (retornar\ false)}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ QVERIFY(resultado\ ==\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ mockRepo;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ QTEST\_APPLESS\_MAIN(TestTriagem)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ "{}test\_triagem.moc"{}}}
+
+\end{DoxyCode}

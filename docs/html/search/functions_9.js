@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['telaagendamento_0',['TelaAgendamento',['../classTelaAgendamento.html#a4c61a832d44d5bb78b6b6c85449948cf',1,'TelaAgendamento']]],
-  ['telatriagem_1',['TelaTriagem',['../classTelaTriagem.html#a2076a3c7d2ebf36da6a1768998dc2983',1,'TelaTriagem']]],
-  ['triagem_2',['triagem',['../classTriagem.html#a311c968101f75e4dc6836b78a93880c2',1,'Triagem::Triagem()=default'],['../classTriagem.html#a54e7b07ea7f473c52b359e2fc5369288',1,'Triagem::Triagem(QString p, double t, double pe, int u)']]]
+  ['paciente_0',['Paciente',['../classPaciente.html#a838e84390d3689d0733a953b166998f5',1,'Paciente']]],
+  ['prescricao_1',['prescricao',['../classAtendimento.html#a7b64ea8a3d2b8bd5de8471a27b49b122',1,'Atendimento']]]
 ];

@@ -1,9 +1,7 @@
 <map id="CliniGestGUI/screens/telatriagem.h" name="CliniGestGUI/screens/telatriagem.h">
-<area shape="rect" id="Node000001" title="Interface para realização de triagem clínica." alt="" coords="243,5,401,45"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html" title=" " alt="" coords="5,101,175,126"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,53,122,103,120,98,257,48"/>
-<area shape="rect" id="Node000003" href="$moc__telatriagem_8cpp.html" title=" " alt="" coords="199,101,445,126"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="325,59,325,100,319,100,319,59"/>
-<area shape="rect" id="Node000004" href="$telatriagem_8cpp.html" title=" " alt="" coords="469,93,628,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="386,48,500,91,498,96,384,53"/>
+<area shape="rect" id="Node000001" title="Interface para realização de triagem clínica." alt="" coords="104,5,263,45"/>
+<area shape="rect" id="Node000002" href="$CliniGestGUI_2main_8cpp.html" title=" " alt="" coords="5,101,175,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,57,105,102,101,98,151,53"/>
+<area shape="rect" id="Node000003" href="$telatriagem_8cpp.html" title=" " alt="" coords="199,93,357,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,53,259,91,255,95,213,57"/>
 </map>

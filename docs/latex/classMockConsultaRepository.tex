@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for Mock\+Consulta\+Repository\+:\nopagebreak
+Inheritance diagram for Mock\+Consulta\+Repository\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for Mock\+Consulta\+Repository\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Mock\+Consulta\+Repository\+:\nopagebreak
+Collaboration diagram for Mock\+Consulta\+Repository\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,6 +30,8 @@ Collaboration diagram for Mock\+Consulta\+Repository\+:\nopagebreak
 bool \mbox{\hyperlink{classMockConsultaRepository_a72281d4adbb15b10d9f09e8734891fe3}{salvar}} (const \mbox{\hyperlink{classConsulta}{Consulta}} \&c) override
 \item 
 QList$<$ \mbox{\hyperlink{classConsulta}{Consulta}} $>$ \mbox{\hyperlink{classMockConsultaRepository_a05f0a51c68290f6071827f21cb4159b0}{listar\+Por\+Data}} (const QDate \&) override
+\item 
+bool \mbox{\hyperlink{classMockConsultaRepository_abc090bf77b1b11a3e93f2241831c81e1}{atualizar\+Status}} (int id, std\+::string status) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIConsultaRepository}{IConsulta\+Repository}}}
 \begin{DoxyCompactItemize}
@@ -42,6 +46,16 @@ QList$<$ \mbox{\hyperlink{classConsulta}{Consulta}} $>$ \mbox{\hyperlink{classMo
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classMockConsultaRepository_abc090bf77b1b11a3e93f2241831c81e1}\label{classMockConsultaRepository_abc090bf77b1b11a3e93f2241831c81e1} 
+\index{MockConsultaRepository@{MockConsultaRepository}!atualizarStatus@{atualizarStatus}}
+\index{atualizarStatus@{atualizarStatus}!MockConsultaRepository@{MockConsultaRepository}}
+\doxysubsubsection{\texorpdfstring{atualizarStatus()}{atualizarStatus()}}
+{\footnotesize\ttfamily bool Mock\+Consulta\+Repository\+::atualizar\+Status (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIConsultaRepository_adaef05480aac128b993cb5b87fd6c20d}{IConsulta\+Repository}}.
+
 \Hypertarget{classMockConsultaRepository_a05f0a51c68290f6071827f21cb4159b0}\label{classMockConsultaRepository_a05f0a51c68290f6071827f21cb4159b0} 
 \index{MockConsultaRepository@{MockConsultaRepository}!listarPorData@{listarPorData}}
 \index{listarPorData@{listarPorData}!MockConsultaRepository@{MockConsultaRepository}}

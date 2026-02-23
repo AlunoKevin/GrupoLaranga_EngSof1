@@ -1,7 +1,7 @@
 <map id="ITriagemRepository" name="ITriagemRepository">
-<area shape="rect" id="Node000001" title=" " alt="" coords="103,5,279,91"/>
-<area shape="rect" id="Node000002" href="$classMockTriagemRepository.html" title=" " alt="" coords="5,149,176,214"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,103,117,150,113,147,149,100"/>
-<area shape="rect" id="Node000003" href="$classSqlTriagemRepository.html" title="Implementação do repositório de triagem utilizando SQL (SQLite)." alt="" coords="200,139,381,224"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,100,261,137,257,140,228,103"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="105,5,281,111"/>
+<area shape="rect" id="Node000002" href="$classMockTriagemRepository.html" title=" " alt="" coords="5,179,176,264"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,124,119,180,115,177,151,121"/>
+<area shape="rect" id="Node000003" href="$classSqlTriagemRepository.html" title="Implementação do repositório de triagem utilizando SQL (SQLite)." alt="" coords="200,159,392,284"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,121,259,157,254,160,232,124"/>
 </map>

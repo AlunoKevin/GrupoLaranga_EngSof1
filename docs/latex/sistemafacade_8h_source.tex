@@ -5,29 +5,37 @@
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SISTEMAFACADE\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SISTEMAFACADE\_H}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../interfaces/services/IServicoAgendamento.h"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../interfaces/services/IServicoTriagem.h"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../interfaces/repositories/IConsultaRepository.h"{}}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../interfaces/repositories/ITriagemRepository.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../interfaces/repositories/IConsultaRepository.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../interfaces/repositories/ITriagemRepository.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../interfaces/repositories/IAtendimentoRepository.h"{}}\ }
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../models/consulta.h"{}}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../models/triagem.h"{}}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSistemaFacade}{SistemaFacade}}}
-\DoxyCodeLine{00012\ \{}
-\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSistemaFacade}{SistemaFacade}}(\mbox{\hyperlink{classIConsultaRepository}{IConsultaRepository}}*\ consultaRepo,\ \mbox{\hyperlink{classITriagemRepository}{ITriagemRepository}}*\ triagemRepo);}
-\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classSistemaFacade_ab342879183ec760408d6ab94d131a890}{\string~SistemaFacade}}();}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSistemaFacade_a7e0e472d88179be93439714e76e4566d}{agendarConsulta}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classConsulta}{Consulta}}\&\ consulta);}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSistemaFacade_aa9c43a2dc26779472851c0b671e325de}{registrarTriagem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTriagem}{Triagem}}\&\ triagem);}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classIConsultaRepository}{IConsultaRepository}}*\ m\_consultaRepo;}
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classITriagemRepository}{ITriagemRepository}}*\ m\_triagemRepo;}
-\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classIServicoAgendamento}{IServicoAgendamento}}*\ m\_servicoAgendamento;}
-\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classIServicoTriagem}{IServicoTriagem}}*\ m\_servicoTriagem;}
-\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../models/atendimento.h"{}}\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSistemaFacade}{SistemaFacade}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classSistemaFacade}{SistemaFacade}}(\mbox{\hyperlink{classIConsultaRepository}{IConsultaRepository}}*\ consultaRepo,\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classITriagemRepository}{ITriagemRepository}}*\ triagemRepo,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIAtendimentoRepository}{IAtendimentoRepository}}*\ atendimentoRepo);}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classSistemaFacade_ab342879183ec760408d6ab94d131a890}{\string~SistemaFacade}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSistemaFacade_a7e0e472d88179be93439714e76e4566d}{agendarConsulta}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classConsulta}{Consulta}}\&\ consulta);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSistemaFacade_aa9c43a2dc26779472851c0b671e325de}{registrarTriagem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTriagem}{Triagem}}\&\ triagem);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSistemaFacade_a1d7d16560d75671245ca2ccd13a8cb09}{registrarAtendimento}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAtendimento}{Atendimento}}\&\ atendimento);}
 \DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SISTEMAFACADE\_H}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSistemaFacade_a4e996cf585b0640ca7dc19385dd4409d}{autenticar}}(\textcolor{keyword}{const}\ QString\&\ usuario,\ \textcolor{keyword}{const}\ QString\&\ senha);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classIConsultaRepository}{IConsultaRepository}}*\ m\_consultaRepo;}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classITriagemRepository}{ITriagemRepository}}*\ m\_triagemRepo;}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classIAtendimentoRepository}{IAtendimentoRepository}}*\ m\_atendimentoRepo;\ }
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SISTEMAFACADE\_H}}
 
 \end{DoxyCode}

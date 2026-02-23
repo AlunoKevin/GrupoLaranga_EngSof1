@@ -6,32 +6,37 @@
 
 
 
-Collaboration diagram for Sistema\+Facade\+:\nopagebreak
+Collaboration diagram for Sistema\+Facade\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=192pt]{classSistemaFacade__coll__graph}
+\includegraphics[width=213pt]{classSistemaFacade__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSistemaFacade_a208d9b6e6298a5a31dcab0605c32e500}{Sistema\+Facade}} (\mbox{\hyperlink{classIConsultaRepository}{IConsulta\+Repository}} \texorpdfstring{$\ast$}{*}consulta\+Repo, \mbox{\hyperlink{classITriagemRepository}{ITriagem\+Repository}} \texorpdfstring{$\ast$}{*}triagem\+Repo)
+\mbox{\hyperlink{classSistemaFacade_adf97e07b9ae553df816d1cbbe7eaeecf}{Sistema\+Facade}} (\mbox{\hyperlink{classIConsultaRepository}{IConsulta\+Repository}} \texorpdfstring{$\ast$}{*}consulta\+Repo, \mbox{\hyperlink{classITriagemRepository}{ITriagem\+Repository}} \texorpdfstring{$\ast$}{*}triagem\+Repo, \mbox{\hyperlink{classIAtendimentoRepository}{IAtendimento\+Repository}} \texorpdfstring{$\ast$}{*}atendimento\+Repo)
 \item 
 \mbox{\hyperlink{classSistemaFacade_ab342879183ec760408d6ab94d131a890}{\texorpdfstring{$\sim$}{\string~}\+Sistema\+Facade}} ()
 \item 
 bool \mbox{\hyperlink{classSistemaFacade_a7e0e472d88179be93439714e76e4566d}{agendar\+Consulta}} (const \mbox{\hyperlink{classConsulta}{Consulta}} \&consulta)
 \item 
 bool \mbox{\hyperlink{classSistemaFacade_aa9c43a2dc26779472851c0b671e325de}{registrar\+Triagem}} (const \mbox{\hyperlink{classTriagem}{Triagem}} \&triagem)
+\item 
+bool \mbox{\hyperlink{classSistemaFacade_a1d7d16560d75671245ca2ccd13a8cb09}{registrar\+Atendimento}} (const \mbox{\hyperlink{classAtendimento}{Atendimento}} \&atendimento)
+\item 
+bool \mbox{\hyperlink{classSistemaFacade_a4e996cf585b0640ca7dc19385dd4409d}{autenticar}} (const QString \&usuario, const QString \&senha)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classSistemaFacade_a208d9b6e6298a5a31dcab0605c32e500}\label{classSistemaFacade_a208d9b6e6298a5a31dcab0605c32e500} 
+\Hypertarget{classSistemaFacade_adf97e07b9ae553df816d1cbbe7eaeecf}\label{classSistemaFacade_adf97e07b9ae553df816d1cbbe7eaeecf} 
 \index{SistemaFacade@{SistemaFacade}!SistemaFacade@{SistemaFacade}}
 \index{SistemaFacade@{SistemaFacade}!SistemaFacade@{SistemaFacade}}
 \doxysubsubsection{\texorpdfstring{SistemaFacade()}{SistemaFacade()}}
-{\footnotesize\ttfamily Sistema\+Facade\+::\+Sistema\+Facade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIConsultaRepository}{IConsulta\+Repository}} \texorpdfstring{$\ast$}{*}}]{consulta\+Repo,  }\item[{\mbox{\hyperlink{classITriagemRepository}{ITriagem\+Repository}} \texorpdfstring{$\ast$}{*}}]{triagem\+Repo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily Sistema\+Facade\+::\+Sistema\+Facade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIConsultaRepository}{IConsulta\+Repository}} \texorpdfstring{$\ast$}{*}}]{consulta\+Repo,  }\item[{\mbox{\hyperlink{classITriagemRepository}{ITriagem\+Repository}} \texorpdfstring{$\ast$}{*}}]{triagem\+Repo,  }\item[{\mbox{\hyperlink{classIAtendimentoRepository}{IAtendimento\+Repository}} \texorpdfstring{$\ast$}{*}}]{atendimento\+Repo }\end{DoxyParamCaption})}
 
 \Hypertarget{classSistemaFacade_ab342879183ec760408d6ab94d131a890}\label{classSistemaFacade_ab342879183ec760408d6ab94d131a890} 
 \index{SistemaFacade@{SistemaFacade}!````~SistemaFacade@{\texorpdfstring{$\sim$}{\string~}SistemaFacade}}
@@ -47,6 +52,18 @@ bool \mbox{\hyperlink{classSistemaFacade_aa9c43a2dc26779472851c0b671e325de}{regi
 \index{agendarConsulta@{agendarConsulta}!SistemaFacade@{SistemaFacade}}
 \doxysubsubsection{\texorpdfstring{agendarConsulta()}{agendarConsulta()}}
 {\footnotesize\ttfamily bool Sistema\+Facade\+::agendar\+Consulta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classConsulta}{Consulta}} \&}]{consulta }\end{DoxyParamCaption})}
+
+\Hypertarget{classSistemaFacade_a4e996cf585b0640ca7dc19385dd4409d}\label{classSistemaFacade_a4e996cf585b0640ca7dc19385dd4409d} 
+\index{SistemaFacade@{SistemaFacade}!autenticar@{autenticar}}
+\index{autenticar@{autenticar}!SistemaFacade@{SistemaFacade}}
+\doxysubsubsection{\texorpdfstring{autenticar()}{autenticar()}}
+{\footnotesize\ttfamily bool Sistema\+Facade\+::autenticar (\begin{DoxyParamCaption}\item[{const QString \&}]{usuario,  }\item[{const QString \&}]{senha }\end{DoxyParamCaption})}
+
+\Hypertarget{classSistemaFacade_a1d7d16560d75671245ca2ccd13a8cb09}\label{classSistemaFacade_a1d7d16560d75671245ca2ccd13a8cb09} 
+\index{SistemaFacade@{SistemaFacade}!registrarAtendimento@{registrarAtendimento}}
+\index{registrarAtendimento@{registrarAtendimento}!SistemaFacade@{SistemaFacade}}
+\doxysubsubsection{\texorpdfstring{registrarAtendimento()}{registrarAtendimento()}}
+{\footnotesize\ttfamily bool Sistema\+Facade\+::registrar\+Atendimento (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAtendimento}{Atendimento}} \&}]{atendimento }\end{DoxyParamCaption})}
 
 \Hypertarget{classSistemaFacade_aa9c43a2dc26779472851c0b671e325de}\label{classSistemaFacade_aa9c43a2dc26779472851c0b671e325de} 
 \index{SistemaFacade@{SistemaFacade}!registrarTriagem@{registrarTriagem}}

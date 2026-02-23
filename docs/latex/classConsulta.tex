@@ -6,11 +6,12 @@
 
 
 
-Collaboration diagram for Consulta\+:\nopagebreak
+Collaboration diagram for Consulta\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=161pt]{classConsulta__coll__graph}
+\includegraphics[width=166pt]{classConsulta__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -18,15 +19,40 @@ Collaboration diagram for Consulta\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classConsulta_a69143a5a1716aae6951ad0265eb0be51}{Consulta}} ()=default
 \item 
-\mbox{\hyperlink{classConsulta_a0127737b7ef75e335b46574be1600c9b}{Consulta}} (QDate d, QTime h)
+\mbox{\hyperlink{classConsulta_a53e9673127de1d3d644f305140b5ede1}{Consulta}} (int \mbox{\hyperlink{classConsulta_a3246296a1477432182e97988c408cbab}{id}}, std\+::string p, std\+::string m, QDate d, QTime h)
+\item 
+void \mbox{\hyperlink{classConsulta_a96d3d0b53122db37735cd58253ff3b1e}{set\+Paciente}} (const std\+::string \&p)
+\item 
+void \mbox{\hyperlink{classConsulta_adfe1c8edc51c00558409188dc8719e90}{set\+Medico}} (const std\+::string \&m)
+\item 
+void \mbox{\hyperlink{classConsulta_ab1830b9dfa8518113db79fb4f10b4373}{set\+Data}} (const QDate \&d)
+\item 
+void \mbox{\hyperlink{classConsulta_a7f8ddcf3b782346aaab984aa58a1a198}{set\+Horario}} (const QTime \&h)
+\item 
+void \mbox{\hyperlink{classConsulta_a8a1d76b0d72342983b01b3ec3831f1e3}{set\+Id}} (int i)
+\item 
+std\+::string \mbox{\hyperlink{classConsulta_a638436320bc18faf3b7de47cce84cff6}{get\+Paciente}} () const
+\item 
+std\+::string \mbox{\hyperlink{classConsulta_a9a423813e260265053f3ec6dfde48775}{get\+Medico}} () const
 \item 
 QDate \mbox{\hyperlink{classConsulta_a690c37cd4a5d0130baac76e21b289321}{get\+Data}} () const
 \item 
 QTime \mbox{\hyperlink{classConsulta_ae523e65e173c08ea7510427a510d69a6}{get\+Horario}} () const
 \item 
-void \mbox{\hyperlink{classConsulta_ab1830b9dfa8518113db79fb4f10b4373}{set\+Data}} (const QDate \&d)
+int \mbox{\hyperlink{classConsulta_a99291c22a64da717f274861f9d5901b0}{get\+Id}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classConsulta_a7f8ddcf3b782346aaab984aa58a1a198}{set\+Horario}} (const QTime \&h)
+int \mbox{\hyperlink{classConsulta_a3246296a1477432182e97988c408cbab}{id}}
+\item 
+std\+::string \mbox{\hyperlink{classConsulta_a67d229a423c17b71de51ae457c8d5e13}{paciente}}
+\item 
+std\+::string \mbox{\hyperlink{classConsulta_ad7aa582e01c147043fba8aa16026c149}{medico}}
+\item 
+QDate \mbox{\hyperlink{classConsulta_a912acbb27cd8b952c1f89e789b9a5dc8}{data}}
+\item 
+QTime \mbox{\hyperlink{classConsulta_a82ae6f820fb3d09e1bc3f25180222cb3}{horario}}
 \end{DoxyCompactItemize}
 
 
@@ -37,11 +63,11 @@ void \mbox{\hyperlink{classConsulta_a7f8ddcf3b782346aaab984aa58a1a198}{set\+Hora
 \doxysubsubsection{\texorpdfstring{Consulta()}{Consulta()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Consulta\+::\+Consulta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-\Hypertarget{classConsulta_a0127737b7ef75e335b46574be1600c9b}\label{classConsulta_a0127737b7ef75e335b46574be1600c9b} 
+\Hypertarget{classConsulta_a53e9673127de1d3d644f305140b5ede1}\label{classConsulta_a53e9673127de1d3d644f305140b5ede1} 
 \index{Consulta@{Consulta}!Consulta@{Consulta}}
 \index{Consulta@{Consulta}!Consulta@{Consulta}}
 \doxysubsubsection{\texorpdfstring{Consulta()}{Consulta()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Consulta\+::\+Consulta (\begin{DoxyParamCaption}\item[{QDate}]{d,  }\item[{QTime}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Consulta\+::\+Consulta (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{p,  }\item[{std\+::string}]{m,  }\item[{QDate}]{d,  }\item[{QTime}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -58,6 +84,24 @@ void \mbox{\hyperlink{classConsulta_a7f8ddcf3b782346aaab984aa58a1a198}{set\+Hora
 \doxysubsubsection{\texorpdfstring{getHorario()}{getHorario()}}
 {\footnotesize\ttfamily QTime Consulta\+::get\+Horario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\Hypertarget{classConsulta_a99291c22a64da717f274861f9d5901b0}\label{classConsulta_a99291c22a64da717f274861f9d5901b0} 
+\index{Consulta@{Consulta}!getId@{getId}}
+\index{getId@{getId}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Consulta\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classConsulta_a9a423813e260265053f3ec6dfde48775}\label{classConsulta_a9a423813e260265053f3ec6dfde48775} 
+\index{Consulta@{Consulta}!getMedico@{getMedico}}
+\index{getMedico@{getMedico}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{getMedico()}{getMedico()}}
+{\footnotesize\ttfamily std\+::string Consulta\+::get\+Medico (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classConsulta_a638436320bc18faf3b7de47cce84cff6}\label{classConsulta_a638436320bc18faf3b7de47cce84cff6} 
+\index{Consulta@{Consulta}!getPaciente@{getPaciente}}
+\index{getPaciente@{getPaciente}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{getPaciente()}{getPaciente()}}
+{\footnotesize\ttfamily std\+::string Consulta\+::get\+Paciente (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \Hypertarget{classConsulta_ab1830b9dfa8518113db79fb4f10b4373}\label{classConsulta_ab1830b9dfa8518113db79fb4f10b4373} 
 \index{Consulta@{Consulta}!setData@{setData}}
 \index{setData@{setData}!Consulta@{Consulta}}
@@ -69,6 +113,57 @@ void \mbox{\hyperlink{classConsulta_a7f8ddcf3b782346aaab984aa58a1a198}{set\+Hora
 \index{setHorario@{setHorario}!Consulta@{Consulta}}
 \doxysubsubsection{\texorpdfstring{setHorario()}{setHorario()}}
 {\footnotesize\ttfamily void Consulta\+::set\+Horario (\begin{DoxyParamCaption}\item[{const QTime \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classConsulta_a8a1d76b0d72342983b01b3ec3831f1e3}\label{classConsulta_a8a1d76b0d72342983b01b3ec3831f1e3} 
+\index{Consulta@{Consulta}!setId@{setId}}
+\index{setId@{setId}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Consulta\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classConsulta_adfe1c8edc51c00558409188dc8719e90}\label{classConsulta_adfe1c8edc51c00558409188dc8719e90} 
+\index{Consulta@{Consulta}!setMedico@{setMedico}}
+\index{setMedico@{setMedico}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{setMedico()}{setMedico()}}
+{\footnotesize\ttfamily void Consulta\+::set\+Medico (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classConsulta_a96d3d0b53122db37735cd58253ff3b1e}\label{classConsulta_a96d3d0b53122db37735cd58253ff3b1e} 
+\index{Consulta@{Consulta}!setPaciente@{setPaciente}}
+\index{setPaciente@{setPaciente}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{setPaciente()}{setPaciente()}}
+{\footnotesize\ttfamily void Consulta\+::set\+Paciente (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classConsulta_a912acbb27cd8b952c1f89e789b9a5dc8}\label{classConsulta_a912acbb27cd8b952c1f89e789b9a5dc8} 
+\index{Consulta@{Consulta}!data@{data}}
+\index{data@{data}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily QDate Consulta\+::data}
+
+\Hypertarget{classConsulta_a82ae6f820fb3d09e1bc3f25180222cb3}\label{classConsulta_a82ae6f820fb3d09e1bc3f25180222cb3} 
+\index{Consulta@{Consulta}!horario@{horario}}
+\index{horario@{horario}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{horario}{horario}}
+{\footnotesize\ttfamily QTime Consulta\+::horario}
+
+\Hypertarget{classConsulta_a3246296a1477432182e97988c408cbab}\label{classConsulta_a3246296a1477432182e97988c408cbab} 
+\index{Consulta@{Consulta}!id@{id}}
+\index{id@{id}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Consulta\+::id}
+
+\Hypertarget{classConsulta_ad7aa582e01c147043fba8aa16026c149}\label{classConsulta_ad7aa582e01c147043fba8aa16026c149} 
+\index{Consulta@{Consulta}!medico@{medico}}
+\index{medico@{medico}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{medico}{medico}}
+{\footnotesize\ttfamily std\+::string Consulta\+::medico}
+
+\Hypertarget{classConsulta_a67d229a423c17b71de51ae457c8d5e13}\label{classConsulta_a67d229a423c17b71de51ae457c8d5e13} 
+\index{Consulta@{Consulta}!paciente@{paciente}}
+\index{paciente@{paciente}!Consulta@{Consulta}}
+\doxysubsubsection{\texorpdfstring{paciente}{paciente}}
+{\footnotesize\ttfamily std\+::string Consulta\+::paciente}
 
 
 

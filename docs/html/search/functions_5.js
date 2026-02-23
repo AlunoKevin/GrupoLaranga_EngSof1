@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['mainwindow_1',['MainWindow',['../classMainWindow.html#ac230604395a07bef65afa67c08c0741d',1,'MainWindow']]],
-  ['medico_2',['Medico',['../classMedico.html#abec37628a7ff8b2f03fc5fa96752af3c',1,'Medico']]]
+  ['id_0',['id',['../classAtendimento.html#ae94d09ae719bf2181a1fe436e141d2fe',1,'Atendimento']]],
+  ['idtriagem_1',['idTriagem',['../classAtendimento.html#a2c91aaaa58a2594cb2240561e7a0ff97',1,'Atendimento']]],
+  ['instance_2',['instance',['../classDatabaseManager.html#a4abb527066e28f3928ef45af856e134c',1,'DatabaseManager']]]
 ];

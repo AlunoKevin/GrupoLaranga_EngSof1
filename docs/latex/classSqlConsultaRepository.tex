@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for Sql\+Consulta\+Repository\+:\nopagebreak
+Inheritance diagram for Sql\+Consulta\+Repository\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for Sql\+Consulta\+Repository\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Sql\+Consulta\+Repository\+:\nopagebreak
+Collaboration diagram for Sql\+Consulta\+Repository\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,6 +32,8 @@ Collaboration diagram for Sql\+Consulta\+Repository\+:\nopagebreak
 bool \mbox{\hyperlink{classSqlConsultaRepository_a8b89b204239b080072722ad81f5557de}{salvar}} (const \mbox{\hyperlink{classConsulta}{Consulta}} \&consulta) override
 \item 
 QList$<$ \mbox{\hyperlink{classConsulta}{Consulta}} $>$ \mbox{\hyperlink{classSqlConsultaRepository_af4b378c44c62a65a86feb42f09b1b3dc}{listar\+Por\+Data}} (const QDate \&data) override
+\item 
+bool \mbox{\hyperlink{classSqlConsultaRepository_a43401eaadfa5fb71b13175335a9265c0}{atualizar\+Status}} (int id, std\+::string status) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIConsultaRepository}{IConsulta\+Repository}}}
 \begin{DoxyCompactItemize}
@@ -48,6 +52,16 @@ virtual \mbox{\hyperlink{classIConsultaRepository_abbdb5174dd027f1085e5207347739
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classSqlConsultaRepository_a43401eaadfa5fb71b13175335a9265c0}\label{classSqlConsultaRepository_a43401eaadfa5fb71b13175335a9265c0} 
+\index{SqlConsultaRepository@{SqlConsultaRepository}!atualizarStatus@{atualizarStatus}}
+\index{atualizarStatus@{atualizarStatus}!SqlConsultaRepository@{SqlConsultaRepository}}
+\doxysubsubsection{\texorpdfstring{atualizarStatus()}{atualizarStatus()}}
+{\footnotesize\ttfamily bool Sql\+Consulta\+Repository\+::atualizar\+Status (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIConsultaRepository_adaef05480aac128b993cb5b87fd6c20d}{IConsulta\+Repository}}.
+
 \Hypertarget{classSqlConsultaRepository_af4b378c44c62a65a86feb42f09b1b3dc}\label{classSqlConsultaRepository_af4b378c44c62a65a86feb42f09b1b3dc} 
 \index{SqlConsultaRepository@{SqlConsultaRepository}!listarPorData@{listarPorData}}
 \index{listarPorData@{listarPorData}!SqlConsultaRepository@{SqlConsultaRepository}}

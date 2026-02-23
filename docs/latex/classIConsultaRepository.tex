@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for IConsulta\+Repository\+:\nopagebreak
+Inheritance diagram for IConsulta\+Repository\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for IConsulta\+Repository\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for IConsulta\+Repository\+:\nopagebreak
+Collaboration diagram for IConsulta\+Repository\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,6 +32,8 @@ virtual \mbox{\hyperlink{classIConsultaRepository_abbdb5174dd027f1085e5207347739
 virtual bool \mbox{\hyperlink{classIConsultaRepository_a53ac24f267d4ae8e7834320e227b63a2}{salvar}} (const \mbox{\hyperlink{classConsulta}{Consulta}} \&consulta)=0
 \item 
 virtual QList$<$ \mbox{\hyperlink{classConsulta}{Consulta}} $>$ \mbox{\hyperlink{classIConsultaRepository_a0e6e116789d0771a8f5240e5d32e3f88}{listar\+Por\+Data}} (const QDate \&data)=0
+\item 
+virtual bool \mbox{\hyperlink{classIConsultaRepository_adaef05480aac128b993cb5b87fd6c20d}{atualizar\+Status}} (int id, std\+::string status)=0
 \end{DoxyCompactItemize}
 
 
@@ -43,6 +47,16 @@ virtual QList$<$ \mbox{\hyperlink{classConsulta}{Consulta}} $>$ \mbox{\hyperlink
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classIConsultaRepository_adaef05480aac128b993cb5b87fd6c20d}\label{classIConsultaRepository_adaef05480aac128b993cb5b87fd6c20d} 
+\index{IConsultaRepository@{IConsultaRepository}!atualizarStatus@{atualizarStatus}}
+\index{atualizarStatus@{atualizarStatus}!IConsultaRepository@{IConsultaRepository}}
+\doxysubsubsection{\texorpdfstring{atualizarStatus()}{atualizarStatus()}}
+{\footnotesize\ttfamily virtual bool IConsulta\+Repository\+::atualizar\+Status (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classSqlConsultaRepository_a43401eaadfa5fb71b13175335a9265c0}{Sql\+Consulta\+Repository}}, and \mbox{\hyperlink{classMockConsultaRepository_abc090bf77b1b11a3e93f2241831c81e1}{Mock\+Consulta\+Repository}}.
+
 \Hypertarget{classIConsultaRepository_a0e6e116789d0771a8f5240e5d32e3f88}\label{classIConsultaRepository_a0e6e116789d0771a8f5240e5d32e3f88} 
 \index{IConsultaRepository@{IConsultaRepository}!listarPorData@{listarPorData}}
 \index{listarPorData@{listarPorData}!IConsultaRepository@{IConsultaRepository}}

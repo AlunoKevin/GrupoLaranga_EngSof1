@@ -92,16 +92,18 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classServicoAgendamento.html">ServicoAgendamento</a>(<a class="code hl_class" href="classIConsultaRepository.html">IConsultaRepository</a>* repo);</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classServicoAgendamento.html#a913dc6d93e419098db3064f8fc895f29">agendar</a>(<span class="keyword">const</span> <a class="code hl_class" href="classConsulta.html">Consulta</a>&amp; consulta) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="classIConsultaRepository.html">IConsultaRepository</a>* m_repo;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>   </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classServicoAgendamento.html#ad972f6cb89150d1c9fb3becfa4797f66">cancelar</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classIConsultaRepository.html">IConsultaRepository</a>* m_repo;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
 </div>
-<div class="ttc" id="aclassConsulta_html"><div class="ttname"><a href="classConsulta.html">Consulta</a></div><div class="ttdef"><b>Definition</b> consulta.h:6</div></div>
+<div class="ttc" id="aclassConsulta_html"><div class="ttname"><a href="classConsulta.html">Consulta</a></div><div class="ttdef"><b>Definition</b> consulta.h:8</div></div>
 <div class="ttc" id="aclassIConsultaRepository_html"><div class="ttname"><a href="classIConsultaRepository.html">IConsultaRepository</a></div><div class="ttdef"><b>Definition</b> IConsultaRepository.h:6</div></div>
 <div class="ttc" id="aclassIServicoAgendamento_html"><div class="ttname"><a href="classIServicoAgendamento.html">IServicoAgendamento</a></div><div class="ttdef"><b>Definition</b> IServicoAgendamento.h:6</div></div>
 <div class="ttc" id="aclassServicoAgendamento_html"><div class="ttname"><a href="classServicoAgendamento.html">ServicoAgendamento</a></div><div class="ttdef"><b>Definition</b> servicoagendamento.h:6</div></div>
 <div class="ttc" id="aclassServicoAgendamento_html_a913dc6d93e419098db3064f8fc895f29"><div class="ttname"><a href="classServicoAgendamento.html#a913dc6d93e419098db3064f8fc895f29">ServicoAgendamento::agendar</a></div><div class="ttdeci">bool agendar(const Consulta &amp;consulta) override</div><div class="ttdef"><b>Definition</b> servicoagendamento.cpp:8</div></div>
+<div class="ttc" id="aclassServicoAgendamento_html_ad972f6cb89150d1c9fb3becfa4797f66"><div class="ttname"><a href="classServicoAgendamento.html#ad972f6cb89150d1c9fb3becfa4797f66">ServicoAgendamento::cancelar</a></div><div class="ttdeci">bool cancelar(int id)</div><div class="ttdef"><b>Definition</b> servicoagendamento.cpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

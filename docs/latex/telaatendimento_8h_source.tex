@@ -1,0 +1,37 @@
+\doxysection{telaatendimento.\+h}
+\hypertarget{telaatendimento_8h_source}{}\label{telaatendimento_8h_source}\index{CliniGestGUI/screens/telaatendimento.h@{CliniGestGUI/screens/telaatendimento.h}}
+\mbox{\hyperlink{telaatendimento_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TELAATENDIMENTO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TELAATENDIMENTO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/facade/sistemafacade.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceUi}{Ui}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTelaAtendimento}{TelaAtendimento}};}
+\DoxyCodeLine{00009\ \}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTelaAtendimento}{TelaAtendimento}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classTelaAtendimento}{TelaAtendimento}}(\mbox{\hyperlink{classSistemaFacade}{SistemaFacade}}*\ facade,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classTelaAtendimento_a643c08b0f80c992793076a88eba4a0f5}{\string~TelaAtendimento}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_btnSalvar\_clicked();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_btnFinalizar\_clicked();\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_btnSair\_clicked();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ Ui::TelaAtendimento\ *ui;}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classSistemaFacade}{SistemaFacade}}*\ m\_facade;}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ salvarDados();\ }
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TELAATENDIMENTO\_H}}
+
+\end{DoxyCode}

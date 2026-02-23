@@ -9,41 +9,24 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QSqlQuery>}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QSqlError>}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QVariant>}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/interfaces/repositories/ITriagemRepository.h"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/models/triagem.h"{}}}
-\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/interfaces/repositories/ITriagemRepository.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/models/triagem.h"{}}}
+\DoxyCodeLine{00011\ }
 \DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSqlTriagemRepository}{SqlTriagemRepository}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classITriagemRepository}{ITriagemRepository}}}
 \DoxyCodeLine{00017\ \{}
 \DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00019\ \ \ \ \ QSqlDatabase\ m\_db;}
 \DoxyCodeLine{00020\ }
 \DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSqlTriagemRepository_a7e2b8bfc85946a16f957916a2044aa27}{SqlTriagemRepository}}(QSqlDatabase\ db)\ :\ m\_db(db)\ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cria\ a\ tabela\ se\ ela\ não\ existir\ (Garante\ que\ o\ teste\ não\ quebre)}}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ QSqlQuery\ query(m\_db);}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ query.exec(\textcolor{stringliteral}{"{}CREATE\ TABLE\ IF\ NOT\ EXISTS\ triagem\ ("{}}}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}id\ INTEGER\ PRIMARY\ KEY\ AUTOINCREMENT,\ "{}}}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}pressao\ TEXT,\ "{}}}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}temperatura\ REAL,\ "{}}}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}peso\ REAL,\ "{}}}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}urgencia\ INTEGER)"{}});}
-\DoxyCodeLine{00031\ \ \ \ \ \}}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSqlTriagemRepository_a72ddd7be79b3118d6eb6e838131b119a}{salvar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTriagem}{Triagem}}\&\ triagem)\textcolor{keyword}{\ override\ }\{}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ QSqlQuery\ query(m\_db);}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ query.prepare(\textcolor{stringliteral}{"{}INSERT\ INTO\ triagem\ (pressao,\ temperatura,\ peso,\ urgencia)\ "{}}}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}VALUES\ (:pressao,\ :temp,\ :peso,\ :urgencia)"{}});}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mapeando\ os\ dados\ do\ objeto\ Model\ para\ as\ colunas\ do\ banco}}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ query.bindValue(\textcolor{stringliteral}{"{}:pressao"{}},\ triagem.\mbox{\hyperlink{classTriagem_a0e756ea44a77f3349a74659b0259dd2a}{getPressao}}());}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ query.bindValue(\textcolor{stringliteral}{"{}:temp"{}},\ triagem.\mbox{\hyperlink{classTriagem_a60d04ae90bcc1306b7813fca8832616e}{getTemperatura}}());}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ query.bindValue(\textcolor{stringliteral}{"{}:peso"{}},\ 0.0);\ \textcolor{comment}{//\ Caso\ precise\ adicionar\ getPeso\ no\ model}}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ query.bindValue(\textcolor{stringliteral}{"{}:urgencia"{}},\ 0);\ \textcolor{comment}{//\ Placeholder\ para\ o\ nível\ de\ risco}}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ query.exec();}
-\DoxyCodeLine{00045\ \ \ \ \ \}}
-\DoxyCodeLine{00046\ \};}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SQLTRIAGEMREPOSITORY\_H}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSqlTriagemRepository}{SqlTriagemRepository}}(QSqlDatabase\ db);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSqlTriagemRepository_aec701e9e77cc6e55bdfb9aae8f3c5d78}{\string~SqlTriagemRepository}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Métodos\ da\ Interface}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSqlTriagemRepository_a72ddd7be79b3118d6eb6e838131b119a}{salvar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTriagem}{Triagem}}\&\ triagem)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSqlTriagemRepository_ad76409a76a32d94b57a1beb847a3cc2b}{atualizarStatus}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ QString\ status)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SQLTRIAGEMREPOSITORY\_H}}
 
 \end{DoxyCode}

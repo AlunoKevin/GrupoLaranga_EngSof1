@@ -45,6 +45,33 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/../CliniGestLogic:$(pwd)/../Clini
 ./CliniGestGUI
 ```
 
+## 🧪 Executando os Testes Unitários
+
+Para garantir que a lógica de agendamento, triagem e manutenção de usuário esteja funcionando, siga os passos abaixo:
+
+### 1. **Acesse a pasta de mocks/testes:**
+   ```bash
+   cd tests/mocks
+   ```
+
+### 2. Gere o Makefile (necessário apenas na primeira vez ou se mudar o .pro):
+
+```bash
+qmake 
+```
+
+### 3. Compile os testes:
+
+```bash
+make clean && make
+```
+
+### 4. Execute os testes:
+
+```bash
+./test
+```
+
 ## 📝 Atualizar Documentação
 
 Sempre que alterar o código, atualize a documentação técnica rodando:

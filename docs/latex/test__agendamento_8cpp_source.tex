@@ -1,0 +1,137 @@
+\doxysection{test\+\_\+agendamento.\+cpp}
+\hypertarget{test__agendamento_8cpp_source}{}\label{test__agendamento_8cpp_source}\index{tests/mocks/test\_agendamento.cpp@{tests/mocks/test\_agendamento.cpp}}
+\mbox{\hyperlink{test__agendamento_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <QtTest>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MockConsultaRepository_8h}{MockConsultaRepository.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/services/servicoagendamento.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTestAgendamento}{TestAgendamento}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ Helper\ methods\ para\ organizar\ o\ código}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAgendamentoValido();}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAgendamentoHorarioOcupado();}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAgendamentoSemPaciente();}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAgendamentoSemMedico();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAgendamentoDataPassada();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarCancelamentoValido();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Os\ testes\ que\ o\ Qt\ vai\ rodar}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ agendar\_com\_horario\_livre();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ agendar\_com\_horario\_ocupado();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ agendar\_sem\_paciente();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ agendar\_sem\_medico();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ agendar\_data\_passada();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ cancelar\_consulta\_existente();\ \textcolor{comment}{//\ Teste\ da\ sua\ parte}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ Implementação\ dos\ Helpers\ (Criação\ dos\ cenários)}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{bool}\ TestAgendamento::executarAgendamentoValido()}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classMockConsultaRepository}{MockConsultaRepository}}\ repo;}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classServicoAgendamento}{ServicoAgendamento}}\ servico(\&repo);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classConsulta}{Consulta}}\ c(1,\ \textcolor{stringliteral}{"{}Paciente\ Teste"{}},\ \textcolor{stringliteral}{"{}Medico\ Teste"{}},\ QDate::currentDate().addDays(1),\ QTime(10,0));}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ servico.agendar(c);}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{bool}\ TestAgendamento::executarAgendamentoHorarioOcupado()}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classMockConsultaRepository}{MockConsultaRepository}}\ repo;}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classServicoAgendamento}{ServicoAgendamento}}\ servico(\&repo);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ QDate\ data\ =\ QDate::currentDate().addDays(1);}
+\DoxyCodeLine{00047\ \ \ \ \ QTime\ hora(10,0);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classConsulta}{Consulta}}\ c1(1,\ \textcolor{stringliteral}{"{}Paciente\ 1"{}},\ \textcolor{stringliteral}{"{}Medico\ 1"{}},\ data,\ hora);}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classConsulta}{Consulta}}\ c2(2,\ \textcolor{stringliteral}{"{}Paciente\ 2"{}},\ \textcolor{stringliteral}{"{}Medico\ 1"{}},\ data,\ hora);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ servico.agendar(c1);\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{return}\ servico.agendar(c2);\ \textcolor{comment}{//\ Deve\ falhar\ se\ a\ lógica\ de\ ocupado\ estiver\ pronta}}
+\DoxyCodeLine{00054\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{bool}\ TestAgendamento::executarAgendamentoSemPaciente()}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classMockConsultaRepository}{MockConsultaRepository}}\ repo;}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{classServicoAgendamento}{ServicoAgendamento}}\ servico(\&repo);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{classConsulta}{Consulta}}\ c(1,\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{stringliteral}{"{}Medico\ Teste"{}},\ QDate::currentDate().addDays(1),\ QTime(11,0));}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{return}\ servico.agendar(c);}
+\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{bool}\ TestAgendamento::executarAgendamentoSemMedico()}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{classMockConsultaRepository}{MockConsultaRepository}}\ repo;}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{classServicoAgendamento}{ServicoAgendamento}}\ servico(\&repo);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ Corrigido:\ Passando\ nome\ vazio\ para\ o\ médico}}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{classConsulta}{Consulta}}\ c(1,\ \textcolor{stringliteral}{"{}Paciente\ Teste"{}},\ \textcolor{stringliteral}{"{}"{}},\ QDate::currentDate().addDays(1),\ QTime(12,0));}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{return}\ servico.agendar(c);}
+\DoxyCodeLine{00073\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{bool}\ TestAgendamento::executarAgendamentoDataPassada()}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{classMockConsultaRepository}{MockConsultaRepository}}\ repo;}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{classServicoAgendamento}{ServicoAgendamento}}\ servico(\&repo);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ Corrigido:\ Usando\ data\ de\ ontem}}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{classConsulta}{Consulta}}\ c(1,\ \textcolor{stringliteral}{"{}Paciente\ Teste"{}},\ \textcolor{stringliteral}{"{}Medico\ Teste"{}},\ QDate::currentDate().addDays(-\/1),\ QTime(9,0));}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ servico.agendar(c);}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{bool}\ TestAgendamento::executarCancelamentoValido()}
+\DoxyCodeLine{00086\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{classMockConsultaRepository}{MockConsultaRepository}}\ repo;}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{classServicoAgendamento}{ServicoAgendamento}}\ servico(\&repo);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ idConsulta\ =\ 1;}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//\ Chama\ o\ método\ cancelar\ que\ você\ criou\ no\ serviço}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{return}\ servico.cancelar(idConsulta);}
+\DoxyCodeLine{00093\ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{comment}{//}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//\ Slots\ de\ Teste\ (Onde\ as\ verificações\ acontecem)}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{void}\ TestAgendamento::cancelar\_consulta\_existente()}
+\DoxyCodeLine{00100\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ QVERIFY(executarCancelamentoValido());}
+\DoxyCodeLine{00102\ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{void}\ TestAgendamento::agendar\_com\_horario\_livre()}
+\DoxyCodeLine{00105\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ QVERIFY(executarAgendamentoValido());}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{void}\ TestAgendamento::agendar\_com\_horario\_ocupado()}
+\DoxyCodeLine{00110\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//\ Esperamos\ que\ retorne\ FALSE\ (!),\ pois\ o\ horário\ já\ está\ ocupado}}
+\DoxyCodeLine{00112\ \ \ \ \ QVERIFY(!executarAgendamentoHorarioOcupado());}
+\DoxyCodeLine{00113\ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{keywordtype}{void}\ TestAgendamento::agendar\_sem\_paciente()}
+\DoxyCodeLine{00116\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ QVERIFY(!executarAgendamentoSemPaciente());}
+\DoxyCodeLine{00118\ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{void}\ TestAgendamento::agendar\_sem\_medico()}
+\DoxyCodeLine{00121\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ QVERIFY(!executarAgendamentoSemMedico());}
+\DoxyCodeLine{00123\ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keywordtype}{void}\ TestAgendamento::agendar\_data\_passada()}
+\DoxyCodeLine{00126\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ QVERIFY(!executarAgendamentoDataPassada());}
+\DoxyCodeLine{00128\ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{comment}{//\ QTEST\_MAIN(TestAgendamento)}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#include\ "{}test\_agendamento.moc"{}}}
+
+\end{DoxyCode}
