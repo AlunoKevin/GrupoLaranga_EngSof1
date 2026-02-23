@@ -1,4 +1,4 @@
-QT += widgets sql
+QT += core gui widgets sql
 CONFIG += c++17
 
 TEMPLATE = app
@@ -19,7 +19,9 @@ HEADERS += \
     screens/telaagendamento.h \
     screens/telatriagem.h \
     screens/telaatendimento.h \
-    ../CliniGestData/repositories/SqlTriagemRepository.h
+    ../CliniGestData/repositories/SqlTriagemRepository.h \
+    ../CliniGestData/repositories/SqlUsuarioRepository.h \
+    ../CliniGestLogic/services/ServicoUsuario.h
 
 # Lista unificada de Sources (Incluindo Atendimento)
 SOURCES += \
@@ -28,11 +30,14 @@ SOURCES += \
     screens/telaagendamento.cpp \
     screens/telatriagem.cpp \
     screens/telaatendimento.cpp \
-    ../CliniGestData/repositories/SqlTriagemRepository.cpp
+    ../CliniGestData/repositories/SqlTriagemRepository.cpp \
+    ../CliniGestData/repositories/SqlUsuarioRepository.cpp \
+    ../CliniGestLogic/services/ServicoUsuario.cpp
 
 # Lista unificada de Forms (Interfaces Gráficas)
 FORMS += \
     mainwindow.ui \
     screens/telaagendamento.ui \
     screens/telatriagem.ui \
-    screens/telaatendimento.ui 
+    screens/telaatendimento.ui \
+    screens/telaadminusuarios.ui

@@ -38,7 +38,7 @@ void TelaAdminUsuarios::on_btnAtualizar_clicked()
 {
     int id = ui->editId->text().toInt();
 
-    bool ok = m_facade->atualizarDadosPessoais(
+    bool ok = m_facade->atualizarDadosUtilizador(
         id,
         ui->editNovoNome->text(),
         ui->editNovoEmail->text()

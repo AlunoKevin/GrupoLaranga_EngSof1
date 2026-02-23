@@ -6,10 +6,13 @@
 #include "../CliniGestData/repositories/SqlTriagemRepository.h"
 #include "../CliniGestData/repositories/SqlAtendimentoRepository.h"
 #include "../CliniGestLogic/facade/sistemafacade.h"
+#include "../CliniGestData/repositories/SqlUsuarioRepository.h"
+#include "../CliniGestLogic/services/servicousuario.h"
 
 #include "screens/telaagendamento.h"
 #include "screens/telatriagem.h"
 #include "screens/telaatendimento.h"
+#include "screens/telaadminusuarios.h"
 
 int main(int argc, char *argv[])
 {
@@ -22,16 +25,31 @@ int main(int argc, char *argv[])
     SqlAtendimentoRepository atendimentoRepo(db);
 
     // Instancia a Fachada Única com os 3 repositórios
-    SistemaFacade facade(&consultaRepo, &triagemRepo, &atendimentoRepo);
+   // SistemaFacade facade(&consultaRepo, &triagemRepo, &atendimentoRepo);
 
-    TelaAgendamento w(&facade);
-    w.show();
 
-    TelaTriagem t(&facade);
-    t.show();
+    SqlUsuarioRepository usuarioRepo;
+    ServicoUsuario usuarioServico(&usuarioRepo);
 
-    TelaAtendimento at(&facade);
-    at.show();
+    SistemaFacade facade(
+        &consultaRepo,
+        &triagemRepo,
+        &atendimentoRepo,
+        &usuarioRepo,
+        &usuarioServico
+    );
+
+    //TelaAgendamento w(&facade);
+   // w.show();
+
+   // TelaTriagem t(&facade);
+   // t.show();
+
+    //TelaAtendimento at(&facade);
+   // at.show();
+
+    TelaAdminUsuarios admin(&facade);
+    admin.show();
 
     return a.exec();
 }
