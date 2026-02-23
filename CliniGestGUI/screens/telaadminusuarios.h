@@ -2,7 +2,7 @@
 #define TELAADMINUSUARIOS_H
 
 #include <QWidget>
-#include "CliniGestLogic/facade/sistemafacade.h"
+#include "../CliniGestLogic/facade/sistemafacade.h"
 
 namespace Ui {
 class TelaAdminUsuarios;

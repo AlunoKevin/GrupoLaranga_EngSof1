@@ -39,7 +39,7 @@ COMPRESS      = gzip -9f
 DISTNAME      = CliniGestGUI1.0.0
 DISTDIR = /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/.tmp/CliniGestGUI1.0.0
 LINK          = g++
-LFLAGS        = -Wl,-O1 -Wl,-rpath-link,/usr/lib/x86_64-linux-gnu
+LFLAGS        = -Wl,-O1 -Wl,-z,origin -Wl,-rpath,\$$ORIGIN/../CliniGestLogic -Wl,-rpath,\$$ORIGIN/../CliniGestData -Wl,-rpath-link,/usr/lib/x86_64-linux-gnu
 LIBS          = $(SUBLIBS) /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/../CliniGestLogic/libCliniGestLogic.so /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/../CliniGestData/libCliniGestData.so /usr/lib/x86_64-linux-gnu/libQt6Widgets.so /usr/lib/x86_64-linux-gnu/libQt6Gui.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libQt6Sql.so /usr/lib/x86_64-linux-gnu/libQt6Core.so -lpthread -lGLX -lOpenGL   
 AR            = ar cqs
 RANLIB        = 
@@ -57,24 +57,28 @@ SOURCES       = main.cpp \
 		screens/telaagendamento.cpp \
 		screens/telatriagem.cpp \
 		screens/telaatendimento.cpp \
+		screens/telaadminusuarios.cpp \
 		../CliniGestData/repositories/SqlTriagemRepository.cpp \
 		../CliniGestData/repositories/SqlUsuarioRepository.cpp \
 		../CliniGestLogic/services/servicousuario.cpp moc_mainwindow.cpp \
 		moc_telaagendamento.cpp \
 		moc_telatriagem.cpp \
-		moc_telaatendimento.cpp
+		moc_telaatendimento.cpp \
+		moc_telaadminusuarios.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		telaagendamento.o \
 		telatriagem.o \
 		telaatendimento.o \
+		telaadminusuarios.o \
 		SqlTriagemRepository.o \
 		SqlUsuarioRepository.o \
 		servicousuario.o \
 		moc_mainwindow.o \
 		moc_telaagendamento.o \
 		moc_telatriagem.o \
-		moc_telaatendimento.o
+		moc_telaatendimento.o \
+		moc_telaadminusuarios.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/common/linux.conf \
@@ -149,6 +153,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		screens/telaagendamento.h \
 		screens/telatriagem.h \
 		screens/telaatendimento.h \
+		screens/telaadminusuarios.h \
 		../CliniGestData/repositories/SqlTriagemRepository.h \
 		../CliniGestData/repositories/SqlUsuarioRepository.h \
 		../CliniGestLogic/services/servicousuario.h main.cpp \
@@ -156,6 +161,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		screens/telaagendamento.cpp \
 		screens/telatriagem.cpp \
 		screens/telaatendimento.cpp \
+		screens/telaadminusuarios.cpp \
 		../CliniGestData/repositories/SqlTriagemRepository.cpp \
 		../CliniGestData/repositories/SqlUsuarioRepository.cpp \
 		../CliniGestLogic/services/servicousuario.cpp
@@ -336,8 +342,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents mainwindow.h screens/telaagendamento.h screens/telatriagem.h screens/telaatendimento.h ../CliniGestData/repositories/SqlTriagemRepository.h ../CliniGestData/repositories/SqlUsuarioRepository.h ../CliniGestLogic/services/servicousuario.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp mainwindow.cpp screens/telaagendamento.cpp screens/telatriagem.cpp screens/telaatendimento.cpp ../CliniGestData/repositories/SqlTriagemRepository.cpp ../CliniGestData/repositories/SqlUsuarioRepository.cpp ../CliniGestLogic/services/servicousuario.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents mainwindow.h screens/telaagendamento.h screens/telatriagem.h screens/telaatendimento.h screens/telaadminusuarios.h ../CliniGestData/repositories/SqlTriagemRepository.h ../CliniGestData/repositories/SqlUsuarioRepository.h ../CliniGestLogic/services/servicousuario.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp mainwindow.cpp screens/telaagendamento.cpp screens/telatriagem.cpp screens/telaatendimento.cpp screens/telaadminusuarios.cpp ../CliniGestData/repositories/SqlTriagemRepository.cpp ../CliniGestData/repositories/SqlUsuarioRepository.cpp ../CliniGestLogic/services/servicousuario.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui screens/telaagendamento.ui screens/telatriagem.ui screens/telaatendimento.ui screens/telaadminusuarios.ui $(DISTDIR)/
 
 
@@ -369,9 +375,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/data/dummy.cpp
 	g++ -pipe -O2 -std=gnu++1z -Wall -Wextra -fPIC -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp moc_telaagendamento.cpp moc_telatriagem.cpp moc_telaatendimento.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_telaagendamento.cpp moc_telatriagem.cpp moc_telaatendimento.cpp moc_telaadminusuarios.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp moc_telaagendamento.cpp moc_telatriagem.cpp moc_telaatendimento.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_telaagendamento.cpp moc_telatriagem.cpp moc_telaatendimento.cpp moc_telaadminusuarios.cpp
 moc_mainwindow.cpp: mainwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt6/libexec/moc
@@ -421,6 +427,21 @@ moc_telaatendimento.cpp: screens/telaatendimento.h \
 		moc_predefs.h \
 		/usr/lib/qt6/libexec/moc
 	/usr/lib/qt6/libexec/moc $(DEFINES) --include '/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaatendimento.h -o moc_telaatendimento.cpp
+
+moc_telaadminusuarios.cpp: screens/telaadminusuarios.h \
+		../CliniGestLogic/facade/sistemafacade.h \
+		../CliniGestLogic/interfaces/repositories/IConsultaRepository.h \
+		../CliniGestLogic/models/consulta.h \
+		../CliniGestLogic/interfaces/repositories/ITriagemRepository.h \
+		../CliniGestLogic/models/triagem.h \
+		../CliniGestLogic/interfaces/repositories/IAtendimentoRepository.h \
+		../CliniGestLogic/models/atendimento.h \
+		../CliniGestLogic/interfaces/repositories/IUsuarioRepository.h \
+		../CliniGestLogic/models/usuario.h \
+		../CliniGestLogic/interfaces/services/IServicoUsuario.h \
+		moc_predefs.h \
+		/usr/lib/qt6/libexec/moc
+	/usr/lib/qt6/libexec/moc $(DEFINES) --include '/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaadminusuarios.h -o moc_telaadminusuarios.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -478,7 +499,8 @@ main.o: main.cpp mainwindow.h \
 		../CliniGestLogic/services/servicousuario.h \
 		screens/telaagendamento.h \
 		screens/telatriagem.h \
-		screens/telaatendimento.h
+		screens/telaatendimento.h \
+		screens/telaadminusuarios.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
@@ -537,6 +559,20 @@ telaatendimento.o: screens/telaatendimento.cpp screens/telaatendimento.h \
 		ui_telaatendimento.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telaatendimento.o screens/telaatendimento.cpp
 
+telaadminusuarios.o: screens/telaadminusuarios.cpp screens/telaadminusuarios.h \
+		../CliniGestLogic/facade/sistemafacade.h \
+		../CliniGestLogic/interfaces/repositories/IConsultaRepository.h \
+		../CliniGestLogic/models/consulta.h \
+		../CliniGestLogic/interfaces/repositories/ITriagemRepository.h \
+		../CliniGestLogic/models/triagem.h \
+		../CliniGestLogic/interfaces/repositories/IAtendimentoRepository.h \
+		../CliniGestLogic/models/atendimento.h \
+		../CliniGestLogic/interfaces/repositories/IUsuarioRepository.h \
+		../CliniGestLogic/models/usuario.h \
+		../CliniGestLogic/interfaces/services/IServicoUsuario.h \
+		ui_telaadminusuarios.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telaadminusuarios.o screens/telaadminusuarios.cpp
+
 SqlTriagemRepository.o: ../CliniGestData/repositories/SqlTriagemRepository.cpp ../CliniGestData/repositories/SqlTriagemRepository.h \
 		../CliniGestLogic/interfaces/repositories/ITriagemRepository.h \
 		../CliniGestLogic/models/triagem.h
@@ -564,6 +600,9 @@ moc_telatriagem.o: moc_telatriagem.cpp
 
 moc_telaatendimento.o: moc_telaatendimento.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_telaatendimento.o moc_telaatendimento.cpp
+
+moc_telaadminusuarios.o: moc_telaadminusuarios.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_telaadminusuarios.o moc_telaadminusuarios.cpp
 
 ####### Install
 

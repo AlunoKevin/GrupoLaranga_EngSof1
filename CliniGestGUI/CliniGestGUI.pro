@@ -1,6 +1,9 @@
 QT += core gui widgets sql
 CONFIG += c++17
 
+QMAKE_RPATHDIR += ../CliniGestLogic
+QMAKE_RPATHDIR += ../CliniGestData
+
 TEMPLATE = app
 TARGET = CliniGestGUI
 
@@ -19,6 +22,7 @@ HEADERS += \
     screens/telaagendamento.h \
     screens/telatriagem.h \
     screens/telaatendimento.h \
+    screens/telaadminusuarios.h \
     ../CliniGestData/repositories/SqlTriagemRepository.h \
     ../CliniGestData/repositories/SqlUsuarioRepository.h \
     ../CliniGestLogic/services/ServicoUsuario.h
@@ -30,6 +34,7 @@ SOURCES += \
     screens/telaagendamento.cpp \
     screens/telatriagem.cpp \
     screens/telaatendimento.cpp \
+    screens/telaadminusuarios.cpp \
     ../CliniGestData/repositories/SqlTriagemRepository.cpp \
     ../CliniGestData/repositories/SqlUsuarioRepository.cpp \
     ../CliniGestLogic/services/ServicoUsuario.cpp

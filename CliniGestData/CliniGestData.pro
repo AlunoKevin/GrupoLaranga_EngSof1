@@ -1,4 +1,4 @@
-QT += sql
+QT += core gui sql
 CONFIG += c++17 shared
 
 TARGET = CliniGestData
