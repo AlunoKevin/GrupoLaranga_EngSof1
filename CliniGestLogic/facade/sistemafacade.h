@@ -33,6 +33,7 @@ public:
     bool registrarAtendimento(const Atendimento& atendimento);
 
     bool autenticar(const QString& usuario, const QString& senha);
+    void logout();
 
     bool atualizarDadosUtilizador(int id, const QString& nome, const QString& email);
     bool alterarSenha(int id, const QString& novaSenha);

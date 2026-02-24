@@ -34,7 +34,6 @@ bool SistemaFacade::registrarTriagem(const Triagem& triagem)
     return false;
 }
 
-
 bool SistemaFacade::registrarAtendimento(const Atendimento& atendimento)
 {
     if (m_atendimentoRepo) {
@@ -43,20 +42,20 @@ bool SistemaFacade::registrarAtendimento(const Atendimento& atendimento)
     return false;
 }
 
-// verificar se o login existe e se a senha bate, se sim, setar o usuário logado no serviço
+// A Fachada agora só repassa a ordem. A lógica pesada (checar senha) ficou isolada no Serviço!
 bool SistemaFacade::autenticar(const QString& login, const QString& senha)
 {
-    if (!m_usuarioServico)
-        return false;
-
-    Usuario* u = m_usuarioServico->buscarPorLogin(login);
-
-    if (u && u->getSenha() == senha) {
-        m_usuarioServico->setUsuarioLogado(u);
-        return true;
+    if (m_usuarioServico) {
+        return m_usuarioServico->autenticar(login, senha);
     }
-
     return false;
+}
+
+void SistemaFacade::logout()
+{
+    if (m_usuarioServico) {
+        m_usuarioServico->logout();
+    }
 }
 
 bool SistemaFacade::atualizarDadosUtilizador(int id, const QString& nome, const QString& email) {

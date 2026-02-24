@@ -23,7 +23,7 @@ HEADERS += \
     services/servicotriagem.h \
     services/servicousuario.h
 
-SOURCES += \
-    facade/sistemafacade.cpp \
-    services/servicoagendamento.cpp \
-    services/servicotriagem.cpp
+SOURCES += facade/sistemafacade.cpp
+SOURCES += services/servicoagendamento.cpp
+SOURCES += services/servicotriagem.cpp
+SOURCES += services/servicousuario.cpp
