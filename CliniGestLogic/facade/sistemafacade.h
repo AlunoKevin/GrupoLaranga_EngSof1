@@ -28,6 +28,8 @@ public:
 
     bool agendarConsulta(const Consulta& consulta);
 
+    bool verificarPacienteAgendado(const QString& nome);
+    
     bool registrarTriagem(const Triagem& triagem);
 
     bool registrarAtendimento(const Atendimento& atendimento);

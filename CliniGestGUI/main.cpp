@@ -39,14 +39,18 @@ int main(int argc, char *argv[])
         &usuarioServico
     );
 
-    //TelaAgendamento w(&facade);
-   // w.show();
 
-   // TelaTriagem t(&facade);
-   // t.show();
+    SqlUsuarioRepository usuarioRepo;
+    ServicoUsuario usuarioServico(&usuarioRepo);
 
-    //TelaAtendimento at(&facade);
-   // at.show();
+    TelaAgendamento w(&facade);
+    w.show();
+
+    TelaTriagem t(&facade);
+    t.show();
+
+    TelaAtendimento at(&facade);
+    at.show();
 
     TelaAdminUsuarios admin(&facade);
     admin.show();

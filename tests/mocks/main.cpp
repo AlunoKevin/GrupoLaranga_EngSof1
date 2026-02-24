@@ -2,6 +2,7 @@
 #include "test_agendamento.h"
 #include "test_triagem.h"
 #include "test_manter_usuario.h"
+#include "test_atendimento.h"
 
 int main(int argc, char *argv[])
 {
@@ -16,6 +17,10 @@ int main(int argc, char *argv[])
     }
     {
         TestManterUsuario tc;
+        status |= QTest::qExec(&tc, argc, argv);
+    }
+    {
+        TestAtendimento tc;
         status |= QTest::qExec(&tc, argc, argv);
     }
     return status;

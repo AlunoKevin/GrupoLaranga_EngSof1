@@ -1,6 +1,5 @@
 #include "test_agendamento.h"
 
-// Implementação dos Helpers
 bool TestAgendamento::executarAgendamentoValido() {
     MockConsultaRepository repo;
     ServicoAgendamento servico(&repo);
@@ -47,7 +46,6 @@ bool TestAgendamento::executarCancelamentoValido() {
     return servico.cancelar(idConsulta);
 }
 
-// Slots de Teste
 void TestAgendamento::cancelar_consulta_existente() {
     QVERIFY(executarCancelamentoValido());
 }

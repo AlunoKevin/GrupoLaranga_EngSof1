@@ -1,0 +1,7 @@
+<map id="IUsuarioRepository" name="IUsuarioRepository">
+<area shape="rect" id="Node000001" title="Interface para persistência e manipulação de dados de usuários no sistema." alt="" coords="105,5,278,171"/>
+<area shape="rect" id="Node000002" href="$classMockUsuarioRepository.html" title=" " alt="" coords="5,239,175,384"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,184,125,240,120,237,146,182"/>
+<area shape="rect" id="Node000003" href="$classSqlUsuarioRepository.html" title=" " alt="" coords="199,219,389,404"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,182,254,217,249,220,232,184"/>
+</map>

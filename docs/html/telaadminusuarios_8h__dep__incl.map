@@ -1,0 +1,9 @@
+<map id="CliniGestGUI/screens/telaadminusuarios.h" name="CliniGestGUI/screens/telaadminusuarios.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="265,5,424,45"/>
+<area shape="rect" id="Node000002" href="$CliniGestGUI_2main_8cpp.html" title=" " alt="" coords="5,101,175,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,52,125,103,123,98,275,47"/>
+<area shape="rect" id="Node000003" href="$moc__telaadminusuarios_8cpp.html" title=" " alt="" coords="199,101,491,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="347,59,347,100,342,100,342,59"/>
+<area shape="rect" id="Node000004" href="$telaadminusuarios_8cpp.html" title=" " alt="" coords="515,93,689,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="415,47,546,91,545,96,413,52"/>
+</map>

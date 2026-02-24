@@ -1,0 +1,30 @@
+\doxysection{test\+\_\+atendimento.\+h}
+\hypertarget{test__atendimento_8h_source}{}\label{test__atendimento_8h_source}\index{tests/mocks/test\_atendimento.h@{tests/mocks/test\_atendimento.h}}
+\mbox{\hyperlink{test__atendimento_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TEST\_ATENDIMENTO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TEST\_ATENDIMENTO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QtTest>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MockAtendimentoRepository_8h}{MockAtendimentoRepository.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/services/servicoatendimento.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTestAtendimento}{TestAtendimento}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAtendimentoValido();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAtendimentoSemDiagnostico();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAtendimentoSemPrescricao();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ registrar\_atendimento\_valido();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ registrar\_atendimento\_sem\_diagnostico();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ registrar\_atendimento\_sem\_prescricao();}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TEST\_ATENDIMENTO\_H}}
+
+\end{DoxyCode}

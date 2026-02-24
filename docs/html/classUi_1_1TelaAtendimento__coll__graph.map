@@ -1,0 +1,5 @@
+<map id="Ui::TelaAtendimento" name="Ui::TelaAtendimento">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,339,152,404"/>
+<area shape="rect" id="Node000002" href="$classUi__TelaAtendimento.html" title=" " alt="" coords="6,5,151,291"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,304,81,338,76,338,76,304"/>
+</map>

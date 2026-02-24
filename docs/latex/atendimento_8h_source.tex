@@ -1,0 +1,46 @@
+\doxysection{atendimento.\+h}
+\hypertarget{atendimento_8h_source}{}\label{atendimento_8h_source}\index{CliniGestLogic/models/atendimento.h@{CliniGestLogic/models/atendimento.h}}
+\mbox{\hyperlink{atendimento_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ATENDIMENTO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ATENDIMENTO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAtendimento}{Atendimento}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classAtendimento_a709dd12c8ef2c75207e056c6686099ea}{Atendimento}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAtendimento_a2c91aaaa58a2594cb2240561e7a0ff97}{idTriagem}}\ =\ 0,\ QString\ \mbox{\hyperlink{classAtendimento_ad56630afd8ea472a57256719991b7ac2}{diagnostico}}\ =\ \textcolor{stringliteral}{"{}"{}},\ QString\ \mbox{\hyperlink{classAtendimento_a7b64ea8a3d2b8bd5de8471a27b49b122}{prescricao}}\ =\ \textcolor{stringliteral}{"{}"{}},\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QString\ \mbox{\hyperlink{classAtendimento_a2187aa6096e370ef9dca815b55138ef9}{exames}}\ =\ \textcolor{stringliteral}{"{}"{}},\ QString\ \mbox{\hyperlink{classAtendimento_a78b71e51a6f18d7ea38ad312de474f50}{observacoes}}\ =\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ :\ m\_id(0),\ m\_idTriagem(\mbox{\hyperlink{classAtendimento_a2c91aaaa58a2594cb2240561e7a0ff97}{idTriagem}}),\ m\_diagnostico(\mbox{\hyperlink{classAtendimento_ad56630afd8ea472a57256719991b7ac2}{diagnostico}}),\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ m\_prescricao(\mbox{\hyperlink{classAtendimento_a7b64ea8a3d2b8bd5de8471a27b49b122}{prescricao}}),\ m\_exames(\mbox{\hyperlink{classAtendimento_a2187aa6096e370ef9dca815b55138ef9}{exames}}),\ m\_observacoes(\mbox{\hyperlink{classAtendimento_a78b71e51a6f18d7ea38ad312de474f50}{observacoes}})\ \{\}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAtendimento_ae94d09ae719bf2181a1fe436e141d2fe}{id}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_id;\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAtendimento_a18141de4804714bca122d1881ba43320}{setId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \{\ m\_id\ =\ \mbox{\hyperlink{classAtendimento_ae94d09ae719bf2181a1fe436e141d2fe}{id}};\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAtendimento_a2c91aaaa58a2594cb2240561e7a0ff97}{idTriagem}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_idTriagem;\ \}\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAtendimento_a5dee5e47b09fe5aebb27c1bdd56bbf2c}{setIdTriagem}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \{\ m\_idTriagem\ =\ \mbox{\hyperlink{classAtendimento_ae94d09ae719bf2181a1fe436e141d2fe}{id}};\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ QString\ \mbox{\hyperlink{classAtendimento_ad56630afd8ea472a57256719991b7ac2}{diagnostico}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_diagnostico;\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAtendimento_a8eba26ec54cefd4ab47350b7007081b0}{setDiagnostico}}(\textcolor{keyword}{const}\ QString\ \&d)\ \{\ m\_diagnostico\ =\ d;\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ QString\ \mbox{\hyperlink{classAtendimento_a7b64ea8a3d2b8bd5de8471a27b49b122}{prescricao}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_prescricao;\ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAtendimento_af76f2c64c8352288dad42ee226fadf20}{setPrescricao}}(\textcolor{keyword}{const}\ QString\ \&p)\ \{\ m\_prescricao\ =\ p;\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ QString\ \mbox{\hyperlink{classAtendimento_a2187aa6096e370ef9dca815b55138ef9}{exames}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_exames;\ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAtendimento_a17ada5c2ce47030a24587b03c2f6f448}{setExames}}(\textcolor{keyword}{const}\ QString\ \&e)\ \{\ m\_exames\ =\ e;\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \ \ QString\ \mbox{\hyperlink{classAtendimento_a78b71e51a6f18d7ea38ad312de474f50}{observacoes}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_observacoes;\ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAtendimento_a76b9352435c914a4a1b94f5b9a1edd40}{setObservacoes}}(\textcolor{keyword}{const}\ QString\ \&obs)\ \{\ m\_observacoes\ =\ obs;\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_id;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_idTriagem;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ QString\ m\_diagnostico;\ \ }
+\DoxyCodeLine{00061\ \ \ \ \ QString\ m\_prescricao;\ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ QString\ m\_exames;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ QString\ m\_observacoes;\ \ }
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ATENDIMENTO\_H}}
+
+\end{DoxyCode}

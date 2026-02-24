@@ -1,0 +1,36 @@
+\doxysection{test\+\_\+agendamento.\+h}
+\hypertarget{test__agendamento_8h_source}{}\label{test__agendamento_8h_source}\index{tests/mocks/test\_agendamento.h@{tests/mocks/test\_agendamento.h}}
+\mbox{\hyperlink{test__agendamento_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TEST\_AGENDAMENTO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TEST\_AGENDAMENTO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QtTest>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MockConsultaRepository_8h}{MockConsultaRepository.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../../CliniGestLogic/services/servicoagendamento.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTestAgendamento}{TestAgendamento}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAgendamentoValido();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAgendamentoHorarioOcupado();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAgendamentoSemPaciente();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAgendamentoSemMedico();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarAgendamentoDataPassada();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ executarCancelamentoValido();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ agendar\_com\_horario\_livre();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ agendar\_com\_horario\_ocupado();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ agendar\_sem\_paciente();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ agendar\_sem\_medico();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ agendar\_data\_passada();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ cancelar\_consulta\_existente();}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TEST\_AGENDAMENTO\_H}}
+
+\end{DoxyCode}

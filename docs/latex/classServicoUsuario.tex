@@ -1,0 +1,207 @@
+\doxysection{Servico\+Usuario Class Reference}
+\hypertarget{classServicoUsuario}{}\label{classServicoUsuario}\index{ServicoUsuario@{ServicoUsuario}}
+
+
+{\ttfamily \#include $<$servicousuario.\+h$>$}
+
+
+
+Inheritance diagram for Servico\+Usuario\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classServicoUsuario__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Servico\+Usuario\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classServicoUsuario__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServicoUsuario_a2b2d75051c70a05b4858972e6781393a}{Servico\+Usuario}} (\mbox{\hyperlink{classIUsuarioRepository}{IUsuario\+Repository}} \texorpdfstring{$\ast$}{*}repo)
+\item 
+virtual \mbox{\hyperlink{classServicoUsuario_a9815e301e00bc6315dd6fcebe12b6934}{\texorpdfstring{$\sim$}{\string~}\+Servico\+Usuario}} ()=default
+\item 
+bool \mbox{\hyperlink{classServicoUsuario_a18f271cfff95e128c97822c687a5477d}{atualizar\+Dados\+Pessoais}} (int id, const QString \&nome, const QString \&email) override
+\begin{DoxyCompactList}\small\item\em Atualiza as informações básicas de cadastro de um usuário. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServicoUsuario_ac45631aa87c67f1a0ad7df598f62dc81}{alterar\+Senha}} (int id, const QString \&nova\+Senha) override
+\begin{DoxyCompactList}\small\item\em Realiza a troca da senha de acesso do usuário. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classServicoUsuario_ab0ad350211262ac241dddf008d522b18}{buscar\+Por\+Id}} (int id) override
+\begin{DoxyCompactList}\small\item\em Recupera um usuário através do seu ID numérico. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classServicoUsuario_a8e99544bdc2e4fd137ebcc57e74b76b1}{buscar\+Por\+Login}} (const QString \&login) override
+\begin{DoxyCompactList}\small\item\em Localiza um usuário pelo nome de login. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classServicoUsuario_a0f83e19fec698024bd63c2ceef610dd7}{buscar\+Utilizador\+Logado}} () override
+\begin{DoxyCompactList}\small\item\em Retorna o usuário que está atualmente autenticado na sessão. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServicoUsuario_a13b7d64e944a4be731a13ea432b9f763}{set\+Usuario\+Logado}} (\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*}u) override
+\begin{DoxyCompactList}\small\item\em Define qual usuário deve ser considerado como logado no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIServicoUsuario}{IServico\+Usuario}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIServicoUsuario_a63c045a447f741e32936fa893fb06569}{\texorpdfstring{$\sim$}{\string~}\+IServico\+Usuario}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classServicoUsuario_a2b2d75051c70a05b4858972e6781393a}\label{classServicoUsuario_a2b2d75051c70a05b4858972e6781393a} 
+\index{ServicoUsuario@{ServicoUsuario}!ServicoUsuario@{ServicoUsuario}}
+\index{ServicoUsuario@{ServicoUsuario}!ServicoUsuario@{ServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{ServicoUsuario()}{ServicoUsuario()}}
+{\footnotesize\ttfamily Servico\+Usuario\+::\+Servico\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIUsuarioRepository}{IUsuario\+Repository}} \texorpdfstring{$\ast$}{*}}]{repo }\end{DoxyParamCaption})}
+
+\Hypertarget{classServicoUsuario_a9815e301e00bc6315dd6fcebe12b6934}\label{classServicoUsuario_a9815e301e00bc6315dd6fcebe12b6934} 
+\index{ServicoUsuario@{ServicoUsuario}!````~ServicoUsuario@{\texorpdfstring{$\sim$}{\string~}ServicoUsuario}}
+\index{````~ServicoUsuario@{\texorpdfstring{$\sim$}{\string~}ServicoUsuario}!ServicoUsuario@{ServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ServicoUsuario()}{\string~ServicoUsuario()}}
+{\footnotesize\ttfamily virtual Servico\+Usuario\+::\texorpdfstring{$\sim$}{\string~}\+Servico\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classServicoUsuario_ac45631aa87c67f1a0ad7df598f62dc81}\label{classServicoUsuario_ac45631aa87c67f1a0ad7df598f62dc81} 
+\index{ServicoUsuario@{ServicoUsuario}!alterarSenha@{alterarSenha}}
+\index{alterarSenha@{alterarSenha}!ServicoUsuario@{ServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{alterarSenha()}{alterarSenha()}}
+{\footnotesize\ttfamily bool Servico\+Usuario\+::alterar\+Senha (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{const QString \&}]{nova\+Senha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Realiza a troca da senha de acesso do usuário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único do usuário. \\
+\hline
+{\em nova\+Senha} & Nova string de senha (deve ser tratada/hasheada na implementação). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a senha atender aos requisitos e for alterada. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServicoUsuario_aae77f6047dbd08ca2c4fa82078b34754}{IServico\+Usuario}}.
+
+\Hypertarget{classServicoUsuario_a18f271cfff95e128c97822c687a5477d}\label{classServicoUsuario_a18f271cfff95e128c97822c687a5477d} 
+\index{ServicoUsuario@{ServicoUsuario}!atualizarDadosPessoais@{atualizarDadosPessoais}}
+\index{atualizarDadosPessoais@{atualizarDadosPessoais}!ServicoUsuario@{ServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{atualizarDadosPessoais()}{atualizarDadosPessoais()}}
+{\footnotesize\ttfamily bool Servico\+Usuario\+::atualizar\+Dados\+Pessoais (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{const QString \&}]{nome,  }\item[{const QString \&}]{email }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atualiza as informações básicas de cadastro de um usuário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único do usuário. \\
+\hline
+{\em nome} & Novo nome completo. \\
+\hline
+{\em email} & Novo endereço de e-\/mail. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se os dados forem válidos e a atualização for confirmada. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServicoUsuario_af429b481da4a0b8c744f9262745797a1}{IServico\+Usuario}}.
+
+\Hypertarget{classServicoUsuario_ab0ad350211262ac241dddf008d522b18}\label{classServicoUsuario_ab0ad350211262ac241dddf008d522b18} 
+\index{ServicoUsuario@{ServicoUsuario}!buscarPorId@{buscarPorId}}
+\index{buscarPorId@{buscarPorId}!ServicoUsuario@{ServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{buscarPorId()}{buscarPorId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} Servico\+Usuario\+::buscar\+Por\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Recupera um usuário através do seu ID numérico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o objeto \doxylink{classUsuario}{Usuario} ou nullptr se não encontrado. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServicoUsuario_abe2de632a388de5f4eb10cb5915098f9}{IServico\+Usuario}}.
+
+\Hypertarget{classServicoUsuario_a8e99544bdc2e4fd137ebcc57e74b76b1}\label{classServicoUsuario_a8e99544bdc2e4fd137ebcc57e74b76b1} 
+\index{ServicoUsuario@{ServicoUsuario}!buscarPorLogin@{buscarPorLogin}}
+\index{buscarPorLogin@{buscarPorLogin}!ServicoUsuario@{ServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{buscarPorLogin()}{buscarPorLogin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} Servico\+Usuario\+::buscar\+Por\+Login (\begin{DoxyParamCaption}\item[{const QString \&}]{login }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Localiza um usuário pelo nome de login. 
+
+\begin{DoxyNote}{Note}
+Este método é essencial para o fluxo de autenticação do Hugo. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em login} & String com o nome de utilizador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o \doxylink{classUsuario}{Usuario} correspondente. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServicoUsuario_a7aae5f2dc1bbdd45400cf43506d48cf0}{IServico\+Usuario}}.
+
+\Hypertarget{classServicoUsuario_a0f83e19fec698024bd63c2ceef610dd7}\label{classServicoUsuario_a0f83e19fec698024bd63c2ceef610dd7} 
+\index{ServicoUsuario@{ServicoUsuario}!buscarUtilizadorLogado@{buscarUtilizadorLogado}}
+\index{buscarUtilizadorLogado@{buscarUtilizadorLogado}!ServicoUsuario@{ServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{buscarUtilizadorLogado()}{buscarUtilizadorLogado()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} Servico\+Usuario\+::buscar\+Utilizador\+Logado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retorna o usuário que está atualmente autenticado na sessão. 
+
+\begin{DoxyReturn}{Returns}
+Ponteiro para o objeto \doxylink{classUsuario}{Usuario} da sessão ativa. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServicoUsuario_a7f229e2e2a4e4ec9d7b594beffbc59ca}{IServico\+Usuario}}.
+
+\Hypertarget{classServicoUsuario_a13b7d64e944a4be731a13ea432b9f763}\label{classServicoUsuario_a13b7d64e944a4be731a13ea432b9f763} 
+\index{ServicoUsuario@{ServicoUsuario}!setUsuarioLogado@{setUsuarioLogado}}
+\index{setUsuarioLogado@{setUsuarioLogado}!ServicoUsuario@{ServicoUsuario}}
+\doxysubsubsection{\texorpdfstring{setUsuarioLogado()}{setUsuarioLogado()}}
+{\footnotesize\ttfamily void Servico\+Usuario\+::set\+Usuario\+Logado (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*}}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Define qual usuário deve ser considerado como logado no sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Ponteiro para o objeto \doxylink{classUsuario}{Usuario} autenticado. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIServicoUsuario_a15a3877642bbc2af5a164fb642bbe2a5}{IServico\+Usuario}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Clini\+Gest\+Logic/services/\mbox{\hyperlink{servicousuario_8h}{servicousuario.\+h}}\item 
+Clini\+Gest\+Logic/services/\mbox{\hyperlink{servicousuario_8cpp}{servicousuario.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+\doxysection{servicousuario.\+h}
+\hypertarget{servicousuario_8h_source}{}\label{servicousuario_8h_source}\index{CliniGestLogic/services/servicousuario.h@{CliniGestLogic/services/servicousuario.h}}
+\mbox{\hyperlink{servicousuario_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SERVICOUSUARIO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SERVICOUSUARIO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../interfaces/services/IServicoUsuario.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../interfaces/repositories/IUsuarioRepository.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classServicoUsuario}{ServicoUsuario}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIServicoUsuario}{IServicoUsuario}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classIUsuarioRepository}{IUsuarioRepository}}*\ m\_repo;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classServicoUsuario}{ServicoUsuario}}(\mbox{\hyperlink{classIUsuarioRepository}{IUsuarioRepository}}*\ repo);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classServicoUsuario_a9815e301e00bc6315dd6fcebe12b6934}{\string~ServicoUsuario}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Implementações\ da\ interface}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoUsuario_a18f271cfff95e128c97822c687a5477d}{atualizarDadosPessoais}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ QString\&\ nome,\ \textcolor{keyword}{const}\ QString\&\ email)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServicoUsuario_ac45631aa87c67f1a0ad7df598f62dc81}{alterarSenha}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ QString\&\ novaSenha)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classUsuario}{Usuario}}*\ \mbox{\hyperlink{classServicoUsuario_ab0ad350211262ac241dddf008d522b18}{buscarPorId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classUsuario}{Usuario}}*\ \mbox{\hyperlink{classServicoUsuario_a8e99544bdc2e4fd137ebcc57e74b76b1}{buscarPorLogin}}(\textcolor{keyword}{const}\ QString\&\ login)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ O\ método\ que\ você\ precisa\ para\ a\ sua\ tela}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classUsuario}{Usuario}}*\ \mbox{\hyperlink{classServicoUsuario_a0f83e19fec698024bd63c2ceef610dd7}{buscarUtilizadorLogado}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Método\ para\ o\ Hugo\ definir\ quem\ logou}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServicoUsuario_a13b7d64e944a4be731a13ea432b9f763}{setUsuarioLogado}}(\mbox{\hyperlink{classUsuario}{Usuario}}*\ u)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

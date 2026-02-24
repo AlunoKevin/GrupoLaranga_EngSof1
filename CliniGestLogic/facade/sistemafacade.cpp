@@ -26,6 +26,30 @@ bool SistemaFacade::agendarConsulta(const Consulta& consulta)
     return false;
 }
 
+bool SistemaFacade::verificarPacienteAgendado(const QString& nome) {
+    QString nomeBusca = nome.trimmed(); 
+    
+    if (nomeBusca.isEmpty()) {
+        return false;
+    }
+
+    if (m_consultaRepo) {
+        QDate hoje = QDate::currentDate();
+        QList<Consulta> consultasHoje = m_consultaRepo->listarPorData(hoje);
+        
+        for (const Consulta& c : consultasHoje) {
+            QString nomePacienteAgendado = QString::fromStdString(c.getPaciente());
+            
+            if (nomePacienteAgendado.contains(nomeBusca, Qt::CaseInsensitive)) {
+                return true;
+            }
+        }
+        return false; 
+    }
+    
+    return false;
+}
+
 bool SistemaFacade::registrarTriagem(const Triagem& triagem)
 {
     if (m_triagemRepo) {
@@ -33,7 +57,6 @@ bool SistemaFacade::registrarTriagem(const Triagem& triagem)
     }
     return false;
 }
-
 
 bool SistemaFacade::registrarAtendimento(const Atendimento& atendimento)
 {
