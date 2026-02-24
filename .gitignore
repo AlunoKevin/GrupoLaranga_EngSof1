@@ -9,3 +9,15 @@ moc_predefs.h
 Makefile
 test
 .qmake.stash
+
+# Doxygen
+docs/html/
+docs/latex/
+
+# Pastas de compilação e binários
+build*/
+debug/
+release/
+bin/
+*.so
+*.a
