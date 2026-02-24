@@ -1,12 +1,15 @@
 #include "sistemafacade.h"
-#include <QDebug>
 
 SistemaFacade::SistemaFacade(IConsultaRepository* consultaRepo, 
                              ITriagemRepository* triagemRepo,
-                             IAtendimentoRepository* atendimentoRepo)
+                             IAtendimentoRepository* atendimentoRepo,
+                             IUsuarioRepository* usuarioRepo,
+                             IServicoUsuario* usuarioServico)
     : m_consultaRepo(consultaRepo), 
       m_triagemRepo(triagemRepo),
-      m_atendimentoRepo(atendimentoRepo)
+      m_atendimentoRepo(atendimentoRepo),
+      m_usuarioRepo(usuarioRepo),
+      m_usuarioServico(usuarioServico)
 {
 }
 
@@ -34,26 +37,16 @@ bool SistemaFacade::verificarPacienteAgendado(const QString& nome) {
         QDate hoje = QDate::currentDate();
         QList<Consulta> consultasHoje = m_consultaRepo->listarPorData(hoje);
         
-        // LOGS PARA DESCOBRIR O MISTÉRIO:
-        qDebug() << "=== INICIANDO BUSCA DE PACIENTE ===";
-        qDebug() << "Procurando por:" << nomeBusca;
-        qDebug() << "Data de hoje (sistema):" << hoje.toString("yyyy-MM-dd");
-        qDebug() << "Total de consultas retornadas pelo banco hoje:" << consultasHoje.size();
-        
         for (const Consulta& c : consultasHoje) {
             QString nomePacienteAgendado = QString::fromStdString(c.getPaciente());
-            qDebug() << " - Encontrado no banco:" << nomePacienteAgendado;
             
             if (nomePacienteAgendado.contains(nomeBusca, Qt::CaseInsensitive)) {
-                qDebug() << " >>> MATCH! Paciente encontrado!";
                 return true;
             }
         }
-        qDebug() << "Nenhum match encontrado no loop.";
         return false; 
     }
     
-    qDebug() << "Erro: m_consultaRepo está nulo!";
     return false;
 }
 
@@ -73,7 +66,55 @@ bool SistemaFacade::registrarAtendimento(const Atendimento& atendimento)
     return false;
 }
 
-bool SistemaFacade::autenticar(const QString& usuario, const QString& senha) {
-    // Lógica simples para teste 
-    return (usuario == "admin" && senha == "1234");
+// verificar se o login existe e se a senha bate, se sim, setar o usuário logado no serviço
+bool SistemaFacade::autenticar(const QString& login, const QString& senha)
+{
+    if (!m_usuarioServico)
+        return false;
+
+    Usuario* u = m_usuarioServico->buscarPorLogin(login);
+
+    if (u && u->getSenha() == senha) {
+        m_usuarioServico->setUsuarioLogado(u);
+        return true;
+    }
+
+    return false;
+}
+
+bool SistemaFacade::atualizarDadosUtilizador(int id, const QString& nome, const QString& email) {
+    if (m_usuarioServico) {
+        return m_usuarioServico->atualizarDadosPessoais(id, nome, email);
+    }
+    return false;
+}
+
+bool SistemaFacade::alterarSenha(int id, const QString& novaSenha) {
+    if (m_usuarioServico) {
+        return m_usuarioServico->alterarSenha(id, novaSenha);
+    }
+    return false;
+}
+
+Usuario* SistemaFacade::buscarUtilizadorLogado() {
+    if (m_usuarioServico) {
+        return m_usuarioServico->buscarUtilizadorLogado();
+    }
+    return nullptr;
+}
+
+bool SistemaFacade::cadastrarUsuario(Usuario* usuario)
+{
+    if (m_usuarioRepo) {
+        return m_usuarioRepo->salvar(usuario);
+    }
+    return false;
+}
+
+Usuario* SistemaFacade::buscarUsuarioPorId(int id)
+{
+    if (m_usuarioServico) {
+        return m_usuarioServico->buscarPorId(id);
+    }
+    return nullptr;
 }

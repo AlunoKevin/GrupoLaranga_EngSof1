@@ -39,6 +39,10 @@ int main(int argc, char *argv[])
         &usuarioServico
     );
 
+
+    SqlUsuarioRepository usuarioRepo;
+    ServicoUsuario usuarioServico(&usuarioRepo);
+
     TelaAgendamento w(&facade);
     w.show();
 
@@ -46,7 +50,7 @@ int main(int argc, char *argv[])
     t.show();
 
     TelaAtendimento at(&facade);
-   at.show();
+    at.show();
 
     TelaAdminUsuarios admin(&facade);
     admin.show();

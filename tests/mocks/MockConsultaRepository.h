@@ -17,6 +17,7 @@ public:
     }
 
     bool atualizarStatus(int id, std::string status) override {
+        Q_UNUSED(status);
         if (id > 0) {
             return true;
         }

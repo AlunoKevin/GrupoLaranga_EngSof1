@@ -1,6 +1,5 @@
 #include "test_agendamento.h"
 
-// Implementação dos Helpers
 bool TestAgendamento::executarAgendamentoValido() {
     MockConsultaRepository repo;
     ServicoAgendamento servico(&repo);
