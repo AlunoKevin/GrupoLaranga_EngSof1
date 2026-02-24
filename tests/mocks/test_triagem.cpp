@@ -1,43 +1,22 @@
-#include <QtTest>
+#include "test_triagem.h"
 #include "../CliniGestLogic/services/servicotriagem.h"
 #include "MockTriagemRepository.h"
 
-class TestTriagem : public QObject
-{
-    Q_OBJECT
+void TestTriagem::test_registrar_triagem_valida() {
+    MockTriagemRepository* mockRepo = new MockTriagemRepository();
+    ServicoTriagem servico(mockRepo);
+    Triagem t("Paciente Teste", "12/8", 36.5, 70.0, 1);
 
-private slots:
-    void test_registrar_triagem_valida() {
-        // Um mock de repositório e dados de triagem válidos
-        MockTriagemRepository* mockRepo = new MockTriagemRepository();
-        ServicoTriagem servico(mockRepo);
-        Triagem t("Paciente Teste", "12/8", 36.5, 70.0, 1);
+    QVERIFY(servico.registrarTriagem(t));
+    QCOMPARE(mockRepo->triagensSalvas.size(), 1);
+    delete mockRepo;
+}
 
-        // Chamamos o serviço para registrar
-        bool resultado = servico.registrarTriagem(t);
-
-        // O registro deve ser bem sucedido e estar no mock
-        QVERIFY(resultado == true);
-        QCOMPARE(mockRepo->triagensSalvas.size(), 1);
-        
-        delete mockRepo;
-    }
-
-    void test_validar_temperatura_perigosa() {
-        // Uma temperatura inválida
-        MockTriagemRepository* mockRepo = new MockTriagemRepository();
-        ServicoTriagem servico(mockRepo);
-        Triagem t("Paciente Invalido", "12/8", 55.0, 70.0, 4);
-        
-        // Tentamos registrar
-        bool resultado = servico.registrarTriagem(t);
-
-        // O serviço deve recusar (retornar false)
-        QVERIFY(resultado == false);
-        
-        delete mockRepo;
-    }
-};
-
-// QTEST_APPLESS_MAIN(TestTriagem)
-#include "test_triagem.moc"
+void TestTriagem::test_validar_temperatura_perigosa() {
+    MockTriagemRepository* mockRepo = new MockTriagemRepository();
+    ServicoTriagem servico(mockRepo);
+    Triagem t("Paciente Invalido", "12/8", 55.0, 70.0, 4);
+    
+    QVERIFY(!servico.registrarTriagem(t));
+    delete mockRepo;
+}

@@ -33,7 +33,7 @@ make clean
 ### 3. Gerar o Makefile e Compilar
 
 ```bash
-qmake
+qmake6
 make
 ```
 
@@ -57,7 +57,7 @@ Para garantir que a lógica de agendamento, triagem e manutenção de usuário e
 ### 2. Gere o Makefile (necessário apenas na primeira vez ou se mudar o .pro):
 
 ```bash
-qmake 
+qmake6
 ```
 
 ### 3. Compile os testes:

@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = CliniGestData1.0.0
-DISTDIR = /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData/.tmp/CliniGestData1.0.0
+DISTDIR = /home/juliana/GrupoLaranga_EngSof1/CliniGestData/.tmp/CliniGestData1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath-link,/usr/lib/x86_64-linux-gnu -shared -Wl,-soname,libCliniGestData.so.1
 LIBS          = $(SUBLIBS) /usr/lib/x86_64-linux-gnu/libQt6Gui.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libQt6Sql.so /usr/lib/x86_64-linux-gnu/libQt6Core.so -lpthread -lGLX -lOpenGL   
@@ -75,7 +75,6 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_designer.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
@@ -83,10 +82,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_help.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_input_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_kms_support_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_linguist.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl.pri \
@@ -99,8 +96,6 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uiplugin.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uitools.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
@@ -180,7 +175,6 @@ Makefile: CliniGestData.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmak
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_designer.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
@@ -188,10 +182,8 @@ Makefile: CliniGestData.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmak
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_help.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_input_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_kms_support_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_linguist.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl.pri \
@@ -204,8 +196,6 @@ Makefile: CliniGestData.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmak
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uiplugin.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uitools.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
@@ -254,7 +244,6 @@ Makefile: CliniGestData.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmak
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_designer.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri:
@@ -262,10 +251,8 @@ Makefile: CliniGestData.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmak
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_fb_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_help.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_input_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_kms_support_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_linguist.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl.pri:
@@ -278,8 +265,6 @@ Makefile: CliniGestData.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmak
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uiplugin.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uitools.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:

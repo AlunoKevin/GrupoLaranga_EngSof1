@@ -1,31 +1,38 @@
-#include <QtTest>
-#include "MockUsuarioRepository.h" // Aquele que criamos antes
+#include "test_manter_usuario.h"
+#include "MockUsuarioRepository.h"
 #include "../CliniGestLogic/services/servicousuario.h"
 
-class TestManterUsuario : public QObject {
-    Q_OBJECT
+void TestManterUsuario::initTestCase() {}
 
-private slots:
-    void initTestCase() {
-        // Inicialização global se necessário
-    }
+void TestManterUsuario::test_alterar_dados_logado() {
+    MockUsuarioRepository repo;
+    ServicoUsuario servico(&repo);
+    Usuario* user = new Usuario(1, "Juliana", "123", "old@email.com", "ju", "123", "Medico");
+    repo.salvar(user);
+    servico.setUsuarioLogado(user);
 
-    void test_alterar_dados_logado() {
-        MockUsuarioRepository repo;
-        ServicoUsuario servico(&repo);
-        
-        // Simula um usuário que já existe
-        Usuario* user = new Usuario(1, "Juliana", "123", "old@email.com", "ju", "123", "Medico");
-        repo.salvar(user);
-        servico.setUsuarioLogado(user);
+    bool res = servico.atualizarDadosPessoais(1, "Juliana Nova", "new@email.com");
+    QVERIFY(res);
+    QCOMPARE(repo.buscarPorId(1)->getNome(), QString("Juliana Nova"));
+}
 
-        // Ação de Manter Cadastro
-        bool res = servico.atualizarDadosPessoais(1, "Juliana Nova", "new@email.com");
+void TestManterUsuario::test_cadastrar_novo_usuario() {
+    MockUsuarioRepository repo;
+    ServicoUsuario servico(&repo);
+    Usuario* novo = new Usuario(2, "Kevin", "456", "kevin@email.com", "kevin", "senha123", "Admin");
+    
+    bool res = repo.salvar(novo);
+    QVERIFY(res);
+    QCOMPARE(repo.listarTodos().size(), 1);
+}
 
-        QVERIFY(res);
-        QCOMPARE(repo.buscarPorId(1)->getNome(), QString("Juliana Nova"));
-    }
-};
+void TestManterUsuario::test_alterar_senha_usuario() {
+    MockUsuarioRepository repo;
+    ServicoUsuario servico(&repo);
+    Usuario* user = new Usuario(1, "Juliana", "123", "old@email.com", "ju", "123", "Medico");
+    repo.salvar(user);
 
-// QTEST_APPLESS_MAIN(TestManterUsuario)
-#include "test_manter_usuario.moc"
+    bool res = servico.alterarSenha(1, "novaSenha456"); 
+    QVERIFY(res);
+    QCOMPARE(repo.buscarPorId(1)->getSenha(), QString("novaSenha456"));
+}

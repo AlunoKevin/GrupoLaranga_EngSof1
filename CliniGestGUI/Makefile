@@ -37,10 +37,10 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = CliniGestGUI1.0.0
-DISTDIR = /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/.tmp/CliniGestGUI1.0.0
+DISTDIR = /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/.tmp/CliniGestGUI1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-z,origin -Wl,-rpath,\$$ORIGIN/../CliniGestLogic -Wl,-rpath,\$$ORIGIN/../CliniGestData -Wl,-rpath-link,/usr/lib/x86_64-linux-gnu
-LIBS          = $(SUBLIBS) /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/../CliniGestLogic/libCliniGestLogic.so /home/kevin/Documents/engenharia\ de\ software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/../CliniGestData/libCliniGestData.so /usr/lib/x86_64-linux-gnu/libQt6Widgets.so /usr/lib/x86_64-linux-gnu/libQt6Gui.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libQt6Sql.so /usr/lib/x86_64-linux-gnu/libQt6Core.so -lpthread -lGLX -lOpenGL   
+LIBS          = $(SUBLIBS) /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/../CliniGestLogic/libCliniGestLogic.so /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/../CliniGestData/libCliniGestData.so /usr/lib/x86_64-linux-gnu/libQt6Widgets.so /usr/lib/x86_64-linux-gnu/libQt6Gui.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libQt6Sql.so /usr/lib/x86_64-linux-gnu/libQt6Core.so -lpthread -lGLX -lOpenGL   
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -94,7 +94,6 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_designer.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
@@ -102,10 +101,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_help.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_input_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_kms_support_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_linguist.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl.pri \
@@ -118,8 +115,6 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uiplugin.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uitools.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
@@ -191,7 +186,6 @@ Makefile: CliniGestGUI.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_designer.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
@@ -199,10 +193,8 @@ Makefile: CliniGestGUI.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_help.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_input_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_kms_support_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_linguist.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl.pri \
@@ -215,8 +207,6 @@ Makefile: CliniGestGUI.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib_private.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uiplugin.pri \
-		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uitools.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
@@ -267,7 +257,6 @@ Makefile: CliniGestGUI.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_core_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_dbus_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_designer.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri:
@@ -275,10 +264,8 @@ Makefile: CliniGestGUI.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_fb_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_gui_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_help.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_input_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_kms_support_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_linguist.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_network_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_opengl.pri:
@@ -291,8 +278,6 @@ Makefile: CliniGestGUI.pro /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++/qmake
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_sql_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_testlib_private.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uiplugin.pri:
-/usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_uitools.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_widgets_private.pri:
 /usr/lib/x86_64-linux-gnu/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
@@ -381,7 +366,7 @@ compiler_moc_header_clean:
 moc_mainwindow.cpp: mainwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt6/libexec/moc
-	/usr/lib/qt6/libexec/moc $(DEFINES) --include '/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/usr/lib/qt6/libexec/moc $(DEFINES) --include /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I/home/juliana/GrupoLaranga_EngSof1/CliniGestGUI -I/home/juliana/GrupoLaranga_EngSof1/CliniGestLogic -I/home/juliana/GrupoLaranga_EngSof1/CliniGestData -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 moc_telaagendamento.cpp: screens/telaagendamento.h \
 		../CliniGestLogic/facade/sistemafacade.h \
@@ -396,7 +381,7 @@ moc_telaagendamento.cpp: screens/telaagendamento.h \
 		../CliniGestLogic/interfaces/services/IServicoUsuario.h \
 		moc_predefs.h \
 		/usr/lib/qt6/libexec/moc
-	/usr/lib/qt6/libexec/moc $(DEFINES) --include '/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaagendamento.h -o moc_telaagendamento.cpp
+	/usr/lib/qt6/libexec/moc $(DEFINES) --include /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I/home/juliana/GrupoLaranga_EngSof1/CliniGestGUI -I/home/juliana/GrupoLaranga_EngSof1/CliniGestLogic -I/home/juliana/GrupoLaranga_EngSof1/CliniGestData -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaagendamento.h -o moc_telaagendamento.cpp
 
 moc_telatriagem.cpp: screens/telatriagem.h \
 		../CliniGestLogic/facade/sistemafacade.h \
@@ -411,7 +396,7 @@ moc_telatriagem.cpp: screens/telatriagem.h \
 		../CliniGestLogic/interfaces/services/IServicoUsuario.h \
 		moc_predefs.h \
 		/usr/lib/qt6/libexec/moc
-	/usr/lib/qt6/libexec/moc $(DEFINES) --include '/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telatriagem.h -o moc_telatriagem.cpp
+	/usr/lib/qt6/libexec/moc $(DEFINES) --include /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I/home/juliana/GrupoLaranga_EngSof1/CliniGestGUI -I/home/juliana/GrupoLaranga_EngSof1/CliniGestLogic -I/home/juliana/GrupoLaranga_EngSof1/CliniGestData -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telatriagem.h -o moc_telatriagem.cpp
 
 moc_telaatendimento.cpp: screens/telaatendimento.h \
 		../CliniGestLogic/facade/sistemafacade.h \
@@ -426,7 +411,7 @@ moc_telaatendimento.cpp: screens/telaatendimento.h \
 		../CliniGestLogic/interfaces/services/IServicoUsuario.h \
 		moc_predefs.h \
 		/usr/lib/qt6/libexec/moc
-	/usr/lib/qt6/libexec/moc $(DEFINES) --include '/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaatendimento.h -o moc_telaatendimento.cpp
+	/usr/lib/qt6/libexec/moc $(DEFINES) --include /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I/home/juliana/GrupoLaranga_EngSof1/CliniGestGUI -I/home/juliana/GrupoLaranga_EngSof1/CliniGestLogic -I/home/juliana/GrupoLaranga_EngSof1/CliniGestData -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaatendimento.h -o moc_telaatendimento.cpp
 
 moc_telaadminusuarios.cpp: screens/telaadminusuarios.h \
 		../CliniGestLogic/facade/sistemafacade.h \
@@ -441,7 +426,7 @@ moc_telaadminusuarios.cpp: screens/telaadminusuarios.h \
 		../CliniGestLogic/interfaces/services/IServicoUsuario.h \
 		moc_predefs.h \
 		/usr/lib/qt6/libexec/moc
-	/usr/lib/qt6/libexec/moc $(DEFINES) --include '/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h' -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestGUI' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestLogic' -I'/home/kevin/Documents/engenharia de software/ProjetoLaranja/GrupoLaranga_EngSof1/CliniGestData' -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaadminusuarios.h -o moc_telaadminusuarios.cpp
+	/usr/lib/qt6/libexec/moc $(DEFINES) --include /home/juliana/GrupoLaranga_EngSof1/CliniGestGUI/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -I/home/juliana/GrupoLaranga_EngSof1/CliniGestGUI -I/home/juliana/GrupoLaranga_EngSof1/CliniGestLogic -I/home/juliana/GrupoLaranga_EngSof1/CliniGestData -I/usr/include/x86_64-linux-gnu/qt6 -I/usr/include/x86_64-linux-gnu/qt6/QtWidgets -I/usr/include/x86_64-linux-gnu/qt6/QtGui -I/usr/include/x86_64-linux-gnu/qt6/QtSql -I/usr/include/x86_64-linux-gnu/qt6/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include screens/telaadminusuarios.h -o moc_telaadminusuarios.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:

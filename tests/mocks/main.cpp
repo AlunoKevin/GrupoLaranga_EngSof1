@@ -1,7 +1,7 @@
 #include <QtTest>
-#include "test_agendamento.cpp"
-#include "test_triagem.cpp"
-#include "test_manter_usuario.cpp"
+#include "test_agendamento.h"
+#include "test_triagem.h"
+#include "test_manter_usuario.h"
 
 int main(int argc, char *argv[])
 {
