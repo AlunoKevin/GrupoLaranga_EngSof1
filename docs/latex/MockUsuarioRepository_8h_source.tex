@@ -1,0 +1,44 @@
+\doxysection{Mock\+Usuario\+Repository.\+h}
+\hypertarget{MockUsuarioRepository_8h_source}{}\label{MockUsuarioRepository_8h_source}\index{tests/mocks/MockUsuarioRepository.h@{tests/mocks/MockUsuarioRepository.h}}
+\mbox{\hyperlink{MockUsuarioRepository_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MOCKUSUARIOREPOSITORY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MOCKUSUARIOREPOSITORY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../CliniGestLogic/interfaces/repositories/IUsuarioRepository.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMockUsuarioRepository}{MockUsuarioRepository}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIUsuarioRepository}{IUsuarioRepository}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ QMap<int,\ Usuario*>\ \mbox{\hyperlink{classMockUsuarioRepository_ad2b7afcc58ecdf6a7d6d2667013c5f60}{usuarios}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMockUsuarioRepository_ae262c8221ce09e139e448039a50233c5}{salvar}}(\mbox{\hyperlink{classUsuario}{Usuario}}*\ u)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMockUsuarioRepository_ad2b7afcc58ecdf6a7d6d2667013c5f60}{usuarios}}[u-\/>\mbox{\hyperlink{classUsuario_a654c2014a73c6361cbcf40af60098229}{getId}}()]\ =\ u;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00014\ \ \ \ \ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMockUsuarioRepository_a4f2a76716bca5fdcfd8792948f7583fd}{atualizar}}(\mbox{\hyperlink{classUsuario}{Usuario}}*\ u)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMockUsuarioRepository_ad2b7afcc58ecdf6a7d6d2667013c5f60}{usuarios}}.contains(u-\/>\mbox{\hyperlink{classUsuario_a654c2014a73c6361cbcf40af60098229}{getId}}()))\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMockUsuarioRepository_ad2b7afcc58ecdf6a7d6d2667013c5f60}{usuarios}}[u-\/>\mbox{\hyperlink{classUsuario_a654c2014a73c6361cbcf40af60098229}{getId}}()]\ =\ u;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classUsuario}{Usuario}}*\ \mbox{\hyperlink{classMockUsuarioRepository_a3728eaaa1b9da09af72c832180c42478}{buscarPorId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMockUsuarioRepository_ad2b7afcc58ecdf6a7d6d2667013c5f60}{usuarios}}.value(\textcolor{keywordtype}{id},\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classUsuario}{Usuario}}*\ \mbox{\hyperlink{classMockUsuarioRepository_a24d8580451f48537ef6848dd0d8da69f}{buscarPorLogin}}(\textcolor{keyword}{const}\ QString\&\ login)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ u\ :\ \mbox{\hyperlink{classMockUsuarioRepository_ad2b7afcc58ecdf6a7d6d2667013c5f60}{usuarios}})\ \textcolor{keywordflow}{if}(u-\/>getLogin()\ ==\ login)\ \textcolor{keywordflow}{return}\ u;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ QList<Usuario*>\ \mbox{\hyperlink{classMockUsuarioRepository_adadabc239613df9b58f391e346a5eafa}{listarTodos}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMockUsuarioRepository_ad2b7afcc58ecdf6a7d6d2667013c5f60}{usuarios}}.values();}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

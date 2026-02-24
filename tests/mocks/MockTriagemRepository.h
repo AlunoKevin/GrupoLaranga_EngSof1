@@ -13,10 +13,9 @@ public:
         return true; 
     }
 
-    // ADICIONE ESTE MÉTODO ABAIXO PARA CORRIGIR O ERRO:
     bool atualizarStatus(int id, QString status) override {
         Q_UNUSED(id);
         Q_UNUSED(status);
-        return true; // Simula que o status foi atualizado com sucesso
+        return true; 
     }
 };

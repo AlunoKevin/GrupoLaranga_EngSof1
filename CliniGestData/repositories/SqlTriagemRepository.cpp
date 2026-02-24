@@ -15,7 +15,23 @@ SqlTriagemRepository::SqlTriagemRepository(QSqlDatabase db) : m_db(db)
 }
 
 bool SqlTriagemRepository::salvar(const Triagem& triagem) {
+    if (!m_db.isOpen()) {
+        qDebug() << "ERRO: Banco de dados não está aberto no repositório de triagem!";
+        return false;
+    }
+    
     QSqlQuery query(m_db);
+    if (!query.exec("CREATE TABLE IF NOT EXISTS triagem ("
+                   "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                   "paciente_nome TEXT, "
+                   "pressao TEXT, "
+                   "temperatura REAL, "
+                   "peso REAL, "
+                   "status TEXT, " 
+                   "urgencia INTEGER)")) {
+        qDebug() << "Erro ao criar/verificar tabela triagem:" << query.lastError().text();
+    }
+
     query.prepare("INSERT INTO triagem (paciente_nome, pressao, temperatura, peso, urgencia, status) "
                   "VALUES (:nome, :pressao, :temp, :peso, :urgencia, :status)");
 
@@ -28,6 +44,7 @@ bool SqlTriagemRepository::salvar(const Triagem& triagem) {
 
     if (!query.exec()) {
         qDebug() << "ERRO NO SQLITE (salvar):" << query.lastError().text();
+        qDebug() << "QUERY EXECUTADA:" << query.executedQuery();
         return false;
     }
     return true;

@@ -1,0 +1,80 @@
+\doxysection{Mock\+Atendimento\+Repository Class Reference}
+\hypertarget{classMockAtendimentoRepository}{}\label{classMockAtendimentoRepository}\index{MockAtendimentoRepository@{MockAtendimentoRepository}}
+
+
+{\ttfamily \#include $<$Mock\+Atendimento\+Repository.\+h$>$}
+
+
+
+Inheritance diagram for Mock\+Atendimento\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classMockAtendimentoRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mock\+Atendimento\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classMockAtendimentoRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classMockAtendimentoRepository_a8ade5aca75ecd014eca2ee22c959f212}{salvar}} (const \mbox{\hyperlink{classAtendimento}{Atendimento}} \&a) override
+\begin{DoxyCompactList}\small\item\em Salva o registro final do atendimento realizado pelo médico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIAtendimentoRepository}{IAtendimento\+Repository}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIAtendimentoRepository_a2a3b203ca4fac921d144fa4568cc9950}{\texorpdfstring{$\sim$}{\string~}\+IAtendimento\+Repository}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ \mbox{\hyperlink{classAtendimento}{Atendimento}} $>$ \mbox{\hyperlink{classMockAtendimentoRepository_aaab51ed84ed51d5973d1c43f8fcb5f6f}{data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMockAtendimentoRepository_a8ade5aca75ecd014eca2ee22c959f212}\label{classMockAtendimentoRepository_a8ade5aca75ecd014eca2ee22c959f212} 
+\index{MockAtendimentoRepository@{MockAtendimentoRepository}!salvar@{salvar}}
+\index{salvar@{salvar}!MockAtendimentoRepository@{MockAtendimentoRepository}}
+\doxysubsubsection{\texorpdfstring{salvar()}{salvar()}}
+{\footnotesize\ttfamily bool Mock\+Atendimento\+Repository\+::salvar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAtendimento}{Atendimento}} \&}]{atendimento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Salva o registro final do atendimento realizado pelo médico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atendimento} & Referência constante para os dados do atendimento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o registro foi salvo. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIAtendimentoRepository_af8e9f0afd41d85c4f625c0bb650db378}{IAtendimento\+Repository}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classMockAtendimentoRepository_aaab51ed84ed51d5973d1c43f8fcb5f6f}\label{classMockAtendimentoRepository_aaab51ed84ed51d5973d1c43f8fcb5f6f} 
+\index{MockAtendimentoRepository@{MockAtendimentoRepository}!data@{data}}
+\index{data@{data}!MockAtendimentoRepository@{MockAtendimentoRepository}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily QList$<$\mbox{\hyperlink{classAtendimento}{Atendimento}}$>$ Mock\+Atendimento\+Repository\+::data}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/mocks/\mbox{\hyperlink{MockAtendimentoRepository_8h}{Mock\+Atendimento\+Repository.\+h}}\end{DoxyCompactItemize}

@@ -16,21 +16,38 @@ TelaTriagem::~TelaTriagem()
     delete ui;
 }
 
+void TelaTriagem::on_btnBuscar_clicked() {
+    QString nomeBusca = ui->txtNomePaciente->text(); 
+    
+    if(nomeBusca.isEmpty()) {
+        QMessageBox::warning(this, "Aviso", "Digite o nome do paciente para buscar.");
+        return;
+    }
+
+    bool temConsulta = m_facade->verificarPacienteAgendado(nomeBusca);
+
+    if (temConsulta) {
+        QMessageBox::information(this, "Sucesso", "Paciente localizado nos agendamentos de hoje. Pode prosseguir!");
+    } else {
+        QMessageBox::warning(this, "Aviso", "Não há consultas agendadas para este paciente na data de hoje.");
+    }
+}
+
 void TelaTriagem::on_btnSalvarTriagem_clicked()
 {
-    // 1. Pegue o nome do campo que você tem na UI (ex: txtNomePaciente)
     QString nome = ui->txtNomePaciente->text(); 
     QString pressao = ui->txtPressao->text();
     double temp = ui->txtTemperatura->value();
     double peso = ui->txtPeso->value();
     int urgencia = ui->cbUrgencia->currentIndex();
 
-    // 2. Agora passe o 'nome' como primeiro argumento
     Triagem dados(nome, pressao, temp, peso, urgencia);
 
-    if (m_facade->registrarTriagem(dados)) {
+    bool sucesso = m_facade->registrarTriagem(dados);
+    
+    if (sucesso) {
         QMessageBox::information(this, "Sucesso", "Triagem registrada!");
-        this->close();
+        this->close(); 
     } else {
         QMessageBox::warning(this, "Erro", "Falha ao registrar triagem.");
     }

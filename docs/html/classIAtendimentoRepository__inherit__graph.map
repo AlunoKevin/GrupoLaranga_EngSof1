@@ -1,0 +1,7 @@
+<map id="IAtendimentoRepository" name="IAtendimentoRepository">
+<area shape="rect" id="Node000001" title="Interface que define o contrato para armazenamento de atendimentos médicos." alt="" coords="119,5,327,91"/>
+<area shape="rect" id="Node000002" href="$classMockAtendimentoRepository.html" title=" " alt="" coords="5,149,208,214"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,103,137,150,133,147,175,99"/>
+<area shape="rect" id="Node000003" href="$classSqlAtendimentoRepository.html" title=" " alt="" coords="232,139,445,224"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,99,304,137,300,140,266,103"/>
+</map>

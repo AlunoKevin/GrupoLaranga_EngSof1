@@ -1,0 +1,171 @@
+\doxysection{Mock\+Usuario\+Repository Class Reference}
+\hypertarget{classMockUsuarioRepository}{}\label{classMockUsuarioRepository}\index{MockUsuarioRepository@{MockUsuarioRepository}}
+
+
+{\ttfamily \#include $<$Mock\+Usuario\+Repository.\+h$>$}
+
+
+
+Inheritance diagram for Mock\+Usuario\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classMockUsuarioRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mock\+Usuario\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classMockUsuarioRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classMockUsuarioRepository_ae262c8221ce09e139e448039a50233c5}{salvar}} (\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*}u) override
+\begin{DoxyCompactList}\small\item\em Registra um novo usuário no banco de dados. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMockUsuarioRepository_a4f2a76716bca5fdcfd8792948f7583fd}{atualizar}} (\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*}u) override
+\begin{DoxyCompactList}\small\item\em Atualiza as informações de um usuário já existente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMockUsuarioRepository_a3728eaaa1b9da09af72c832180c42478}{buscar\+Por\+Id}} (int id) override
+\begin{DoxyCompactList}\small\item\em Localiza um usuário através do seu identificador único. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMockUsuarioRepository_a24d8580451f48537ef6848dd0d8da69f}{buscar\+Por\+Login}} (const QString \&login) override
+\begin{DoxyCompactList}\small\item\em Busca um usuário pelo seu nome de login (essencial para autenticação). \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classMockUsuarioRepository_adadabc239613df9b58f391e346a5eafa}{listar\+Todos}} () override
+\begin{DoxyCompactList}\small\item\em Recupera a lista completa de usuários cadastrados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIUsuarioRepository}{IUsuario\+Repository}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIUsuarioRepository_a6d2e398d9b571ee6beeeb0e0e6b0d71d}{\texorpdfstring{$\sim$}{\string~}\+IUsuario\+Repository}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QMap$<$ int, \mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classMockUsuarioRepository_ad2b7afcc58ecdf6a7d6d2667013c5f60}{usuarios}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMockUsuarioRepository_a4f2a76716bca5fdcfd8792948f7583fd}\label{classMockUsuarioRepository_a4f2a76716bca5fdcfd8792948f7583fd} 
+\index{MockUsuarioRepository@{MockUsuarioRepository}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!MockUsuarioRepository@{MockUsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily bool Mock\+Usuario\+Repository\+::atualizar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*}}]{usuario }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atualiza as informações de um usuário já existente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usuario} & Ponteiro para o objeto com os dados atualizados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a atualização foi persistida corretamente. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIUsuarioRepository_a5270a54f294681baba1bbb0d7aeed989}{IUsuario\+Repository}}.
+
+\Hypertarget{classMockUsuarioRepository_a3728eaaa1b9da09af72c832180c42478}\label{classMockUsuarioRepository_a3728eaaa1b9da09af72c832180c42478} 
+\index{MockUsuarioRepository@{MockUsuarioRepository}!buscarPorId@{buscarPorId}}
+\index{buscarPorId@{buscarPorId}!MockUsuarioRepository@{MockUsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{buscarPorId()}{buscarPorId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} Mock\+Usuario\+Repository\+::buscar\+Por\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Localiza um usuário através do seu identificador único. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador numérico do usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o \doxylink{classUsuario}{Usuario} encontrado ou nullptr caso não exista. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIUsuarioRepository_a33b7bda73c9992eff17d65c3b63acde4}{IUsuario\+Repository}}.
+
+\Hypertarget{classMockUsuarioRepository_a24d8580451f48537ef6848dd0d8da69f}\label{classMockUsuarioRepository_a24d8580451f48537ef6848dd0d8da69f} 
+\index{MockUsuarioRepository@{MockUsuarioRepository}!buscarPorLogin@{buscarPorLogin}}
+\index{buscarPorLogin@{buscarPorLogin}!MockUsuarioRepository@{MockUsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{buscarPorLogin()}{buscarPorLogin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} Mock\+Usuario\+Repository\+::buscar\+Por\+Login (\begin{DoxyParamCaption}\item[{const QString \&}]{login }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Busca um usuário pelo seu nome de login (essencial para autenticação). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & String contendo o username do usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o \doxylink{classUsuario}{Usuario} correspondente. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIUsuarioRepository_a59a42422b2d213bf4a17af5620d2aa1a}{IUsuario\+Repository}}.
+
+\Hypertarget{classMockUsuarioRepository_adadabc239613df9b58f391e346a5eafa}\label{classMockUsuarioRepository_adadabc239613df9b58f391e346a5eafa} 
+\index{MockUsuarioRepository@{MockUsuarioRepository}!listarTodos@{listarTodos}}
+\index{listarTodos@{listarTodos}!MockUsuarioRepository@{MockUsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{listarTodos()}{listarTodos()}}
+{\footnotesize\ttfamily QList$<$ \mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*} $>$ Mock\+Usuario\+Repository\+::listar\+Todos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Recupera a lista completa de usuários cadastrados. 
+
+\begin{DoxyReturn}{Returns}
+QList contendo ponteiros para todos os objetos \doxylink{classUsuario}{Usuario}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIUsuarioRepository_ae16038894fbafa17712cb8f5a0bea2cf}{IUsuario\+Repository}}.
+
+\Hypertarget{classMockUsuarioRepository_ae262c8221ce09e139e448039a50233c5}\label{classMockUsuarioRepository_ae262c8221ce09e139e448039a50233c5} 
+\index{MockUsuarioRepository@{MockUsuarioRepository}!salvar@{salvar}}
+\index{salvar@{salvar}!MockUsuarioRepository@{MockUsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{salvar()}{salvar()}}
+{\footnotesize\ttfamily bool Mock\+Usuario\+Repository\+::salvar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsuario}{Usuario}} \texorpdfstring{$\ast$}{*}}]{usuario }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Registra um novo usuário no banco de dados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usuario} & Ponteiro para o objeto \doxylink{classUsuario}{Usuario} a ser salvo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o usuário foi salvo com sucesso. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIUsuarioRepository_afdf06fbce83a4c7ec7117734531d77e8}{IUsuario\+Repository}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classMockUsuarioRepository_ad2b7afcc58ecdf6a7d6d2667013c5f60}\label{classMockUsuarioRepository_ad2b7afcc58ecdf6a7d6d2667013c5f60} 
+\index{MockUsuarioRepository@{MockUsuarioRepository}!usuarios@{usuarios}}
+\index{usuarios@{usuarios}!MockUsuarioRepository@{MockUsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{usuarios}{usuarios}}
+{\footnotesize\ttfamily QMap$<$int, \mbox{\hyperlink{classUsuario}{Usuario}}\texorpdfstring{$\ast$}{*}$>$ Mock\+Usuario\+Repository\+::usuarios}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/mocks/\mbox{\hyperlink{MockUsuarioRepository_8h}{Mock\+Usuario\+Repository.\+h}}\end{DoxyCompactItemize}

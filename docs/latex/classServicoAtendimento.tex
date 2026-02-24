@@ -1,0 +1,78 @@
+\doxysection{Servico\+Atendimento Class Reference}
+\hypertarget{classServicoAtendimento}{}\label{classServicoAtendimento}\index{ServicoAtendimento@{ServicoAtendimento}}
+
+
+{\ttfamily \#include $<$servicoatendimento.\+h$>$}
+
+
+
+Inheritance diagram for Servico\+Atendimento\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classServicoAtendimento__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Servico\+Atendimento\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classServicoAtendimento__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServicoAtendimento_a3b60804988de8c788f312a2bcf2b1949}{Servico\+Atendimento}} (\mbox{\hyperlink{classIAtendimentoRepository}{IAtendimento\+Repository}} \texorpdfstring{$\ast$}{*}repo)
+\item 
+bool \mbox{\hyperlink{classServicoAtendimento_a480a04259643a8694a19dda0ac090640}{registrar}} (const \mbox{\hyperlink{classAtendimento}{Atendimento}} \&atendimento) override
+\begin{DoxyCompactList}\small\item\em Registra um novo atendimento médico no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIServicoAtendimento}{IServico\+Atendimento}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIServicoAtendimento_afb3acd43f65dca5b35ca857bd528f908}{\texorpdfstring{$\sim$}{\string~}\+IServico\+Atendimento}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classServicoAtendimento_a3b60804988de8c788f312a2bcf2b1949}\label{classServicoAtendimento_a3b60804988de8c788f312a2bcf2b1949} 
+\index{ServicoAtendimento@{ServicoAtendimento}!ServicoAtendimento@{ServicoAtendimento}}
+\index{ServicoAtendimento@{ServicoAtendimento}!ServicoAtendimento@{ServicoAtendimento}}
+\doxysubsubsection{\texorpdfstring{ServicoAtendimento()}{ServicoAtendimento()}}
+{\footnotesize\ttfamily Servico\+Atendimento\+::\+Servico\+Atendimento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIAtendimentoRepository}{IAtendimento\+Repository}} \texorpdfstring{$\ast$}{*}}]{repo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classServicoAtendimento_a480a04259643a8694a19dda0ac090640}\label{classServicoAtendimento_a480a04259643a8694a19dda0ac090640} 
+\index{ServicoAtendimento@{ServicoAtendimento}!registrar@{registrar}}
+\index{registrar@{registrar}!ServicoAtendimento@{ServicoAtendimento}}
+\doxysubsubsection{\texorpdfstring{registrar()}{registrar()}}
+{\footnotesize\ttfamily bool Servico\+Atendimento\+::registrar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAtendimento}{Atendimento}} \&}]{atendimento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Registra um novo atendimento médico no sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atendimento} & Referência constante para o objeto \doxylink{classAtendimento}{Atendimento} contendo diagnóstico e prescrições. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o atendimento for validado pelas regras de negócio e salvo com sucesso. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIServicoAtendimento_ab9524155ed62dcde459378ef865682f7}{IServico\+Atendimento}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Clini\+Gest\+Logic/services/\mbox{\hyperlink{servicoatendimento_8h}{servicoatendimento.\+h}}\item 
+Clini\+Gest\+Logic/services/\mbox{\hyperlink{servicoatendimento_8cpp}{servicoatendimento.\+cpp}}\end{DoxyCompactItemize}
