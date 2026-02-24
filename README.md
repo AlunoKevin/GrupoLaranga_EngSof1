@@ -47,7 +47,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/../CliniGestLogic:$(pwd)/../Clini
 
 ## 🧪 Executando os Testes Unitários
 
-Para garantir que a lógica de agendamento, triagem e manutenção de usuário esteja funcionando, siga os passos abaixo:
+Para garantir que a lógica de agendamento, triagem, manutenção de usuário e atendimento esteja funcionando, siga os passos abaixo:
 
 ### 1. **Acesse a pasta de mocks/testes:**
    ```bash
@@ -70,6 +70,33 @@ make clean && make
 
 ```bash
 ./test
+```
+
+## 🚀 Executando o Teste Funcional (Integração)
+
+Para validar o fluxo completo do sistema (Agendamento ➔ Triagem ➔ Atendimento) integrado através da Facade, sem a necessidade da interface gráfica, siga os passos abaixo:
+
+### 1. **Acesse a pasta do teste funcional:**
+   ```bash
+   cd tests/funcional
+   ```
+
+### 2. Gere o Makefile :
+
+```bash
+qmake6
+```
+
+### 3. Compile os testes:
+
+```bash
+make clean && make
+```
+
+### 4. Execute os testes:
+
+```bash
+./test_funcional
 ```
 
 ## 📝 Atualizar Documentação
