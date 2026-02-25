@@ -40,6 +40,10 @@ public:
     bool alterarSenha(int id, const QString& novaSenha);
     Usuario* buscarUtilizadorLogado();
 
+    IServicoUsuario* getServicoUsuario() {
+        return m_usuarioServico;
+    }
+
 private:
     IConsultaRepository* m_consultaRepo;
     ITriagemRepository* m_triagemRepo;

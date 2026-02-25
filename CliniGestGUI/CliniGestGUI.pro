@@ -11,12 +11,12 @@ INCLUDEPATH += \
     ../CliniGestLogic \
     ../CliniGestData
 
-# Linkagem das bibliotecas (Mantive o seu formato $$PWD que estava funcionando)
+# Linkagem das bibliotecas
 LIBS += \
     $$PWD/../CliniGestLogic/libCliniGestLogic.so \
     $$PWD/../CliniGestData/libCliniGestData.so
 
-# Lista unificada de Headers (Incluindo Atendimento)
+# Lista unificada de Headers (Corrigido com screens/)
 HEADERS += \
     mainwindow.h \
     screens/telaagendamento.h \
@@ -25,9 +25,11 @@ HEADERS += \
     screens/telaadminusuarios.h \
     ../CliniGestData/repositories/SqlTriagemRepository.h \
     ../CliniGestData/repositories/SqlUsuarioRepository.h \
-    ../CliniGestLogic/services/ServicoUsuario.h
+    ../CliniGestLogic/services/ServicoUsuario.h \
+    screens/telalogin.h \
+    screens/telaprincipaladmin.h
 
-# Lista unificada de Sources (Incluindo Atendimento)
+# Lista unificada de Sources (Corrigido com screens/)
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
@@ -37,12 +39,16 @@ SOURCES += \
     screens/telaadminusuarios.cpp \
     ../CliniGestData/repositories/SqlTriagemRepository.cpp \
     ../CliniGestData/repositories/SqlUsuarioRepository.cpp \
-    ../CliniGestLogic/services/ServicoUsuario.cpp
+    ../CliniGestLogic/services/ServicoUsuario.cpp \
+    screens/telalogin.cpp \
+    screens/telaprincipaladmin.cpp
 
-# Lista unificada de Forms (Interfaces Gráficas)
+# Lista unificada de Forms (Corrigido com screens/)
 FORMS += \
     mainwindow.ui \
     screens/telaagendamento.ui \
     screens/telatriagem.ui \
     screens/telaatendimento.ui \
-    screens/telaadminusuarios.ui
+    screens/telaadminusuarios.ui \
+    screens/telalogin.ui \
+    screens/telaprincipaladmin.ui

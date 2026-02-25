@@ -13,6 +13,7 @@
 #include "screens/telatriagem.h"
 #include "screens/telaatendimento.h"
 #include "screens/telaadminusuarios.h"
+#include "screens/telalogin.h" // <-- 1. Adicione este include
 
 int main(int argc, char *argv[])
 {
@@ -24,13 +25,10 @@ int main(int argc, char *argv[])
     SqlTriagemRepository triagemRepo(db);
     SqlAtendimentoRepository atendimentoRepo(db);
 
-    // Instancia a Fachada Única com os 3 repositórios
-   // SistemaFacade facade(&consultaRepo, &triagemRepo, &atendimentoRepo);
-
-
     SqlUsuarioRepository usuarioRepo;
     ServicoUsuario usuarioServico(&usuarioRepo);
 
+    // Instancia a Fachada Única com todos os repositórios
     SistemaFacade facade(
         &consultaRepo,
         &triagemRepo,
@@ -39,21 +37,13 @@ int main(int argc, char *argv[])
         &usuarioServico
     );
 
+    // 2. Comente ou remova a abertura direta da tela de admin
+    // TelaAdminUsuarios admin(&facade);
+    // admin.show();
 
-    SqlUsuarioRepository usuarioRepo;
-    ServicoUsuario usuarioServico(&usuarioRepo);
-
-    TelaAgendamento w(&facade);
-    w.show();
-
-    TelaTriagem t(&facade);
-    t.show();
-
-    TelaAtendimento at(&facade);
-    at.show();
-
-    TelaAdminUsuarios admin(&facade);
-    admin.show();
+    // 3. Inicie pela Tela de Login passando a fachada
+    TelaLogin login(&facade); 
+    login.show();
 
     return a.exec();
 }
